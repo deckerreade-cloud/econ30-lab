@@ -38,55 +38,74 @@
         <p class="hero__scroll" aria-hidden="true">Scroll</p>
       </section>
 
-      <!-- 2 National scrolly -->
-      <div id="scrolly-national" class="scrolly">
-        <div class="scrolly__graphic" aria-live="polite">
-          <div class="scrolly__graphic-inner" id="national-graphic">
-            <div class="stat-row" style="max-width: 520px; margin: 0 auto">
-              <div class="stat">
-                <div class="stat__value" data-stat="officeVacancyQ1Pct">19.6%</div>
-                <div class="stat__label">U.S. office vacancy (Q1 2025)</div>
-              </div>
-              <div class="stat stat--neutral">
-                <div class="stat__value" data-stat="moodysVacancyPeakPct">24%</div>
-                <div class="stat__label">Moody’s peak vacancy scenario</div>
-              </div>
+      <!-- 2 National stat strip -->
+      <section class="stat-strip" aria-label="National headline statistics">
+        <div class="stat-strip__inner">
+          <div class="stat-strip__grid">
+            <div class="stat">
+              <div class="stat__value" data-stat="officeVacancyQ1Pct">19.6%</div>
+              <div class="stat__label">U.S. office vacancy (Q1 2025)</div>
+            </div>
+            <div class="stat stat--neutral">
+              <div class="stat__value" data-stat="moodysVacancyPeakPct">24%</div>
+              <div class="stat__label">Moody’s peak vacancy scenario</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value" data-stat="nationwideValueDestruction">$556.8B</div>
+              <div class="stat__label">Illustrative nationwide office value destruction (literature)</div>
+            </div>
+            <div class="stat stat--neutral">
+              <div class="stat__value" data-stat="sfOfficeVacancyMajorCities">22.65%</div>
+              <div class="stat__label">SF vacancy context (major-city stat pack)</div>
             </div>
           </div>
         </div>
-        <div class="scrolly__steps">
-          <div class="scrolly__step is-active" data-step="national-1">
-            <div class="scrolly__step-inner">
-              <h2>The national picture</h2>
-              <p>
-                Office became the distressed heart of CRE: record vacancy prints, value
-                drawdowns, and a refinancing calendar that keeps pressure on owners and
-                lenders. The headline numbers are large — but the pain is not evenly
-                shared.
-              </p>
-            </div>
-          </div>
-          <div class="scrolly__step" data-step="national-2">
-            <div class="scrolly__step-inner">
-              <h2>Micro-recession, macro debate</h2>
-              <p>
-                Some analyses frame the shock as concentrated in office and certain
-                cities rather than a single economy-wide collapse. That matters for who
-                loses first — and who can wait, or buy, through the cycle.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <p class="typographic-break typographic-break--loser" style="padding: 0 1.5rem">
-        Academic work on work-from-home and office values points to long-run repricing
-        and hundreds of billions in destroyed office value nationwide — with
-        <span data-stat="nycLongRunDecline">46%</span> long-run decline in NYC office
-        values in a leading lease-level study.
+      <p class="callout callout--loser">
+        Lease-level study estimates a
+        <strong data-stat="nycLongRunDecline">46%</strong> long-run decline in NYC office
+        values.
       </p>
 
-      <!-- 3 SF case -->
+      <!-- 3 Dashboard -->
+      <section class="dashboard-section" aria-labelledby="dash-title">
+        <h2 id="dash-title">Compare cities</h2>
+        <p class="lead">
+          Toggle San Francisco, New York, or Washington, D.C. Vacancy, property value
+          index, and rent index animate from the shared synthetic panel (three cities,
+          same frequency).
+        </p>
+        <div class="dashboard-sticky">
+          <div class="city-toggle" role="group" aria-label="Select city">
+            <button type="button" data-city="San Francisco" aria-pressed="true">
+              San Francisco
+            </button>
+            <button type="button" data-city="New York" aria-pressed="false">
+              New York
+            </button>
+            <button type="button" data-city="Washington DC" aria-pressed="false">
+              Washington DC
+            </button>
+          </div>
+          <div class="dashboard-charts">
+            <div class="chart-panel" data-metric="vacancy">
+              <h3>Vacancy</h3>
+              <div class="chart-panel__svg" aria-hidden="true"></div>
+            </div>
+            <div class="chart-panel" data-metric="value">
+              <h3>Property value</h3>
+              <div class="chart-panel__svg" aria-hidden="true"></div>
+            </div>
+            <div class="chart-panel" data-metric="rent">
+              <h3>Rent index</h3>
+              <div class="chart-panel__svg" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 SF case -->
       <div id="scrolly-sf" class="scrolly">
         <div class="scrolly__graphic">
           <div class="scrolly__graphic-inner" id="sf-graphic">
@@ -126,7 +145,7 @@
         </div>
       </div>
 
-      <!-- 4 NYC case -->
+      <!-- 5 NYC case -->
       <div id="scrolly-nyc" class="scrolly">
         <div class="scrolly__graphic">
           <div class="scrolly__graphic-inner" id="nyc-graphic">
@@ -167,43 +186,6 @@
         </div>
       </div>
 
-      <!-- 5 Dashboard -->
-      <section class="dashboard-section" aria-labelledby="dash-title">
-        <h2 id="dash-title">Compare cities</h2>
-        <p class="lead">
-          Toggle San Francisco, New York, or Washington, D.C. Vacancy, property value
-          index, and rent index animate from the shared synthetic panel (three cities,
-          same frequency).
-        </p>
-        <div class="dashboard-sticky">
-          <div class="city-toggle" role="group" aria-label="Select city">
-            <button type="button" data-city="San Francisco" aria-pressed="true">
-              San Francisco
-            </button>
-            <button type="button" data-city="New York" aria-pressed="false">
-              New York
-            </button>
-            <button type="button" data-city="Washington DC" aria-pressed="false">
-              Washington DC
-            </button>
-          </div>
-          <div class="dashboard-charts">
-            <div class="chart-panel" data-metric="vacancy">
-              <h3>Vacancy</h3>
-              <div class="chart-panel__svg" aria-hidden="true"></div>
-            </div>
-            <div class="chart-panel" data-metric="value">
-              <h3>Property value</h3>
-              <div class="chart-panel__svg" aria-hidden="true"></div>
-            </div>
-            <div class="chart-panel" data-metric="rent">
-              <h3>Rent index</h3>
-              <div class="chart-panel__svg" aria-hidden="true"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- 6 Winners vs losers -->
       <section class="winners-losers" aria-labelledby="wl-title">
         <h2 id="wl-title" class="visually-hidden">Who wins and who loses</h2>
@@ -217,7 +199,7 @@
         </div>
       </section>
 
-      <p class="typographic-break typographic-break--winner" style="padding: 0 1.5rem">
+      <p class="callout callout--winner">
         Capital that can buy at a discount and hold — or restructure — captures option
         value when others are forced to sell or refinance.
       </p>

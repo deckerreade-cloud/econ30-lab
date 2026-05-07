@@ -109,26 +109,6 @@ async function main() {
   fillStatPlaceholders(curated);
   renderLists(curated);
 
-  // National scrolly: swap graphic content per step
-  setupScrollyGraphic("scrolly-national", ".scrolly__step", (stepId, graphic) => {
-    if (stepId === "national-1") {
-      graphic.innerHTML =
-        '<div class="stat-row" style="max-width:520px;margin:0 auto">' +
-        `<div class="stat"><div class="stat__value" data-stat="officeVacancyQ1Pct"></div><div class="stat__label">U.S. office vacancy (Q1 2025)</div></div>` +
-        `<div class="stat stat--neutral"><div class="stat__value" data-stat="moodysVacancyPeakPct"></div><div class="stat__label">Moody’s peak vacancy scenario</div></div>` +
-        "</div>";
-      fillStatPlaceholders(curated);
-    }
-    if (stepId === "national-2") {
-      graphic.innerHTML =
-        '<div class="stat-row" style="max-width:520px;margin:0 auto">' +
-        `<div class="stat"><div class="stat__value" data-stat="nationwideValueDestruction"></div><div class="stat__label">Illustrative nationwide office value destruction (literature)</div></div>` +
-        `<div class="stat stat--neutral"><div class="stat__value" data-stat="sfOfficeVacancyMajorCities"></div><div class="stat__label">SF vacancy context (major-city stat pack)</div></div>` +
-        "</div>";
-      fillStatPlaceholders(curated);
-    }
-  });
-
   // SF / NYC scrolly graphics: mount chart containers once visible
   setupScrollyGraphic("scrolly-sf", ".scrolly__step", (stepId, graphic) => {
     if (stepId === "sf-chart") {
