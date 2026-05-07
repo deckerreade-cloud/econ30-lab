@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Who Wins and Loses When Office Values Crash</title>
+    <meta
+      name="description"
+      content="A scroll-driven look at post-pandemic office markets, San Francisco and New York case studies, and who gains when commercial real estate reprices."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-hidden="true">
+      <span class="site-header__label">Office CRE · Distribution</span>
+    </header>
+
+    <main id="main">
+      <!-- 1 Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="hero__eyebrow">Commercial real estate</p>
+        <h1 id="hero-title" class="hero__title">
+          Who wins and loses when office values crash?
+        </h1>
+        <p class="hero__deck">
+          After the pandemic, declining office demand redistributed risk and opportunity:
+          hurting many small businesses and downtown workers while creating openings for
+          institutional capital. This story moves from the national picture to San
+          Francisco and New York — then asks what comes next.
+        </p>
+        <p class="hero__scroll" aria-hidden="true">Scroll</p>
+      </section>
+
+      <!-- 2 National scrolly -->
+      <div id="scrolly-national" class="scrolly">
+        <div class="scrolly__graphic" aria-live="polite">
+          <div class="scrolly__graphic-inner" id="national-graphic">
+            <div class="stat-row" style="max-width: 520px; margin: 0 auto">
+              <div class="stat">
+                <div class="stat__value" data-stat="officeVacancyQ1Pct">19.6%</div>
+                <div class="stat__label">U.S. office vacancy (Q1 2025)</div>
+              </div>
+              <div class="stat stat--neutral">
+                <div class="stat__value" data-stat="moodysVacancyPeakPct">24%</div>
+                <div class="stat__label">Moody’s peak vacancy scenario</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrolly__steps">
+          <div class="scrolly__step is-active" data-step="national-1">
+            <div class="scrolly__step-inner">
+              <h2>The national picture</h2>
+              <p>
+                Office became the distressed heart of CRE: record vacancy prints, value
+                drawdowns, and a refinancing calendar that keeps pressure on owners and
+                lenders. The headline numbers are large — but the pain is not evenly
+                shared.
+              </p>
+            </div>
+          </div>
+          <div class="scrolly__step" data-step="national-2">
+            <div class="scrolly__step-inner">
+              <h2>Micro-recession, macro debate</h2>
+              <p>
+                Some analyses frame the shock as concentrated in office and certain
+                cities rather than a single economy-wide collapse. That matters for who
+                loses first — and who can wait, or buy, through the cycle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="typographic-break typographic-break--loser" style="padding: 0 1.5rem">
+        Academic work on work-from-home and office values points to long-run repricing
+        and hundreds of billions in destroyed office value nationwide — with
+        <span data-stat="nycLongRunDecline">46%</span> long-run decline in NYC office
+        values in a leading lease-level study.
+      </p>
+
+      <!-- 3 SF case -->
+      <div id="scrolly-sf" class="scrolly">
+        <div class="scrolly__graphic">
+          <div class="scrolly__graphic-inner" id="sf-graphic">
+            <p
+              style="
+                color: var(--text-muted);
+                text-align: center;
+                max-width: 28rem;
+                margin: 0 auto;
+              "
+            >
+              San Francisco: extreme vacancy and a long fiscal shadow on downtown.
+            </p>
+          </div>
+        </div>
+        <div class="scrolly__steps">
+          <div class="scrolly__step is-active" data-step="sf-text">
+            <div class="scrolly__step-inner">
+              <h2>Case study: San Francisco</h2>
+              <p>
+                Tech-heavy remote adoption hit San Francisco early and hard. Market
+                reports document sustained stress; policy voices argue recovery requires
+                deliberate action — not just market time.
+              </p>
+            </div>
+          </div>
+          <div class="scrolly__step" data-step="sf-chart">
+            <div class="scrolly__step-inner">
+              <h2>Vacancy trajectory</h2>
+              <p>
+                The chart below uses the project’s harmonized synthetic panel (for
+                shape and teaching) — pair it with Colliers / SPUR PDFs in Sources for
+                real-world calibration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 NYC case -->
+      <div id="scrolly-nyc" class="scrolly">
+        <div class="scrolly__graphic">
+          <div class="scrolly__graphic-inner" id="nyc-graphic">
+            <p
+              style="
+                color: var(--text-muted);
+                text-align: center;
+                max-width: 28rem;
+                margin: 0 auto;
+              "
+            >
+              New York: a fight between “doom loop” fiscal narratives and “boom loop”
+              pockets of strength.
+            </p>
+          </div>
+        </div>
+        <div class="scrolly__steps">
+          <div class="scrolly__step is-active" data-step="nyc-text">
+            <div class="scrolly__step-inner">
+              <h2>Case study: New York City</h2>
+              <p>
+                NYC’s scale and tax base change the arithmetic. The Comptroller’s
+                framing — doom loop vs. boom loop — captures how simultaneous distress
+                and selective strength can coexist in one market.
+              </p>
+            </div>
+          </div>
+          <div class="scrolly__step" data-step="nyc-chart">
+            <div class="scrolly__step-inner">
+              <h2>K-shaped signals</h2>
+              <p>
+                Two small multiples: a value index proxy (relatively stronger assets)
+                versus vacancy stress. Same synthetic NYC series — illustrative, not a
+                substitute for building-class microdata.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 Dashboard -->
+      <section class="dashboard-section" aria-labelledby="dash-title">
+        <h2 id="dash-title">Compare cities</h2>
+        <p class="lead">
+          Toggle San Francisco, New York, or Washington, D.C. Vacancy, property value
+          index, and rent index animate from the shared synthetic panel (three cities,
+          same frequency).
+        </p>
+        <div class="dashboard-sticky">
+          <div class="city-toggle" role="group" aria-label="Select city">
+            <button type="button" data-city="San Francisco" aria-pressed="true">
+              San Francisco
+            </button>
+            <button type="button" data-city="New York" aria-pressed="false">
+              New York
+            </button>
+            <button type="button" data-city="Washington DC" aria-pressed="false">
+              Washington DC
+            </button>
+          </div>
+          <div class="dashboard-charts">
+            <div class="chart-panel" data-metric="vacancy">
+              <h3>Vacancy</h3>
+              <div class="chart-panel__svg" aria-hidden="true"></div>
+            </div>
+            <div class="chart-panel" data-metric="value">
+              <h3>Property value</h3>
+              <div class="chart-panel__svg" aria-hidden="true"></div>
+            </div>
+            <div class="chart-panel" data-metric="rent">
+              <h3>Rent index</h3>
+              <div class="chart-panel__svg" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Winners vs losers -->
+      <section class="winners-losers" aria-labelledby="wl-title">
+        <h2 id="wl-title" class="visually-hidden">Who wins and who loses</h2>
+        <div class="winners-losers__col winners-losers__col--winners">
+          <h3>Winners</h3>
+          <ul id="winners-list"></ul>
+        </div>
+        <div class="winners-losers__col winners-losers__col--losers">
+          <h3>Losers</h3>
+          <ul id="losers-list"></ul>
+        </div>
+      </section>
+
+      <p class="typographic-break typographic-break--winner" style="padding: 0 1.5rem">
+        Capital that can buy at a discount and hold — or restructure — captures option
+        value when others are forced to sell or refinance.
+      </p>
+
+      <!-- 7 What comes next -->
+      <section class="section-standalone" aria-labelledby="next-title">
+        <h2 id="next-title">What comes next</h2>
+        <ul id="next-list"></ul>
+        <p>
+          The static story is only a scaffold: plug in your curated city series, REIT
+          flows, and fiscal data as you finalize the research layer.
+        </p>
+      </section>
+
+      <!-- 8 Sources -->
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">Sources</h2>
+        <ul id="sources-list"></ul>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted)">
+          Serve this folder with a local HTTP server (e.g.
+          <code style="color: var(--accent-neutral)">python -m http.server</code> from
+          <code>site/</code>) so ES module imports resolve correctly.
+        </p>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollama@3.2.0/build/scrollama.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

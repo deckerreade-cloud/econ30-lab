@@ -33,3 +33,8 @@ keeping the same panel schema.
 - Enriched panel: `data/cleaned/city_panel_enriched.csv`
 - Synthetic raw panel: `data/simulated/city_panel_synthetic.csv`
 - Latest city snapshot: `output/latest_city_snapshot.csv`
+- Scrolly site time series: `site/data/timeseries.json` (run `python code/export_timeseries.py` after the pipeline)
+
+## Public narrative site
+
+- Static scroll-driven story: `site/` — see [site/README.md](site/README.md) for how to serve it locally.

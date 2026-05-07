@@ -1,0 +1,70 @@
+{
+  "national": {
+    "officeVacancyQ1Pct": "19.6%",
+    "moodysVacancyPeakPct": "24%",
+    "nationwideValueDestruction": "$556.8B",
+    "nycLongRunDecline": "46%",
+    "sfOfficeVacancyMajorCities": "22.65%",
+    "headline": "After the pandemic, remote and hybrid work pulled demand out of the office sector. Vacancy rose to record levels while property values and tax bases came under pressure — unevenly, across cities and building classes."
+  },
+  "sf": {
+    "headline": "San Francisco became the poster child for empty towers and distressed pricing. Brokerage data show sustained high vacancy; policy reports (SPUR) argue recovery is long without conversion, tax reform, and downtown activation.",
+    "statLabel": "SF metro office vacancy (major-city context)",
+    "statValue": "22.65%"
+  },
+  "nyc": {
+    "headline": "New York’s market splits: trophy Class A assets and selective leasing can stabilize headlines while Class B/C stock and fiscal exposure still matter. The NYC Comptroller frames the tension as doom loop vs. boom loop.",
+    "statLabel": "NYC office narrative",
+    "statValue": "K-shaped"
+  },
+  "dc": {
+    "headline": "Washington, D.C. depends heavily on federal-adjacent office demand. The D.C. Office of Revenue Analysis ties rising vacant stock to valuation and property-tax risk — a fiscal Achilles’ heel.",
+    "statLabel": "Policy frame",
+    "statValue": "Vacancy & tax base"
+  },
+  "winners": [
+    "Institutional investors and well-capitalized buyers acquiring distressed or discounted assets",
+    "Owners of Class A / trophy buildings in prime locations (relative resilience)",
+    "Asset managers with long horizons who can wait out lease rollover and repricing"
+  ],
+  "losers": [
+    "Small businesses in downtown corridors tied to office foot traffic",
+    "Urban workers in office-adjacent services when attendance and hiring slow",
+    "Municipal budgets when assessed values and transaction volume weaken"
+  ],
+  "next": [
+    "Office-to-residential conversion (where economically and legally feasible)",
+    "A wall of CRE debt maturities and refinancing under higher rates",
+    "Fiscal feedback loops: weaker downtowns → fewer services → harder recovery"
+  ],
+  "sources": [
+    {
+      "label": "Gupta, Mittal & Van Nieuwerburgh — Work From Home and the Office Real Estate Apocalypse (NBER; long-run NYC decline & nationwide value destruction figures)",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4124698"
+    },
+    {
+      "label": "Kaplan Group — 52 Commercial & Office Real Estate Statistics for 2025 (wiki summary)",
+      "url": "../knowledge-base/wiki/summaries/kaplan-52-commercial-office-real-estate-statistics-2025.md"
+    },
+    {
+      "label": "CFO Dive / Moody’s — vacancy peak scenario (wiki summary)",
+      "url": "../knowledge-base/wiki/summaries/cfo-dive-moodys-vacancy-peak-2026.md"
+    },
+    {
+      "label": "NYC Comptroller — Doom Loop or Boom Loop? (PDF in repo)",
+      "url": "../knowledge-base/raw/articles/NYC%E2%80%99s%20Office%20Market_%20Doom%20Loop%20or%20Boom%20Loop_%20-%20Office%20of%20the%20New%20York%20City%20Comptroller%20Mark%20Levine.pdf"
+    },
+    {
+      "label": "SPUR — San Francisco commercial office recovery (PDF in repo)",
+      "url": "../knowledge-base/raw/articles/Without%20Decisive%20Action,%20San%20Francisco%E2%80%99s%20Commercial%20Office%20Market%20Has%20a%20Looong%20Road%20to%20Recovery%20_%20SPUR.pdf"
+    },
+    {
+      "label": "D.C. ORA — Vacant office space (PDF in repo)",
+      "url": "../knowledge-base/raw/articles/The%20Increasing%20Levels%20of%20Vacant%20Office%20Space_%20The%20Achilles%E2%80%99%20Heel%20of%20DC's%20Office%20Market%20_%20ora-cfo.pdf"
+    },
+    {
+      "label": "Colliers — San Francisco Office Q4 2024 (PDF in repo)",
+      "url": "../knowledge-base/raw/articles/San%20Francisco%20Office%20Market%20Research%20Report%20Q4%202024%20_%20Colliers.pdf"
+    }
+  ]
+}

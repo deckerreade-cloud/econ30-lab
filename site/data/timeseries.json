@@ -1,0 +1,1682 @@
+[
+{
+"date": "2005-03-31",
+"city": "New York",
+"vacancy_rate_pct": 10.580853195748947,
+"property_value_index": 110.08075287789389,
+"rent_index": 99.98567103308362
+},
+{
+"date": "2005-06-30",
+"city": "New York",
+"vacancy_rate_pct": 14.702138818126404,
+"property_value_index": 110.48403480705542,
+"rent_index": 101.04232784789444
+},
+{
+"date": "2005-09-30",
+"city": "New York",
+"vacancy_rate_pct": 13.686066688555773,
+"property_value_index": 112.47624998870148,
+"rent_index": 101.97573638367668
+},
+{
+"date": "2005-12-31",
+"city": "New York",
+"vacancy_rate_pct": 12.247832153609636,
+"property_value_index": 114.72535694239905,
+"rent_index": 102.70764272206546
+},
+{
+"date": "2006-03-31",
+"city": "New York",
+"vacancy_rate_pct": 14.5472096628372,
+"property_value_index": 114.8565544948598,
+"rent_index": 103.2099109149736
+},
+{
+"date": "2006-06-30",
+"city": "New York",
+"vacancy_rate_pct": 14.130610664624498,
+"property_value_index": 116.25702125322434,
+"rent_index": 104.32383241087167
+},
+{
+"date": "2006-09-30",
+"city": "New York",
+"vacancy_rate_pct": 15.601937052529882,
+"property_value_index": 116.54397666890353,
+"rent_index": 105.16068111181136
+},
+{
+"date": "2006-12-31",
+"city": "New York",
+"vacancy_rate_pct": 16.727414065374145,
+"property_value_index": 117.6211065720153,
+"rent_index": 105.47591565157764
+},
+{
+"date": "2007-03-31",
+"city": "New York",
+"vacancy_rate_pct": 16.488278094219513,
+"property_value_index": 119.30989244648242,
+"rent_index": 105.61789575210976
+},
+{
+"date": "2007-06-30",
+"city": "New York",
+"vacancy_rate_pct": 18.03868190657652,
+"property_value_index": 119.43508271885814,
+"rent_index": 106.22874990779331
+},
+{
+"date": "2007-09-30",
+"city": "New York",
+"vacancy_rate_pct": 17.56689213868004,
+"property_value_index": 120.88834422610611,
+"rent_index": 106.61264508321965
+},
+{
+"date": "2007-12-31",
+"city": "New York",
+"vacancy_rate_pct": 17.374963786023212,
+"property_value_index": 121.69890631151044,
+"rent_index": 107.016273482327
+},
+{
+"date": "2008-03-31",
+"city": "New York",
+"vacancy_rate_pct": 16.028241561919177,
+"property_value_index": 123.29913135373044,
+"rent_index": 107.54077230259252
+},
+{
+"date": "2008-06-30",
+"city": "New York",
+"vacancy_rate_pct": 16.952958002312542,
+"property_value_index": 124.99408189363751,
+"rent_index": 108.59743342345088
+},
+{
+"date": "2008-09-30",
+"city": "New York",
+"vacancy_rate_pct": 15.824245553324817,
+"property_value_index": 126.58064071516154,
+"rent_index": 108.483184327662
+},
+{
+"date": "2008-12-31",
+"city": "New York",
+"vacancy_rate_pct": 16.125351294361067,
+"property_value_index": 126.93698777374438,
+"rent_index": 109.5268778981279
+},
+{
+"date": "2009-03-31",
+"city": "New York",
+"vacancy_rate_pct": 15.32227825007694,
+"property_value_index": 126.58013747226514,
+"rent_index": 109.77269779775638
+},
+{
+"date": "2009-06-30",
+"city": "New York",
+"vacancy_rate_pct": 14.787247770126513,
+"property_value_index": 128.61375728095248,
+"rent_index": 109.84654452869532
+},
+{
+"date": "2009-09-30",
+"city": "New York",
+"vacancy_rate_pct": 14.515950115771943,
+"property_value_index": 130.02462786739034,
+"rent_index": 110.9878398303022
+},
+{
+"date": "2009-12-31",
+"city": "New York",
+"vacancy_rate_pct": 13.353317791806452,
+"property_value_index": 130.75521951281183,
+"rent_index": 111.04134024118844
+},
+{
+"date": "2010-03-31",
+"city": "New York",
+"vacancy_rate_pct": 13.90898143149438,
+"property_value_index": 130.71983454414556,
+"rent_index": 111.4790458782838
+},
+{
+"date": "2010-06-30",
+"city": "New York",
+"vacancy_rate_pct": 12.59992757576138,
+"property_value_index": 132.2740270715569,
+"rent_index": 112.14045137478162
+},
+{
+"date": "2010-09-30",
+"city": "New York",
+"vacancy_rate_pct": 12.061661899868938,
+"property_value_index": 134.01959926410396,
+"rent_index": 112.74962845364192
+},
+{
+"date": "2010-12-31",
+"city": "New York",
+"vacancy_rate_pct": 11.965121961282442,
+"property_value_index": 135.2598236042675,
+"rent_index": 113.83286537762164
+},
+{
+"date": "2011-03-31",
+"city": "New York",
+"vacancy_rate_pct": 9.425589349759788,
+"property_value_index": 136.47550033959308,
+"rent_index": 114.3878015723607
+},
+{
+"date": "2011-06-30",
+"city": "New York",
+"vacancy_rate_pct": 10.45226529110662,
+"property_value_index": 138.11355288601916,
+"rent_index": 114.60291277590004
+},
+{
+"date": "2011-09-30",
+"city": "New York",
+"vacancy_rate_pct": 10.654572811253509,
+"property_value_index": 139.2422147660355,
+"rent_index": 115.49811054367052
+},
+{
+"date": "2011-12-31",
+"city": "New York",
+"vacancy_rate_pct": 8.006549137598004,
+"property_value_index": 140.10359513830704,
+"rent_index": 115.74626215482724
+},
+{
+"date": "2012-03-31",
+"city": "New York",
+"vacancy_rate_pct": 8.975010216409792,
+"property_value_index": 141.49131521699724,
+"rent_index": 116.94853495561571
+},
+{
+"date": "2012-06-30",
+"city": "New York",
+"vacancy_rate_pct": 9.702515037661126,
+"property_value_index": 142.93639045354067,
+"rent_index": 117.79729892089124
+},
+{
+"date": "2012-09-30",
+"city": "New York",
+"vacancy_rate_pct": 11.079236594559868,
+"property_value_index": 143.81090626230036,
+"rent_index": 118.49334978595148
+},
+{
+"date": "2012-12-31",
+"city": "New York",
+"vacancy_rate_pct": 10.562835932926152,
+"property_value_index": 144.51116765170238,
+"rent_index": 118.90588009764797
+},
+{
+"date": "2013-03-31",
+"city": "New York",
+"vacancy_rate_pct": 10.194478287066625,
+"property_value_index": 144.94201634935288,
+"rent_index": 119.93152718607368
+},
+{
+"date": "2013-06-30",
+"city": "New York",
+"vacancy_rate_pct": 11.882520747627607,
+"property_value_index": 145.25162886778696,
+"rent_index": 120.74399301198936
+},
+{
+"date": "2013-09-30",
+"city": "New York",
+"vacancy_rate_pct": 9.738534124517194,
+"property_value_index": 147.6347574175968,
+"rent_index": 122.32160564202256
+},
+{
+"date": "2013-12-31",
+"city": "New York",
+"vacancy_rate_pct": 10.42780610194327,
+"property_value_index": 148.78994374652925,
+"rent_index": 122.8990026361709
+},
+{
+"date": "2014-03-31",
+"city": "New York",
+"vacancy_rate_pct": 12.806550062855,
+"property_value_index": 149.5500729003353,
+"rent_index": 123.70542381464502
+},
+{
+"date": "2014-06-30",
+"city": "New York",
+"vacancy_rate_pct": 12.216072917196584,
+"property_value_index": 150.25695057203163,
+"rent_index": 124.77496773917616
+},
+{
+"date": "2014-09-30",
+"city": "New York",
+"vacancy_rate_pct": 12.177989362474095,
+"property_value_index": 150.88170359515226,
+"rent_index": 125.76551018856142
+},
+{
+"date": "2014-12-31",
+"city": "New York",
+"vacancy_rate_pct": 14.405515216338676,
+"property_value_index": 152.10990739361853,
+"rent_index": 126.64764659732148
+},
+{
+"date": "2015-03-31",
+"city": "New York",
+"vacancy_rate_pct": 12.76757169606254,
+"property_value_index": 152.74247610865248,
+"rent_index": 127.8389760026734
+},
+{
+"date": "2015-06-30",
+"city": "New York",
+"vacancy_rate_pct": 14.955642311588807,
+"property_value_index": 154.86987977709484,
+"rent_index": 128.54172795094655
+},
+{
+"date": "2015-09-30",
+"city": "New York",
+"vacancy_rate_pct": 15.125342477947587,
+"property_value_index": 157.20339978978473,
+"rent_index": 128.97923565777046
+},
+{
+"date": "2015-12-31",
+"city": "New York",
+"vacancy_rate_pct": 15.14270689643767,
+"property_value_index": 158.39310004891678,
+"rent_index": 129.18347885440002
+},
+{
+"date": "2016-03-31",
+"city": "New York",
+"vacancy_rate_pct": 14.994933764874324,
+"property_value_index": 158.60754035539009,
+"rent_index": 129.88024297135158
+},
+{
+"date": "2016-06-30",
+"city": "New York",
+"vacancy_rate_pct": 16.642518662249522,
+"property_value_index": 160.1622051959036,
+"rent_index": 130.0821795340114
+},
+{
+"date": "2016-09-30",
+"city": "New York",
+"vacancy_rate_pct": 15.90728081027266,
+"property_value_index": 161.03425727682648,
+"rent_index": 131.00260875627131
+},
+{
+"date": "2016-12-31",
+"city": "New York",
+"vacancy_rate_pct": 15.354013769848976,
+"property_value_index": 162.22973233561137,
+"rent_index": 131.84404257572078
+},
+{
+"date": "2017-03-31",
+"city": "New York",
+"vacancy_rate_pct": 15.33353145172746,
+"property_value_index": 164.8100464423081,
+"rent_index": 132.91257813955798
+},
+{
+"date": "2017-06-30",
+"city": "New York",
+"vacancy_rate_pct": 14.689015518203794,
+"property_value_index": 165.3870802150791,
+"rent_index": 133.91885200740288
+},
+{
+"date": "2017-09-30",
+"city": "New York",
+"vacancy_rate_pct": 16.134571912180416,
+"property_value_index": 167.92973793605927,
+"rent_index": 134.43200094784322
+},
+{
+"date": "2017-12-31",
+"city": "New York",
+"vacancy_rate_pct": 14.793711524976032,
+"property_value_index": 168.9470377838013,
+"rent_index": 134.83025322598945
+},
+{
+"date": "2018-03-31",
+"city": "New York",
+"vacancy_rate_pct": 13.855383171880478,
+"property_value_index": 169.3910781525318,
+"rent_index": 135.36556213277856
+},
+{
+"date": "2018-06-30",
+"city": "New York",
+"vacancy_rate_pct": 11.71208347081651,
+"property_value_index": 170.7754811118428,
+"rent_index": 136.27795532826963
+},
+{
+"date": "2018-09-30",
+"city": "New York",
+"vacancy_rate_pct": 11.846106207521515,
+"property_value_index": 171.85137876650967,
+"rent_index": 136.65222873480485
+},
+{
+"date": "2018-12-31",
+"city": "New York",
+"vacancy_rate_pct": 11.174114766241235,
+"property_value_index": 172.45327574672567,
+"rent_index": 137.27303664034986
+},
+{
+"date": "2019-03-31",
+"city": "New York",
+"vacancy_rate_pct": 12.786041916135474,
+"property_value_index": 172.73014711657862,
+"rent_index": 137.99109986441192
+},
+{
+"date": "2019-06-30",
+"city": "New York",
+"vacancy_rate_pct": 9.741014849695834,
+"property_value_index": 175.73916060718625,
+"rent_index": 138.65807923412365
+},
+{
+"date": "2019-09-30",
+"city": "New York",
+"vacancy_rate_pct": 8.857863241154398,
+"property_value_index": 176.22857705498245,
+"rent_index": 139.7477308320865
+},
+{
+"date": "2019-12-31",
+"city": "New York",
+"vacancy_rate_pct": 7.739254982905697,
+"property_value_index": 176.06717698017627,
+"rent_index": 140.24261586393433
+},
+{
+"date": "2020-03-31",
+"city": "New York",
+"vacancy_rate_pct": 16.09528840818398,
+"property_value_index": 176.39222419703867,
+"rent_index": 140.9153239994747
+},
+{
+"date": "2020-06-30",
+"city": "New York",
+"vacancy_rate_pct": 14.897124282416204,
+"property_value_index": 177.2030121348168,
+"rent_index": 141.18831625781166
+},
+{
+"date": "2020-09-30",
+"city": "New York",
+"vacancy_rate_pct": 13.606884399261348,
+"property_value_index": 177.74759876258815,
+"rent_index": 142.3835646622605
+},
+{
+"date": "2020-12-31",
+"city": "New York",
+"vacancy_rate_pct": 14.772118072238564,
+"property_value_index": 177.7858327330787,
+"rent_index": 142.48553126954977
+},
+{
+"date": "2021-03-31",
+"city": "New York",
+"vacancy_rate_pct": 14.3600139486499,
+"property_value_index": 177.22217583921156,
+"rent_index": 144.23866769505275
+},
+{
+"date": "2021-06-30",
+"city": "New York",
+"vacancy_rate_pct": 13.743616632523636,
+"property_value_index": 177.1554454717181,
+"rent_index": 145.33921757518615
+},
+{
+"date": "2021-09-30",
+"city": "New York",
+"vacancy_rate_pct": 13.299988133325916,
+"property_value_index": 178.04544669863773,
+"rent_index": 146.0707381817083
+},
+{
+"date": "2021-12-31",
+"city": "New York",
+"vacancy_rate_pct": 14.424975273744478,
+"property_value_index": 179.10577096494418,
+"rent_index": 146.25704463778465
+},
+{
+"date": "2022-03-31",
+"city": "New York",
+"vacancy_rate_pct": 15.212883784502033,
+"property_value_index": 178.77348123902198,
+"rent_index": 146.8573052376894
+},
+{
+"date": "2022-06-30",
+"city": "New York",
+"vacancy_rate_pct": 15.693406841862195,
+"property_value_index": 179.9952174968598,
+"rent_index": 147.00315601655495
+},
+{
+"date": "2022-09-30",
+"city": "New York",
+"vacancy_rate_pct": 15.400508067247252,
+"property_value_index": 180.4844433125307,
+"rent_index": 147.80821693081035
+},
+{
+"date": "2022-12-31",
+"city": "New York",
+"vacancy_rate_pct": 14.96500779548136,
+"property_value_index": 180.94277161828427,
+"rent_index": 147.95191362701357
+},
+{
+"date": "2023-03-31",
+"city": "New York",
+"vacancy_rate_pct": 16.15851650701637,
+"property_value_index": 180.88467231985808,
+"rent_index": 149.05492645322963
+},
+{
+"date": "2023-06-30",
+"city": "New York",
+"vacancy_rate_pct": 16.62553109315823,
+"property_value_index": 180.35709567130337,
+"rent_index": 149.09453736655203
+},
+{
+"date": "2023-09-30",
+"city": "New York",
+"vacancy_rate_pct": 17.58617387438419,
+"property_value_index": 180.01590363397077,
+"rent_index": 150.3473621795754
+},
+{
+"date": "2023-12-31",
+"city": "New York",
+"vacancy_rate_pct": 18.516186211369252,
+"property_value_index": 180.23252151023615,
+"rent_index": 150.38850657874897
+},
+{
+"date": "2024-03-31",
+"city": "New York",
+"vacancy_rate_pct": 19.439239948119365,
+"property_value_index": 180.30055915310533,
+"rent_index": 150.99235811120082
+},
+{
+"date": "2024-06-30",
+"city": "New York",
+"vacancy_rate_pct": 19.556856669443903,
+"property_value_index": 180.9300165948742,
+"rent_index": 151.59169125070116
+},
+{
+"date": "2024-09-30",
+"city": "New York",
+"vacancy_rate_pct": 20.46653833349644,
+"property_value_index": 180.323254938784,
+"rent_index": 152.23970825406224
+},
+{
+"date": "2024-12-31",
+"city": "New York",
+"vacancy_rate_pct": 20.01652122185878,
+"property_value_index": 180.6887685097028,
+"rent_index": 152.85469418871176
+},
+{
+"date": "2005-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 11.502030391292545,
+"property_value_index": 112.07721252392471,
+"rent_index": 100.88219765149438
+},
+{
+"date": "2005-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.330136803063915,
+"property_value_index": 113.39175035357056,
+"rent_index": 101.6204197836439
+},
+{
+"date": "2005-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 12.50654374401272,
+"property_value_index": 113.87416630021735,
+"rent_index": 102.56050200690012
+},
+{
+"date": "2005-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.674547603119182,
+"property_value_index": 115.1187494378093,
+"rent_index": 102.9513213302109
+},
+{
+"date": "2006-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.201507659202631,
+"property_value_index": 116.2814783607914,
+"rent_index": 103.5234096935378
+},
+{
+"date": "2006-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 12.896805391742264,
+"property_value_index": 117.09919051959965,
+"rent_index": 104.2607933669846
+},
+{
+"date": "2006-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.264576327975668,
+"property_value_index": 118.13800637189092,
+"rent_index": 105.16792750237168
+},
+{
+"date": "2006-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 17.61077496831139,
+"property_value_index": 120.17853548618712,
+"rent_index": 105.8694824875613
+},
+{
+"date": "2007-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 17.023808783930686,
+"property_value_index": 121.87895527858404,
+"rent_index": 106.83849063091402
+},
+{
+"date": "2007-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 17.6136360728031,
+"property_value_index": 123.07288026182916,
+"rent_index": 106.9580802639569
+},
+{
+"date": "2007-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.671864995539917,
+"property_value_index": 124.62625583848065,
+"rent_index": 107.73928184721512
+},
+{
+"date": "2007-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.73127101070681,
+"property_value_index": 125.22760376004328,
+"rent_index": 108.37635215647067
+},
+{
+"date": "2008-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 17.006189192240903,
+"property_value_index": 126.20734834679163,
+"rent_index": 109.1939859699544
+},
+{
+"date": "2008-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 17.53948603358394,
+"property_value_index": 126.45881622138867,
+"rent_index": 109.86313417425556
+},
+{
+"date": "2008-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.580903687858202,
+"property_value_index": 127.73582587881248,
+"rent_index": 110.1751036102043
+},
+{
+"date": "2008-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.379105919464923,
+"property_value_index": 128.5835600759566,
+"rent_index": 111.0416211981048
+},
+{
+"date": "2009-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.232828530422136,
+"property_value_index": 129.9970780434328,
+"rent_index": 111.90497388880227
+},
+{
+"date": "2009-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.216873831067302,
+"property_value_index": 131.15336659176978,
+"rent_index": 112.15714130903476
+},
+{
+"date": "2009-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.941087686506943,
+"property_value_index": 132.9361701951788,
+"rent_index": 112.42225884110852
+},
+{
+"date": "2009-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.112147538914524,
+"property_value_index": 134.07800293059228,
+"rent_index": 112.97847177170078
+},
+{
+"date": "2010-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.398807198267567,
+"property_value_index": 135.40813176024324,
+"rent_index": 113.28974225137372
+},
+{
+"date": "2010-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 12.532682421377428,
+"property_value_index": 135.67988083497244,
+"rent_index": 114.08861189683516
+},
+{
+"date": "2010-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 11.982942527690978,
+"property_value_index": 136.915183833244,
+"rent_index": 114.5730830825771
+},
+{
+"date": "2010-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 10.092502427151503,
+"property_value_index": 138.92181714862448,
+"rent_index": 115.06168093686074
+},
+{
+"date": "2011-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 10.875443674182424,
+"property_value_index": 139.8947593886394,
+"rent_index": 115.70110449073444
+},
+{
+"date": "2011-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 11.108247824525968,
+"property_value_index": 142.0008264848426,
+"rent_index": 117.07196946407365
+},
+{
+"date": "2011-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 10.60757453739182,
+"property_value_index": 144.53953307590007,
+"rent_index": 117.8043568654965
+},
+{
+"date": "2011-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 10.2096866403045,
+"property_value_index": 145.9293074446506,
+"rent_index": 118.92979501733682
+},
+{
+"date": "2012-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 8.325272548069751,
+"property_value_index": 146.4289635596293,
+"rent_index": 119.73814574529322
+},
+{
+"date": "2012-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 8.885971820949269,
+"property_value_index": 147.14874012586944,
+"rent_index": 120.42556031531568
+},
+{
+"date": "2012-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 9.56911981252114,
+"property_value_index": 148.2264067570317,
+"rent_index": 120.9665722286131
+},
+{
+"date": "2012-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 9.36965186515397,
+"property_value_index": 149.50967285827298,
+"rent_index": 121.4773932180767
+},
+{
+"date": "2013-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 8.48162469305488,
+"property_value_index": 150.22651113759147,
+"rent_index": 122.6835966811512
+},
+{
+"date": "2013-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 7.509815809756025,
+"property_value_index": 151.53963016392396,
+"rent_index": 123.53336464866844
+},
+{
+"date": "2013-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 10.14549801977374,
+"property_value_index": 152.4802506684374,
+"rent_index": 123.77652567393967
+},
+{
+"date": "2013-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 11.84259632742414,
+"property_value_index": 153.85290534683807,
+"rent_index": 124.423831175087
+},
+{
+"date": "2014-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 11.533399652909289,
+"property_value_index": 155.64054714799113,
+"rent_index": 125.66079740753152
+},
+{
+"date": "2014-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 12.68442061750457,
+"property_value_index": 156.8320654000363,
+"rent_index": 126.37836368243464
+},
+{
+"date": "2014-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.322421355279968,
+"property_value_index": 158.1669392611987,
+"rent_index": 127.3994829772018
+},
+{
+"date": "2014-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 12.728965458961849,
+"property_value_index": 160.83970679504648,
+"rent_index": 129.03828986941622
+},
+{
+"date": "2015-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.07545819558851,
+"property_value_index": 162.39897150895385,
+"rent_index": 129.2197047117244
+},
+{
+"date": "2015-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.006826163840056,
+"property_value_index": 163.47880467593498,
+"rent_index": 130.01920698899028
+},
+{
+"date": "2015-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.581634734004444,
+"property_value_index": 165.2168050851981,
+"rent_index": 130.95431127311247
+},
+{
+"date": "2015-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.243212907811422,
+"property_value_index": 165.2680740983228,
+"rent_index": 131.29593755202075
+},
+{
+"date": "2016-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.005895027575676,
+"property_value_index": 165.86405407745926,
+"rent_index": 132.50447925632835
+},
+{
+"date": "2016-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 18.05362893640283,
+"property_value_index": 167.27147266771038,
+"rent_index": 133.93100636414485
+},
+{
+"date": "2016-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.03239188683831,
+"property_value_index": 168.72232664015547,
+"rent_index": 134.39853966753734
+},
+{
+"date": "2016-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.08875898055119,
+"property_value_index": 168.71702621572976,
+"rent_index": 134.67227523910074
+},
+{
+"date": "2017-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.284800181946489,
+"property_value_index": 169.89931665749734,
+"rent_index": 135.35823535855516
+},
+{
+"date": "2017-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.69756994252988,
+"property_value_index": 171.13857232471307,
+"rent_index": 135.9851003834018
+},
+{
+"date": "2017-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.884988257318987,
+"property_value_index": 173.03361075165049,
+"rent_index": 136.4456728741469
+},
+{
+"date": "2017-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.71395339465235,
+"property_value_index": 174.2520575312549,
+"rent_index": 137.33302605066714
+},
+{
+"date": "2018-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.31885525404019,
+"property_value_index": 173.5798083579769,
+"rent_index": 137.32853285143608
+},
+{
+"date": "2018-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 12.23732226200973,
+"property_value_index": 174.79779348653366,
+"rent_index": 138.06083178422315
+},
+{
+"date": "2018-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 12.116333438416529,
+"property_value_index": 176.2393261442732,
+"rent_index": 138.9754669504077
+},
+{
+"date": "2018-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 10.806086516458093,
+"property_value_index": 177.1057484989451,
+"rent_index": 139.91244014854033
+},
+{
+"date": "2019-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 10.968327738316836,
+"property_value_index": 178.56849180873166,
+"rent_index": 140.35819294702645
+},
+{
+"date": "2019-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 9.928546537422845,
+"property_value_index": 180.02887847322694,
+"rent_index": 141.59227402840116
+},
+{
+"date": "2019-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 7.991032107983581,
+"property_value_index": 181.0527178959577,
+"rent_index": 142.03202898048363
+},
+{
+"date": "2019-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 8.454177953723592,
+"property_value_index": 182.75909577231664,
+"rent_index": 142.99435880927263
+},
+{
+"date": "2020-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.46423084968716,
+"property_value_index": 183.70712894655327,
+"rent_index": 144.35768471677005
+},
+{
+"date": "2020-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.443038360529478,
+"property_value_index": 184.85748869142495,
+"rent_index": 145.1628185334212
+},
+{
+"date": "2020-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.215041607815111,
+"property_value_index": 185.44979526710165,
+"rent_index": 145.41460323936892
+},
+{
+"date": "2020-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 14.535220650003472,
+"property_value_index": 185.442125997047,
+"rent_index": 146.21190739567106
+},
+{
+"date": "2021-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.56970787734114,
+"property_value_index": 185.54556097583335,
+"rent_index": 146.3988619498142
+},
+{
+"date": "2021-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.910524145564269,
+"property_value_index": 185.980806702134,
+"rent_index": 147.22051753226756
+},
+{
+"date": "2021-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.418020118836722,
+"property_value_index": 185.84808101559003,
+"rent_index": 148.57963220409238
+},
+{
+"date": "2021-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.95517200650268,
+"property_value_index": 187.37214006676817,
+"rent_index": 148.96876921504503
+},
+{
+"date": "2022-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.910122798383773,
+"property_value_index": 187.6190941792744,
+"rent_index": 149.37247150039346
+},
+{
+"date": "2022-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.078754798591005,
+"property_value_index": 188.33130049297105,
+"rent_index": 150.0125169659667
+},
+{
+"date": "2022-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 13.47159898008571,
+"property_value_index": 189.5963281967888,
+"rent_index": 151.0896114481002
+},
+{
+"date": "2022-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 16.01206252843039,
+"property_value_index": 190.1339923682982,
+"rent_index": 151.55334264426622
+},
+{
+"date": "2023-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.88906273334922,
+"property_value_index": 189.78642619683512,
+"rent_index": 152.31033985395686
+},
+{
+"date": "2023-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 15.428853476359803,
+"property_value_index": 190.44800324723255,
+"rent_index": 152.58039712852587
+},
+{
+"date": "2023-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 17.04090737447542,
+"property_value_index": 191.6592218564867,
+"rent_index": 153.71699727930104
+},
+{
+"date": "2023-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 18.88073272663717,
+"property_value_index": 192.0750730501918,
+"rent_index": 154.23093700051038
+},
+{
+"date": "2024-03-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 18.833931165087662,
+"property_value_index": 191.291901944824,
+"rent_index": 154.87753719244515
+},
+{
+"date": "2024-06-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 19.56328301085565,
+"property_value_index": 192.46899452613496,
+"rent_index": 155.59081842877407
+},
+{
+"date": "2024-09-30",
+"city": "San Francisco",
+"vacancy_rate_pct": 20.18825352360301,
+"property_value_index": 192.4291574056171,
+"rent_index": 156.34251115201755
+},
+{
+"date": "2024-12-31",
+"city": "San Francisco",
+"vacancy_rate_pct": 21.16159616228319,
+"property_value_index": 193.3848185359715,
+"rent_index": 156.80551173647
+},
+{
+"date": "2005-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.858535899874964,
+"property_value_index": 110.03903440161749,
+"rent_index": 100.54674332400936
+},
+{
+"date": "2005-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 12.986415027237348,
+"property_value_index": 111.37610843083144,
+"rent_index": 101.04084362048228
+},
+{
+"date": "2005-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.296726384985265,
+"property_value_index": 112.39569974493855,
+"rent_index": 100.87608126527324
+},
+{
+"date": "2005-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.591196470965256,
+"property_value_index": 113.00641816398624,
+"rent_index": 101.47392223819604
+},
+{
+"date": "2006-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.061470678527304,
+"property_value_index": 113.19581388515344,
+"rent_index": 102.36963366804471
+},
+{
+"date": "2006-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.24297754317939,
+"property_value_index": 115.16738996379632,
+"rent_index": 103.31425125099464
+},
+{
+"date": "2006-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.40419994527487,
+"property_value_index": 118.0245688250402,
+"rent_index": 103.96166451071942
+},
+{
+"date": "2006-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 17.186879715234106,
+"property_value_index": 117.87456043227677,
+"rent_index": 105.05670673101142
+},
+{
+"date": "2007-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.115755983522195,
+"property_value_index": 118.55413021322214,
+"rent_index": 106.55945812577627
+},
+{
+"date": "2007-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 17.09353362611269,
+"property_value_index": 119.41954841606643,
+"rent_index": 107.5340173515374
+},
+{
+"date": "2007-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 17.584574561982123,
+"property_value_index": 120.28378562408278,
+"rent_index": 108.46634423318044
+},
+{
+"date": "2007-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.074351029327573,
+"property_value_index": 121.32378999968356,
+"rent_index": 108.7955801502422
+},
+{
+"date": "2008-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.95231391463495,
+"property_value_index": 124.05907331730428,
+"rent_index": 110.08718888828972
+},
+{
+"date": "2008-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 17.369267681853888,
+"property_value_index": 124.14524381369,
+"rent_index": 110.78006111363794
+},
+{
+"date": "2008-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.565222393358358,
+"property_value_index": 125.42741425766108,
+"rent_index": 111.573244667473
+},
+{
+"date": "2008-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 17.01769637708878,
+"property_value_index": 126.21418524483816,
+"rent_index": 112.84119482059592
+},
+{
+"date": "2009-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.074459877230934,
+"property_value_index": 127.82029384379216,
+"rent_index": 113.37526551358296
+},
+{
+"date": "2009-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.23868032040269,
+"property_value_index": 129.2660689651848,
+"rent_index": 113.37154487196663
+},
+{
+"date": "2009-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.67701613084578,
+"property_value_index": 129.9813306924379,
+"rent_index": 114.3238601490326
+},
+{
+"date": "2009-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.149697266144628,
+"property_value_index": 130.86206372440816,
+"rent_index": 115.03195490482976
+},
+{
+"date": "2010-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.925613196684678,
+"property_value_index": 131.37396556006914,
+"rent_index": 115.38229607461984
+},
+{
+"date": "2010-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.106497197693628,
+"property_value_index": 133.24089984981111,
+"rent_index": 116.11149508124608
+},
+{
+"date": "2010-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 12.420980001803434,
+"property_value_index": 133.6545077358495,
+"rent_index": 116.94695731784589
+},
+{
+"date": "2010-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.229201038305424,
+"property_value_index": 135.17301188866216,
+"rent_index": 117.2577465410707
+},
+{
+"date": "2011-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 9.845278726329935,
+"property_value_index": 135.36317930594402,
+"rent_index": 118.142222385487
+},
+{
+"date": "2011-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.334853607310665,
+"property_value_index": 136.34235414238634,
+"rent_index": 119.08380319292688
+},
+{
+"date": "2011-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.060898521639492,
+"property_value_index": 137.3529578791189,
+"rent_index": 119.4035215254568
+},
+{
+"date": "2011-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 10.20016337451736,
+"property_value_index": 139.59681808275252,
+"rent_index": 120.32777225763738
+},
+{
+"date": "2012-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 10.580282295280345,
+"property_value_index": 141.4912317164945,
+"rent_index": 121.40265690959968
+},
+{
+"date": "2012-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 9.973995152512831,
+"property_value_index": 141.37553051697083,
+"rent_index": 121.74156928869442
+},
+{
+"date": "2012-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 9.31660070649104,
+"property_value_index": 141.54781427979233,
+"rent_index": 122.38234898620128
+},
+{
+"date": "2012-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 8.779292355189556,
+"property_value_index": 142.17510605569686,
+"rent_index": 122.87488684743974
+},
+{
+"date": "2013-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.72376938970114,
+"property_value_index": 142.12794855385667,
+"rent_index": 123.64398543558964
+},
+{
+"date": "2013-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 9.7568588189137,
+"property_value_index": 143.23551295223464,
+"rent_index": 124.02063890289024
+},
+{
+"date": "2013-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 12.852178413428236,
+"property_value_index": 144.1177321627681,
+"rent_index": 125.44701714830738
+},
+{
+"date": "2013-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.757635413430354,
+"property_value_index": 144.3719677128948,
+"rent_index": 126.1316224967833
+},
+{
+"date": "2014-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 12.833190547426026,
+"property_value_index": 145.60307375630725,
+"rent_index": 126.72339140764008
+},
+{
+"date": "2014-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.68901777773649,
+"property_value_index": 145.98703959462182,
+"rent_index": 127.32476370441144
+},
+{
+"date": "2014-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.285891660453988,
+"property_value_index": 148.46421055132106,
+"rent_index": 128.44511258894735
+},
+{
+"date": "2014-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.341989771389374,
+"property_value_index": 149.08964450013292,
+"rent_index": 128.93053873314557
+},
+{
+"date": "2015-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.164925712396151,
+"property_value_index": 150.3612826709059,
+"rent_index": 129.96308718732465
+},
+{
+"date": "2015-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.883112918724205,
+"property_value_index": 151.49819120509898,
+"rent_index": 130.66226294121026
+},
+{
+"date": "2015-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.353514409279702,
+"property_value_index": 152.3376323871209,
+"rent_index": 131.19984565890667
+},
+{
+"date": "2015-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.745344494989723,
+"property_value_index": 153.71887076418585,
+"rent_index": 132.04711409693948
+},
+{
+"date": "2016-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.576584919686642,
+"property_value_index": 154.62178908979962,
+"rent_index": 132.4849907258744
+},
+{
+"date": "2016-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.8060929196621,
+"property_value_index": 155.51853893297738,
+"rent_index": 133.6116492109642
+},
+{
+"date": "2016-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.884246610890054,
+"property_value_index": 155.49020020993532,
+"rent_index": 134.51365324255798
+},
+{
+"date": "2016-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.465506643597138,
+"property_value_index": 156.02660321134618,
+"rent_index": 134.87313140974965
+},
+{
+"date": "2017-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.914238140926376,
+"property_value_index": 158.00938730594282,
+"rent_index": 135.70953357120243
+},
+{
+"date": "2017-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.16085923806801,
+"property_value_index": 159.9065897977256,
+"rent_index": 136.88312818423162
+},
+{
+"date": "2017-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.722654005315476,
+"property_value_index": 161.49359673225092,
+"rent_index": 136.76959182213102
+},
+{
+"date": "2017-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.845800472020915,
+"property_value_index": 162.28864732092086,
+"rent_index": 137.5181025919216
+},
+{
+"date": "2018-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.751213835427828,
+"property_value_index": 163.57865353795074,
+"rent_index": 138.28233218303728
+},
+{
+"date": "2018-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.44165072984246,
+"property_value_index": 163.46482564407236,
+"rent_index": 138.0989696958259
+},
+{
+"date": "2018-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 12.152893312175443,
+"property_value_index": 164.17456639181398,
+"rent_index": 138.2134652960794
+},
+{
+"date": "2018-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 11.907968294375737,
+"property_value_index": 165.67240440220294,
+"rent_index": 138.8106699246048
+},
+{
+"date": "2019-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 10.178314254963022,
+"property_value_index": 166.41032428508427,
+"rent_index": 139.32438348409295
+},
+{
+"date": "2019-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 10.128756545966509,
+"property_value_index": 167.6074401178027,
+"rent_index": 139.3033801687267
+},
+{
+"date": "2019-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 8.991343221138843,
+"property_value_index": 167.50543143613177,
+"rent_index": 140.2148942456599
+},
+{
+"date": "2019-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 9.52342104653006,
+"property_value_index": 169.80177330458997,
+"rent_index": 140.4552565191436
+},
+{
+"date": "2020-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.991055110865588,
+"property_value_index": 169.8743794924691,
+"rent_index": 140.91987632221873
+},
+{
+"date": "2020-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.730128051218053,
+"property_value_index": 171.16157867663742,
+"rent_index": 141.16535650370852
+},
+{
+"date": "2020-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.221550450808968,
+"property_value_index": 171.2972658392672,
+"rent_index": 141.91976966647658
+},
+{
+"date": "2020-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.791328540344962,
+"property_value_index": 171.6780165877447,
+"rent_index": 143.19540712096372
+},
+{
+"date": "2021-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.800509347203702,
+"property_value_index": 171.80981265241013,
+"rent_index": 144.16549200199134
+},
+{
+"date": "2021-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.47416529633043,
+"property_value_index": 171.73257822594164,
+"rent_index": 144.5395853373551
+},
+{
+"date": "2021-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.996379995089365,
+"property_value_index": 171.74969671355183,
+"rent_index": 145.96137483649062
+},
+{
+"date": "2021-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.55550986762706,
+"property_value_index": 171.31511433680615,
+"rent_index": 147.33180146228466
+},
+{
+"date": "2022-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.880646766414758,
+"property_value_index": 172.43570415289523,
+"rent_index": 147.80551436678928
+},
+{
+"date": "2022-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.048105616651704,
+"property_value_index": 173.31483788047086,
+"rent_index": 148.1468579028378
+},
+{
+"date": "2022-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 13.77670755299353,
+"property_value_index": 174.33073905839024,
+"rent_index": 148.43567420855527
+},
+{
+"date": "2022-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 15.360038898028725,
+"property_value_index": 173.34706464198356,
+"rent_index": 148.25806774402773
+},
+{
+"date": "2023-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 14.940714154514549,
+"property_value_index": 174.20274415252285,
+"rent_index": 148.45454747277165
+},
+{
+"date": "2023-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 18.02358780876156,
+"property_value_index": 174.3246195670692,
+"rent_index": 149.45429877609368
+},
+{
+"date": "2023-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 16.94607379938887,
+"property_value_index": 175.2246642504754,
+"rent_index": 150.5765072786389
+},
+{
+"date": "2023-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 17.36285140196713,
+"property_value_index": 175.9796839333495,
+"rent_index": 151.03080730235092
+},
+{
+"date": "2024-03-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 17.85586098508566,
+"property_value_index": 176.04740119553222,
+"rent_index": 151.3382390307326
+},
+{
+"date": "2024-06-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 20.58922080201333,
+"property_value_index": 175.82258295191588,
+"rent_index": 152.1882646510017
+},
+{
+"date": "2024-09-30",
+"city": "Washington DC",
+"vacancy_rate_pct": 19.2622010462221,
+"property_value_index": 176.1898547425103,
+"rent_index": 153.7273405025273
+},
+{
+"date": "2024-12-31",
+"city": "Washington DC",
+"vacancy_rate_pct": 20.868119209487887,
+"property_value_index": 175.67703102051124,
+"rent_index": 154.5566519377376
+}
+]

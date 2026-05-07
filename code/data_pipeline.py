@@ -28,6 +28,7 @@ class CityConfig:
 CITY_CONFIGS: tuple[CityConfig, ...] = (
     CityConfig(city="San Francisco", city_code="SFO", state="CA"),
     CityConfig(city="New York", city_code="NYC", state="NY"),
+    CityConfig(city="Washington DC", city_code="DCA", state="DC"),
 )
 
 
@@ -55,7 +56,7 @@ def _synthetic_city_series(
 ) -> pd.DataFrame:
     """Generate a plausible quarterly city-level office market panel."""
     rng = np.random.default_rng(seed + hash(city_config.city_code) % 10_000)
-    dates = pd.date_range(start=start, periods=periods, freq="Q")
+    dates = pd.date_range(start=start, periods=periods, freq="QE")
     t = np.arange(periods)
 
     # Demand downshift post-2020 proxy with cyclical structure.
@@ -113,7 +114,7 @@ def build_synthetic_panel(cities: Iterable[CityConfig] = CITY_CONFIGS) -> pd.Dat
     """Create synthetic panel data for all configured cities."""
     frames = [_synthetic_city_series(city) for city in cities]
     panel = pd.concat(frames, ignore_index=True)
-    panel["period"] = panel["date"].dt.to_period("Q").astype(str)
+    panel["period"] = panel["date"].dt.to_period("Q").astype(str)  # period label still uses Q
     return panel.sort_values(["city", "date"]).reset_index(drop=True)
 
 
