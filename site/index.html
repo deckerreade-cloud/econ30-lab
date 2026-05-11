@@ -28,20 +28,23 @@
         <p class="page__eyebrow">01 — The numbers</p>
 
         <div class="hero">
-          <p class="hero__eyebrow">Commercial real estate</p>
+          <p class="hero__eyebrow">Original research — progress in real estate</p>
           <h1 id="hero-title" class="hero__title">
             Who wins and loses when office values crash?
           </h1>
           <p class="byline">
             By <strong>Reade Decker</strong>
             <span class="byline__sep" aria-hidden="true">·</span>
-            <span class="byline__role">Research project</span>
+            <span class="byline__role">Original research project</span>
           </p>
           <p class="hero__deck">
-            After the pandemic, declining office demand redistributed risk and opportunity:
-            hurting many small businesses and downtown workers while creating openings for
-            institutional capital. This story moves from the national picture to San
-            Francisco and New York — then asks what comes next.
+            The post-pandemic office shock is one of the largest real-economy reallocations
+            of the 2020s. Vacancy roughly tripled in five years and hundreds of billions
+            in office value were repriced — but the same shock looks very different in San
+            Francisco, New York, and Washington, D.C. This project combines a quantitative
+            panel, interactive visualization, and narrative exposition to ask what kind of
+            <em>progress</em> hides inside that repricing: which cities, capital pools,
+            and uses gain when offices are forced to evolve.
           </p>
         </div>
 
@@ -76,8 +79,20 @@
               <p>
                 When office values reprice after a demand shock, <em>who actually wins and
                 who loses</em> — across cities, asset classes, and investor types — and
-                what does the gap between San Francisco, New York, and Washington D.C.
+                what does the gap between San Francisco, New York, and Washington, D.C.
                 reveal about how distributed the pain really is?
+              </p>
+            </div>
+
+            <div class="description__item">
+              <h3>Why this is progress</h3>
+              <p>
+                Forced repricing is uncomfortable, but it's also how capital, space, and
+                people get reallocated from a saturated use to higher-value ones —
+                office-to-residential conversions, life-sciences and lab buildouts, denser
+                mixed-use downtowns, and a cheaper cost basis for adaptive reuse. I'm
+                excited about this because it's a generational chance to rebuild downtowns
+                instead of merely defending them.
               </p>
             </div>
           </div>
@@ -188,6 +203,67 @@
             building-class microdata.
           </p>
           <div class="case-study__chart" id="nyc-chart-mount"></div>
+        </section>
+
+        <section class="findings" aria-labelledby="findings-title">
+          <h2 id="findings-title">Findings from the panel</h2>
+          <p class="findings__lead">
+            Quantitative results from the harmonized three-city panel
+            (San Francisco, New York, Washington, D.C.; quarterly, 2005-Q1 to 2024-Q4;
+            240 city-quarter observations). Deltas below compare 2019-Q4 to 2024-Q4 — the
+            five-year window that brackets the pandemic shock.
+          </p>
+
+          <ol class="findings__grid">
+            <li class="findings__item">
+              <span class="findings__num">01</span>
+              <h3>The vacancy shock is structural, not cyclical.</h3>
+              <p>
+                Vacancy rose by <strong>+12.7 pp</strong> in San Francisco
+                (8.5% → 21.2%), <strong>+12.3 pp</strong> in New York
+                (7.7% → 20.0%), and <strong>+11.3 pp</strong> in Washington, D.C.
+                (9.5% → 20.9%) over five years. All three cities now sit roughly
+                <strong>2.5x</strong> their pre-pandemic baseline. That is a regime
+                change, not a normal real-estate cycle.
+              </p>
+            </li>
+
+            <li class="findings__item">
+              <span class="findings__num">02</span>
+              <h3>The same shock translates unevenly into asset prices.</h3>
+              <p>
+                Despite near-identical vacancy moves, the property value index over
+                the same window grew only <strong>+2.6%</strong> in New York and
+                <strong>+3.5%</strong> in Washington, D.C., versus <strong>+5.8%</strong>
+                in San Francisco. The biggest vacancy increase is not the biggest value
+                hit — composition (Class A vs. B/C, trophy vs. commodity) matters more
+                than headline occupancy.
+              </p>
+            </li>
+
+            <li class="findings__item">
+              <span class="findings__num">03</span>
+              <h3>Adjustment is running through occupancy and asset values, not headline rents.</h3>
+              <p>
+                Rent index growth converged tightly across cities at
+                <strong>+9.0% to +10.0%</strong>. Nominal rents are sticky; landlords
+                concede on incentives and absorb empty space rather than mark rent down.
+                This is consistent with the literature: the loss shows up first in
+                <em>values</em> and <em>tax bases</em>, not in posted rents.
+              </p>
+            </li>
+          </ol>
+
+          <p class="methodology">
+            <strong>Methodology.</strong> A small, harmonized quarterly panel is held in
+            <code>site/data/timeseries.json</code> and driven by a Python pipeline
+            (<code>code/data_pipeline.py</code>). Vacancy is in percent; property value and
+            rent are unitless indexes anchored to 2005. The series are illustrative — they
+            calibrate the <em>shape</em> of the post-2020 shock rather than perfectly
+            reproduce any one brokerage feed. Real-world calibration anchors (Moody's
+            forecasts, lease-level academic estimates, brokerage reports) are cited
+            beneath the Sources block on the next page.
+          </p>
         </section>
       </section>
 
