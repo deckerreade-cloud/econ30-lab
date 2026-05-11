@@ -1,5 +1,5 @@
 /**
- * Scroll-driven narrative: Scrollama steps + section visibility.
+ * Static 3-section narrative: stat strip, dashboard, case-study charts.
  * D3 charts loaded from charts.js / dashboard.js.
  */
 
@@ -9,14 +9,6 @@ import { initDashboard } from "./dashboard.js";
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
-
-const scrollama = typeof window !== "undefined" && window.scrollama;
-if (typeof scrollama !== "function") {
-  throw new Error("Scrollama not loaded. Include scrollama.min.js before the module.");
-}
-
-/** @type {Map<string, ReturnType<createLineChart> | ReturnType<createSmallMultiples> | null>} */
-const graphicCharts = new Map();
 
 async function loadCurated() {
   const res = await fetch(new URL("../data/curated.json", import.meta.url));
@@ -74,30 +66,25 @@ function escapeAttr(s) {
   return escapeHtml(s).replace(/'/g, "&#39;");
 }
 
-function setupScrollyGraphic(containerId, stepSelector, onStep) {
-  const container = document.getElementById(containerId);
-  const graphic = container?.querySelector(".scrolly__graphic-inner");
-  const steps = container?.querySelectorAll(stepSelector);
-  if (!container || !graphic || !steps?.length) return;
-
-  const scroller = scrollama();
-  scroller.setup({
-    step: steps,
-    offset: 0.6,
-    debug: false,
-  });
-  scroller.onStepEnter((response) => {
-    steps.forEach((s) => s.classList.remove("is-active"));
-    response.element.classList.add("is-active");
-    const stepId = response.element.dataset.step;
-    onStep(stepId, graphic, response.index);
-  });
-
-  function resize() {
-    scroller.resize();
+function renderCaseStudyCharts(timeseries) {
+  const sfMount = document.getElementById("sf-chart-mount");
+  if (sfMount) {
+    const chart = createLineChart(sfMount, {
+      yKey: "vacancy_rate_pct",
+      yLabel: "Vacancy %",
+      color: "#f26b5e",
+      animate: !prefersReducedMotion,
+    });
+    chart.setData(timeseries.filter((d) => d.city === "San Francisco"));
   }
-  window.addEventListener("resize", resize);
-  resize();
+
+  const nycMount = document.getElementById("nyc-chart-mount");
+  if (nycMount) {
+    const chart = createSmallMultiples(nycMount, {
+      animate: !prefersReducedMotion,
+    });
+    chart.setData(timeseries.filter((d) => d.city === "New York"));
+  }
 }
 
 async function main() {
@@ -108,45 +95,7 @@ async function main() {
 
   fillStatPlaceholders(curated);
   renderLists(curated);
-
-  // SF / NYC scrolly graphics: mount chart containers once visible
-  setupScrollyGraphic("scrolly-sf", ".scrolly__step", (stepId, graphic) => {
-    if (stepId === "sf-chart") {
-      graphic.innerHTML = '<div id="sf-spark-mount" style="width:100%;min-height:280px"></div>';
-      const mount = graphic.querySelector("#sf-spark-mount");
-      if (mount) {
-        const sf = timeseries.filter((d) => d.city === "San Francisco");
-        const chart = createLineChart(mount, {
-          yKey: "vacancy_rate_pct",
-          yLabel: "Vacancy %",
-          color: "#f26b5e",
-          animate: !prefersReducedMotion,
-        });
-        chart.setData(sf);
-        graphicCharts.set("sf-scroll", chart);
-      }
-    } else if (stepId === "sf-text") {
-      graphic.innerHTML = `<p style="color:var(--text-muted);text-align:center;max-width:28rem;margin:0 auto;font-size:1rem;line-height:1.5">${curated.sf?.headline ?? ""}</p>`;
-    }
-  });
-
-  setupScrollyGraphic("scrolly-nyc", ".scrolly__step", (stepId, graphic) => {
-    if (stepId === "nyc-chart") {
-      graphic.innerHTML = '<div id="nyc-multiples-mount" style="width:100%;min-height:280px"></div>';
-      const mount = graphic.querySelector("#nyc-multiples-mount");
-      if (mount) {
-        const nyc = timeseries.filter((d) => d.city === "New York");
-        const chart = createSmallMultiples(mount, {
-          animate: !prefersReducedMotion,
-        });
-        chart.setData(nyc);
-        graphicCharts.set("nyc-scroll", chart);
-      }
-    } else if (stepId === "nyc-text") {
-      graphic.innerHTML = `<p style="color:var(--text-muted);text-align:center;max-width:28rem;margin:0 auto;font-size:1rem;line-height:1.5">${curated.nyc?.headline ?? ""}</p>`;
-    }
-  });
-
+  renderCaseStudyCharts(timeseries);
   initDashboard(timeseries, { animate: !prefersReducedMotion });
 }
 

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Who Wins and Loses When Office Values Crash</title>
+    <title>Who Wins and Loses When Office Values Crash — Reade Decker</title>
     <meta
       name="description"
-      content="A scroll-driven look at post-pandemic office markets, San Francisco and New York case studies, and who gains when commercial real estate reprices."
+      content="A static three-section look at post-pandemic office markets, San Francisco and New York case studies, and who gains when commercial real estate reprices. By Reade Decker."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,210 +23,216 @@
     </header>
 
     <main id="main">
-      <!-- 1 Hero -->
-      <section class="hero" aria-labelledby="hero-title">
-        <p class="hero__eyebrow">Commercial real estate</p>
-        <h1 id="hero-title" class="hero__title">
-          Who wins and loses when office values crash?
-        </h1>
-        <p class="hero__deck">
-          After the pandemic, declining office demand redistributed risk and opportunity:
-          hurting many small businesses and downtown workers while creating openings for
-          institutional capital. This story moves from the national picture to San
-          Francisco and New York — then asks what comes next.
-        </p>
-        <p class="hero__scroll" aria-hidden="true">Scroll</p>
-      </section>
+      <!-- Page 1: Headline numbers + project description -->
+      <section class="page" id="page-1" aria-labelledby="hero-title">
+        <p class="page__eyebrow">01 — The numbers</p>
 
-      <!-- 2 National stat strip -->
-      <section class="stat-strip" aria-label="National headline statistics">
-        <div class="stat-strip__inner">
-          <div class="stat-strip__grid">
-            <div class="stat">
-              <div class="stat__value" data-stat="officeVacancyQ1Pct">19.6%</div>
-              <div class="stat__label">U.S. office vacancy (Q1 2025)</div>
-            </div>
-            <div class="stat stat--neutral">
-              <div class="stat__value" data-stat="moodysVacancyPeakPct">24%</div>
-              <div class="stat__label">Moody’s peak vacancy scenario</div>
-            </div>
-            <div class="stat">
-              <div class="stat__value" data-stat="nationwideValueDestruction">$556.8B</div>
-              <div class="stat__label">Illustrative nationwide office value destruction (literature)</div>
-            </div>
-            <div class="stat stat--neutral">
-              <div class="stat__value" data-stat="sfOfficeVacancyMajorCities">22.65%</div>
-              <div class="stat__label">SF vacancy context (major-city stat pack)</div>
-            </div>
-          </div>
+        <div class="hero">
+          <p class="hero__eyebrow">Commercial real estate</p>
+          <h1 id="hero-title" class="hero__title">
+            Who wins and loses when office values crash?
+          </h1>
+          <p class="byline">
+            By <strong>Reade Decker</strong>
+            <span class="byline__sep" aria-hidden="true">·</span>
+            <span class="byline__role">Research project</span>
+          </p>
+          <p class="hero__deck">
+            After the pandemic, declining office demand redistributed risk and opportunity:
+            hurting many small businesses and downtown workers while creating openings for
+            institutional capital. This story moves from the national picture to San
+            Francisco and New York — then asks what comes next.
+          </p>
         </div>
-      </section>
 
-      <p class="callout callout--loser">
-        Lease-level study estimates a
-        <strong data-stat="nycLongRunDecline">46%</strong> long-run decline in NYC office
-        values.
-      </p>
+        <section class="description" aria-labelledby="about-title">
+          <h2 id="about-title" class="description__title">About this project</h2>
 
-      <!-- 3 Dashboard -->
-      <section class="dashboard-section" aria-labelledby="dash-title">
-        <h2 id="dash-title">Compare cities</h2>
-        <p class="lead">
-          Toggle San Francisco, New York, or Washington, D.C. Vacancy, property value
-          index, and rent index animate from the shared synthetic panel (three cities,
-          same frequency).
-        </p>
-        <div class="dashboard-sticky">
-          <div class="city-toggle" role="group" aria-label="Select city">
-            <button type="button" data-city="San Francisco" aria-pressed="true">
-              San Francisco
-            </button>
-            <button type="button" data-city="New York" aria-pressed="false">
-              New York
-            </button>
-            <button type="button" data-city="Washington DC" aria-pressed="false">
-              Washington DC
-            </button>
-          </div>
-          <div class="dashboard-charts">
-            <div class="chart-panel" data-metric="vacancy">
-              <h3>Vacancy</h3>
-              <div class="chart-panel__svg" aria-hidden="true"></div>
-            </div>
-            <div class="chart-panel" data-metric="value">
-              <h3>Property value</h3>
-              <div class="chart-panel__svg" aria-hidden="true"></div>
-            </div>
-            <div class="chart-panel" data-metric="rent">
-              <h3>Rent index</h3>
-              <div class="chart-panel__svg" aria-hidden="true"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4 SF case -->
-      <div id="scrolly-sf" class="scrolly">
-        <div class="scrolly__graphic">
-          <div class="scrolly__graphic-inner" id="sf-graphic">
-            <p
-              style="
-                color: var(--text-muted);
-                text-align: center;
-                max-width: 28rem;
-                margin: 0 auto;
-              "
-            >
-              San Francisco: extreme vacancy and a long fiscal shadow on downtown.
-            </p>
-          </div>
-        </div>
-        <div class="scrolly__steps">
-          <div class="scrolly__step is-active" data-step="sf-text">
-            <div class="scrolly__step-inner">
-              <h2>Case study: San Francisco</h2>
+          <div class="description__grid">
+            <div class="description__item">
+              <h3>Context</h3>
               <p>
-                Tech-heavy remote adoption hit San Francisco early and hard. Market
-                reports document sustained stress; policy voices argue recovery requires
-                deliberate action — not just market time.
+                U.S. office vacancy is at multi-decade highs and Moody's projects a peak
+                around 24% in 2026. The shock is uneven: tech-heavy downtowns (San
+                Francisco) and large monocentric office markets (Manhattan, Washington
+                D.C.) absorb very different hits, with knock-on effects on city tax bases,
+                small business foot traffic, and lender balance sheets.
+              </p>
+            </div>
+
+            <div class="description__item">
+              <h3>Literature</h3>
+              <p>
+                The project draws on lease-level work by Gupta, Mittal, and Van Nieuwerburgh
+                on long-run office value declines (a leading estimate puts NYC at ~46%),
+                Moody's Analytics vacancy forecasts, Cushman &amp; Wakefield and Colliers
+                market reports, the NYC Comptroller's doom-loop / boom-loop framing, and
+                J.P. Morgan research on bank exposure to commercial real estate.
+              </p>
+            </div>
+
+            <div class="description__item">
+              <h3>Research question</h3>
+              <p>
+                When office values reprice after a demand shock, <em>who actually wins and
+                who loses</em> — across cities, asset classes, and investor types — and
+                what does the gap between San Francisco, New York, and Washington D.C.
+                reveal about how distributed the pain really is?
               </p>
             </div>
           </div>
-          <div class="scrolly__step" data-step="sf-chart">
-            <div class="scrolly__step-inner">
-              <h2>Vacancy trajectory</h2>
-              <p>
-                The chart below uses the project’s harmonized synthetic panel (for
-                shape and teaching) — pair it with Colliers / SPUR PDFs in Sources for
-                real-world calibration.
-              </p>
+        </section>
+
+        <section class="stat-strip" aria-label="National headline statistics">
+          <div class="stat-strip__inner">
+            <div class="stat-strip__grid">
+              <div class="stat">
+                <div class="stat__value" data-stat="officeVacancyQ1Pct">19.6%</div>
+                <div class="stat__label">U.S. office vacancy (Q1 2025)</div>
+              </div>
+              <div class="stat stat--neutral">
+                <div class="stat__value" data-stat="moodysVacancyPeakPct">24%</div>
+                <div class="stat__label">Moody's peak vacancy scenario</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value" data-stat="nationwideValueDestruction">$556.8B</div>
+                <div class="stat__label">Illustrative nationwide office value destruction (literature)</div>
+              </div>
+              <div class="stat stat--neutral">
+                <div class="stat__value" data-stat="sfOfficeVacancyMajorCities">22.65%</div>
+                <div class="stat__label">SF vacancy context (major-city stat pack)</div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- 5 NYC case -->
-      <div id="scrolly-nyc" class="scrolly">
-        <div class="scrolly__graphic">
-          <div class="scrolly__graphic-inner" id="nyc-graphic">
-            <p
-              style="
-                color: var(--text-muted);
-                text-align: center;
-                max-width: 28rem;
-                margin: 0 auto;
-              "
-            >
-              New York: a fight between “doom loop” fiscal narratives and “boom loop”
-              pockets of strength.
-            </p>
-          </div>
-        </div>
-        <div class="scrolly__steps">
-          <div class="scrolly__step is-active" data-step="nyc-text">
-            <div class="scrolly__step-inner">
-              <h2>Case study: New York City</h2>
-              <p>
-                NYC’s scale and tax base change the arithmetic. The Comptroller’s
-                framing — doom loop vs. boom loop — captures how simultaneous distress
-                and selective strength can coexist in one market.
-              </p>
-            </div>
-          </div>
-          <div class="scrolly__step" data-step="nyc-chart">
-            <div class="scrolly__step-inner">
-              <h2>K-shaped signals</h2>
-              <p>
-                Two small multiples: a value index proxy (relatively stronger assets)
-                versus vacancy stress. Same synthetic NYC series — illustrative, not a
-                substitute for building-class microdata.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6 Winners vs losers -->
-      <section class="winners-losers" aria-labelledby="wl-title">
-        <h2 id="wl-title" class="visually-hidden">Who wins and who loses</h2>
-        <div class="winners-losers__col winners-losers__col--winners">
-          <h3>Winners</h3>
-          <ul id="winners-list"></ul>
-        </div>
-        <div class="winners-losers__col winners-losers__col--losers">
-          <h3>Losers</h3>
-          <ul id="losers-list"></ul>
-        </div>
-      </section>
-
-      <p class="callout callout--winner">
-        Capital that can buy at a discount and hold — or restructure — captures option
-        value when others are forced to sell or refinance.
-      </p>
-
-      <!-- 7 What comes next -->
-      <section class="section-standalone" aria-labelledby="next-title">
-        <h2 id="next-title">What comes next</h2>
-        <ul id="next-list"></ul>
-        <p>
-          The static story is only a scaffold: plug in your curated city series, REIT
-          flows, and fiscal data as you finalize the research layer.
+        <p class="callout callout--loser">
+          Lease-level study estimates a
+          <strong data-stat="nycLongRunDecline">46%</strong> long-run decline in NYC office
+          values.
         </p>
       </section>
 
-      <!-- 8 Sources -->
-      <section class="sources" aria-labelledby="sources-title">
-        <h2 id="sources-title">Sources</h2>
-        <ul id="sources-list"></ul>
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted)">
-          Serve this folder with a local HTTP server (e.g.
-          <code style="color: var(--accent-neutral)">python -m http.server</code> from
-          <code>site/</code>) so ES module imports resolve correctly.
+      <!-- Page 2: Cities (interactive dashboard + case studies) -->
+      <section class="page" id="page-2" aria-labelledby="dash-title">
+        <p class="page__eyebrow">02 — The cities (interactive)</p>
+
+        <section class="dashboard-section">
+          <h2 id="dash-title">Compare cities</h2>
+          <p class="lead">
+            <strong>Interactive element.</strong> Toggle San Francisco, New York, or
+            Washington, D.C. Vacancy, property value index, and rent index animate from a
+            shared harmonized panel (three cities, same frequency). If the JavaScript
+            charts fail to load you'll see the static placeholders below.
+          </p>
+          <div class="dashboard-sticky">
+            <div class="city-toggle" role="group" aria-label="Select city">
+              <button type="button" data-city="San Francisco" aria-pressed="true">
+                San Francisco
+              </button>
+              <button type="button" data-city="New York" aria-pressed="false">
+                New York
+              </button>
+              <button type="button" data-city="Washington DC" aria-pressed="false">
+                Washington DC
+              </button>
+            </div>
+            <div class="dashboard-charts">
+              <div class="chart-panel" data-metric="vacancy">
+                <h3>Vacancy</h3>
+                <div class="chart-panel__svg" aria-hidden="true">
+                  <p class="chart-panel__placeholder">Interactive vacancy chart loads here.</p>
+                </div>
+              </div>
+              <div class="chart-panel" data-metric="value">
+                <h3>Property value</h3>
+                <div class="chart-panel__svg" aria-hidden="true">
+                  <p class="chart-panel__placeholder">Interactive value-index chart loads here.</p>
+                </div>
+              </div>
+              <div class="chart-panel" data-metric="rent">
+                <h3>Rent index</h3>
+                <div class="chart-panel__svg" aria-hidden="true">
+                  <p class="chart-panel__placeholder">Interactive rent-index chart loads here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-study" aria-labelledby="sf-title">
+          <h2 id="sf-title">Case study: San Francisco</h2>
+          <p>
+            Tech-heavy remote adoption hit San Francisco early and hard. Market reports
+            document sustained stress; policy voices argue recovery requires deliberate
+            action — not just market time.
+          </p>
+          <p>
+            The chart below uses the project's harmonized synthetic panel (for shape and
+            teaching) — pair it with Colliers / SPUR PDFs in Sources for real-world
+            calibration.
+          </p>
+          <div class="case-study__chart" id="sf-chart-mount"></div>
+        </section>
+
+        <section class="case-study" aria-labelledby="nyc-title">
+          <h2 id="nyc-title">Case study: New York City</h2>
+          <p>
+            NYC's scale and tax base change the arithmetic. The Comptroller's framing —
+            doom loop vs. boom loop — captures how simultaneous distress and selective
+            strength can coexist in one market.
+          </p>
+          <p>
+            Two small multiples: a value index proxy (relatively stronger assets) versus
+            vacancy stress. Same synthetic NYC series — illustrative, not a substitute for
+            building-class microdata.
+          </p>
+          <div class="case-study__chart" id="nyc-chart-mount"></div>
+        </section>
+      </section>
+
+      <!-- Page 3: Takeaways & sources -->
+      <section class="page" id="page-3" aria-labelledby="wl-title">
+        <p class="page__eyebrow">03 — Takeaways</p>
+
+        <section class="winners-losers">
+          <h2 id="wl-title" class="visually-hidden">Who wins and who loses</h2>
+          <div class="winners-losers__col winners-losers__col--winners">
+            <h3>Winners</h3>
+            <ul id="winners-list"></ul>
+          </div>
+          <div class="winners-losers__col winners-losers__col--losers">
+            <h3>Losers</h3>
+            <ul id="losers-list"></ul>
+          </div>
+        </section>
+
+        <p class="callout callout--winner">
+          Capital that can buy at a discount and hold — or restructure — captures option
+          value when others are forced to sell or refinance.
         </p>
+
+        <section class="section-standalone" aria-labelledby="next-title">
+          <h2 id="next-title">What comes next</h2>
+          <ul id="next-list"></ul>
+          <p>
+            The static story is only a scaffold: plug in your curated city series, REIT
+            flows, and fiscal data as the research layer is finalized.
+          </p>
+        </section>
+
+        <section class="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">Sources</h2>
+          <ul id="sources-list"></ul>
+          <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted)">
+            Serve this folder with a local HTTP server (e.g.
+            <code style="color: var(--accent-neutral)">python -m http.server</code> from
+            <code>site/</code>) so ES module imports resolve correctly.
+          </p>
+        </section>
       </section>
     </main>
 
-    <script src="https://unpkg.com/scrollama@3.2.0/build/scrollama.min.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

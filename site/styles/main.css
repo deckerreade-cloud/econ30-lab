@@ -1,4 +1,4 @@
-/* CRE Office Scrollytelling — dark clinical theme */
+/* CRE Office story — dark clinical theme, static 3-section layout */
 
 :root {
   --bg-deep: #0b1220;
@@ -11,20 +11,11 @@
   --hairline: rgba(230, 232, 238, 0.08);
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --max-prose: 42rem;
-  --step-height: 55vh;
 }
 
 @media (max-width: 600px) {
-  :root {
-    --step-height: 48vh;
-  }
-
   .hero {
     padding-top: 2rem;
-  }
-
-  .dashboard-sticky {
-    top: 1rem;
   }
 }
 
@@ -167,71 +158,106 @@ code {
   margin: 0 0 1rem;
 }
 
-.hero__scroll {
-  display: none;
+.byline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
 }
 
-.scrolly {
-  position: relative;
-}
-
-.scrolly__graphic {
-  position: sticky;
-  top: 0;
-  height: 42vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1rem;
-  background: var(--bg-deep);
-  border-bottom: 1px solid var(--hairline);
-}
-
-.scrolly__graphic-inner {
-  width: 100%;
-  max-width: 900px;
-  height: 100%;
-  min-height: 160px;
-}
-
-.scrolly__steps {
-  position: relative;
-  z-index: 1;
-  padding: 0 1.25rem 1.5rem;
-  max-width: 36rem;
-  margin: 0 auto;
-}
-
-.scrolly__step {
-  min-height: var(--step-height);
-  padding: 0.75rem 0;
-  display: flex;
-  align-items: center;
-  opacity: 0.35;
-  transition: opacity 0.35s ease;
-}
-
-.scrolly__step.is-active {
-  opacity: 1;
-}
-
-.scrolly__step-inner {
-  padding: 1.25rem 1.5rem;
-  background: var(--bg-panel);
-  border: 1px solid var(--hairline);
-  border-radius: 4px;
-}
-
-.scrolly__step h2 {
-  font-size: 1.25rem;
-  margin: 0 0 0.75rem;
+.byline strong {
+  color: var(--text-primary);
   font-weight: 600;
 }
 
-.scrolly__step p {
+.byline__sep {
+  margin: 0 0.5rem;
+  opacity: 0.5;
+}
+
+.byline__role {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.page + .page {
+  border-top: 1px solid var(--hairline);
+}
+
+.page__eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.description {
+  max-width: 56rem;
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+
+.description__title {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.description__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .description__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.description__item h3 {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-neutral);
+  margin: 0 0 0.4rem;
+}
+
+.description__item p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.case-study {
+  max-width: var(--max-prose);
+  margin: 2.5rem auto 0;
+}
+
+.case-study h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0 0 0.75rem;
+}
+
+.case-study p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+}
+
+.case-study__chart {
+  margin-top: 1.25rem;
+  width: 100%;
+  min-height: 280px;
 }
 
 .stat-strip {
@@ -250,13 +276,6 @@ code {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1.25rem;
-}
-
-.stat-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  margin-top: 1.25rem;
 }
 
 .stat {
@@ -324,23 +343,6 @@ code {
   margin: 0 0 1rem;
 }
 
-.typographic-break {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  margin: 1.5rem 0;
-  max-width: 48rem;
-}
-
-.typographic-break--winner {
-  color: var(--accent-winner);
-}
-
-.typographic-break--loser {
-  color: var(--accent-loser);
-}
-
 /* Dashboard */
 .dashboard-section {
   padding: 1.5rem 1.25rem 2.5rem;
@@ -360,9 +362,6 @@ code {
 }
 
 .dashboard-sticky {
-  position: sticky;
-  top: 3rem;
-  z-index: 10;
   background: var(--bg-panel);
   border: 1px solid var(--hairline);
   border-radius: 6px;
@@ -437,6 +436,20 @@ code {
   height: auto;
 }
 
+.chart-panel__placeholder {
+  margin: 0;
+  padding: 1.5rem 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+.chart-panel svg + .chart-panel__placeholder,
+.chart-panel__svg:has(svg) .chart-panel__placeholder {
+  display: none;
+}
+
 .winners-losers {
   display: grid;
   grid-template-columns: 1fr;
@@ -497,7 +510,6 @@ code {
   padding: 2rem 1.5rem 3rem;
   max-width: var(--max-prose);
   margin: 0 auto;
-  border-top: 1px solid var(--hairline);
 }
 
 .sources h2 {
@@ -522,7 +534,6 @@ code {
   gap: 0.5rem;
   width: 100%;
   max-width: 900px;
-  height: 100%;
   min-height: 200px;
 }
 
