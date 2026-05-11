@@ -22,6 +22,16 @@ async function loadTimeseries() {
   return res.json();
 }
 
+async function loadFred() {
+  try {
+    const res = await fetch(new URL("../data/fred_real.json", import.meta.url));
+    if (!res.ok) return null;
+    return res.json();
+  } catch (_err) {
+    return null;
+  }
+}
+
 function fillStatPlaceholders(curated) {
   const national = curated.national || {};
   document.querySelectorAll("[data-stat]").forEach((el) => {
@@ -66,6 +76,37 @@ function escapeAttr(s) {
   return escapeHtml(s).replace(/'/g, "&#39;");
 }
 
+function renderFredCharts(fred) {
+  if (!fred || !Array.isArray(fred.series)) return;
+  const byId = Object.fromEntries(fred.series.map((s) => [s.id, s]));
+
+  const loans = byId.CREACBM027NBOG;
+  const loansMount = document.getElementById("fred-loans-mount");
+  if (loans && loansMount) {
+    const chart = createLineChart(loansMount, {
+      yKey: "value",
+      yLabel: "Billions of USD",
+      color: "#ffd166",
+      animate: !prefersReducedMotion,
+      height: 240,
+    });
+    chart.setData(loans.rows);
+  }
+
+  const delinq = byId.DRCRELEXFACBS;
+  const delinqMount = document.getElementById("fred-delinq-mount");
+  if (delinq && delinqMount) {
+    const chart = createLineChart(delinqMount, {
+      yKey: "value",
+      yLabel: "Delinquency rate (%)",
+      color: "#f26b5e",
+      animate: !prefersReducedMotion,
+      height: 240,
+    });
+    chart.setData(delinq.rows);
+  }
+}
+
 function renderCaseStudyCharts(timeseries) {
   const sfMount = document.getElementById("sf-chart-mount");
   if (sfMount) {
@@ -88,14 +129,16 @@ function renderCaseStudyCharts(timeseries) {
 }
 
 async function main() {
-  const [curated, timeseries] = await Promise.all([
+  const [curated, timeseries, fred] = await Promise.all([
     loadCurated(),
     loadTimeseries(),
+    loadFred(),
   ]);
 
   fillStatPlaceholders(curated);
   renderLists(curated);
   renderCaseStudyCharts(timeseries);
+  renderFredCharts(fred);
   initDashboard(timeseries, { animate: !prefersReducedMotion });
 }
 

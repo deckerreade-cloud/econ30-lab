@@ -137,8 +137,9 @@
           <p class="lead">
             <strong>Interactive element.</strong> Toggle San Francisco, New York, or
             Washington, D.C. Vacancy, property value index, and rent index animate from a
-            shared harmonized panel (three cities, same frequency). If the JavaScript
-            charts fail to load you'll see the static placeholders below.
+            shared harmonized quarterly panel. The city panel is <em>illustrative</em>
+            for cross-city shape comparison; the <em>real, source-attributed</em> national
+            time series live in the FRED panel just below it.
           </p>
           <div class="dashboard-sticky">
             <div class="city-toggle" role="group" aria-label="Select city">
@@ -205,6 +206,44 @@
           <div class="case-study__chart" id="nyc-chart-mount"></div>
         </section>
 
+        <section class="fred-panel" aria-labelledby="fred-title">
+          <header class="fred-panel__header">
+            <p class="fred-panel__eyebrow">Real data — Federal Reserve Economic Data (FRED)</p>
+            <h2 id="fred-title">National CRE indicators</h2>
+            <p class="fred-panel__lead">
+              Two live series pulled from
+              <a href="https://fred.stlouisfed.org/" rel="noopener">FRED</a>
+              via <code>code/fetch_fred.py</code>. These are not synthetic — they are the
+              same Federal Reserve series economists and regulators monitor. Together they
+              show that even as office <em>vacancy</em> exploded, US banks kept
+              <em>expanding</em> their CRE exposure, and only a small but rising share of
+              those loans is officially delinquent.
+            </p>
+          </header>
+
+          <div class="fred-panel__grid">
+            <article class="fred-card" id="fred-card-loans">
+              <h3>Commercial real estate loans — all commercial banks</h3>
+              <p class="fred-card__meta">
+                Source: Federal Reserve H.8 release ·
+                <a href="https://fred.stlouisfed.org/series/CREACBM027NBOG" rel="noopener">FRED&nbsp;CREACBM027NBOG</a>
+                · monthly, billions of USD
+              </p>
+              <div class="fred-card__chart" id="fred-loans-mount"></div>
+            </article>
+
+            <article class="fred-card" id="fred-card-delinq">
+              <h3>CRE loan delinquency rate — all commercial banks</h3>
+              <p class="fred-card__meta">
+                Source: Federal Reserve Charge-Off &amp; Delinquency report ·
+                <a href="https://fred.stlouisfed.org/series/DRCRELEXFACBS" rel="noopener">FRED&nbsp;DRCRELEXFACBS</a>
+                · quarterly, percent
+              </p>
+              <div class="fred-card__chart" id="fred-delinq-mount"></div>
+            </article>
+          </div>
+        </section>
+
         <section class="findings" aria-labelledby="findings-title">
           <h2 id="findings-title">Findings from the panel</h2>
           <p class="findings__lead">
@@ -250,6 +289,21 @@
                 concede on incentives and absorb empty space rather than mark rent down.
                 This is consistent with the literature: the loss shows up first in
                 <em>values</em> and <em>tax bases</em>, not in posted rents.
+              </p>
+            </li>
+
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">04 · real data</span>
+              <h3>Banks are absorbing the shock, not unwinding from it.</h3>
+              <p>
+                From <a href="https://fred.stlouisfed.org/series/CREACBM027NBOG" rel="noopener">FRED CREACBM027NBOG</a>:
+                CRE loans on US commercial-bank balance sheets grew from
+                <strong>$2.32 trillion (Dec 2019) to $3.01 trillion (Dec 2024)</strong>,
+                a <strong>+29.5%</strong> expansion. Delinquencies
+                (<a href="https://fred.stlouisfed.org/series/DRCRELEXFACBS" rel="noopener">DRCRELEXFACBS</a>)
+                rose from <strong>0.67% to 1.56%</strong> over the same window — more
+                than double, but still a small share of book. The repricing is real;
+                the official credit event is, so far, contained.
               </p>
             </li>
           </ol>
