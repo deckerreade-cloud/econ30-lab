@@ -1,11 +1,12 @@
 /**
- * Sticky city toggle: SF / NYC / DC — three synchronized line charts.
+ * Sticky city toggle: SF / Manhattan / DC — three synchronized line charts
+ * driven by real annual Q4 brokerage data in site/data/city_panel.json.
  */
 
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
 /**
- * @param {Array<{date:string,city:string,vacancy_rate_pct:number,property_value_index:number,rent_index:number}>} timeseries
+ * @param {Array<{date:string,city:string,vacancy_rate_pct:number,asking_rent_psf:number,sublease_msf:number}>} timeseries
  * @param {{ animate?: boolean }} options
  */
 export function initDashboard(timeseries, options = {}) {
@@ -24,18 +25,23 @@ export function initDashboard(timeseries, options = {}) {
     const metricKey =
       metric === "vacancy"
         ? "vacancy_rate_pct"
-        : metric === "value"
-          ? "property_value_index"
-          : "rent_index";
+        : metric === "rent"
+          ? "asking_rent_psf"
+          : "sublease_msf";
     const colors = {
       vacancy: "#f26b5e",
-      value: "#ffd166",
-      rent: "#3db7a0",
+      rent: "#ffd166",
+      sublease: "#3db7a0",
     };
     const labels = {
       vacancy: "Vacancy %",
-      value: "Property value index",
-      rent: "Rent index",
+      rent: "Class A asking rent ($/sf/yr)",
+      sublease: "Sublease available (M sq ft)",
+    };
+    const tickFormat = {
+      vacancy: (v) => `${v}%`,
+      rent: (v) => `$${v}`,
+      sublease: (v) => `${v}`,
     };
 
     const container = panel.querySelector(".chart-panel__svg");
@@ -80,7 +86,7 @@ export function initDashboard(timeseries, options = {}) {
       .call((a) => a.selectAll("path,line").attr("stroke", "rgba(230,232,238,0.12)"));
 
     g.append("g")
-      .call(d3.axisLeft(y).ticks(3))
+      .call(d3.axisLeft(y).ticks(3).tickFormat(tickFormat[metric] || ((v) => v)))
       .call((a) => a.selectAll("text").attr("fill", "#8a93a6").attr("font-size", 9))
       .call((a) => a.selectAll("path,line").attr("stroke", "rgba(230,232,238,0.12)"));
 

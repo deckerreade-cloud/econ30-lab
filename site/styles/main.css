@@ -245,25 +245,60 @@ code {
   line-height: 1.5;
 }
 
+.case-studies {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 2.5rem auto 0;
+}
+
+@media (min-width: 800px) {
+  .case-studies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .case-study {
   max-width: var(--max-prose);
   margin: 2.5rem auto 0;
 }
 
-.case-study h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+.case-study--side {
+  margin: 0;
+  padding: 1.25rem 1.4rem 1.5rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  max-width: none;
+}
+
+.case-study h2,
+.case-study--side h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   margin: 0 0 0.75rem;
 }
 
-.case-study p {
-  margin: 0 0 1rem;
+.case-study p,
+.case-study--side p {
+  margin: 0 0 0.9rem;
   color: var(--text-muted);
 }
 
-.case-study__chart {
-  margin-top: 1.25rem;
-  width: 100%;
-  min-height: 280px;
+.case-study--side strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.dashboard-source {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.dashboard-source a {
+  color: var(--accent-winner);
 }
 
 .fred-panel {

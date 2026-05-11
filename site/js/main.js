@@ -3,7 +3,7 @@
  * D3 charts loaded from charts.js / dashboard.js.
  */
 
-import { createLineChart, createSmallMultiples } from "./charts.js";
+import { createLineChart } from "./charts.js";
 import { initDashboard } from "./dashboard.js";
 
 const prefersReducedMotion = window.matchMedia(
@@ -16,10 +16,11 @@ async function loadCurated() {
   return res.json();
 }
 
-async function loadTimeseries() {
-  const res = await fetch(new URL("../data/timeseries.json", import.meta.url));
-  if (!res.ok) throw new Error("timeseries.json missing");
-  return res.json();
+async function loadCityPanel() {
+  const res = await fetch(new URL("../data/city_panel.json", import.meta.url));
+  if (!res.ok) throw new Error("city_panel.json missing");
+  const json = await res.json();
+  return Array.isArray(json.rows) ? json.rows : [];
 }
 
 async function loadFred() {
@@ -107,39 +108,17 @@ function renderFredCharts(fred) {
   }
 }
 
-function renderCaseStudyCharts(timeseries) {
-  const sfMount = document.getElementById("sf-chart-mount");
-  if (sfMount) {
-    const chart = createLineChart(sfMount, {
-      yKey: "vacancy_rate_pct",
-      yLabel: "Vacancy %",
-      color: "#f26b5e",
-      animate: !prefersReducedMotion,
-    });
-    chart.setData(timeseries.filter((d) => d.city === "San Francisco"));
-  }
-
-  const nycMount = document.getElementById("nyc-chart-mount");
-  if (nycMount) {
-    const chart = createSmallMultiples(nycMount, {
-      animate: !prefersReducedMotion,
-    });
-    chart.setData(timeseries.filter((d) => d.city === "New York"));
-  }
-}
-
 async function main() {
-  const [curated, timeseries, fred] = await Promise.all([
+  const [curated, cityRows, fred] = await Promise.all([
     loadCurated(),
-    loadTimeseries(),
+    loadCityPanel(),
     loadFred(),
   ]);
 
   fillStatPlaceholders(curated);
   renderLists(curated);
-  renderCaseStudyCharts(timeseries);
   renderFredCharts(fred);
-  initDashboard(timeseries, { animate: !prefersReducedMotion });
+  initDashboard(cityRows, { animate: !prefersReducedMotion });
 }
 
 main().catch((err) => {

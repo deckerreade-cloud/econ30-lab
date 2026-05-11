@@ -133,13 +133,16 @@
         <p class="page__eyebrow">02 — The cities (interactive)</p>
 
         <section class="dashboard-section">
-          <h2 id="dash-title">Compare cities</h2>
+          <h2 id="dash-title">Compare cities — real data</h2>
           <p class="lead">
-            <strong>Interactive element.</strong> Toggle San Francisco, New York, or
-            Washington, D.C. Vacancy, property value index, and rent index animate from a
-            shared harmonized quarterly panel. The city panel is <em>illustrative</em>
-            for cross-city shape comparison; the <em>real, source-attributed</em> national
-            time series live in the FRED panel just below it.
+            <strong>Interactive element.</strong> Toggle San Francisco, Manhattan (New
+            York), or Washington, D.C. Vacancy, Class A asking rent, and sublease
+            availability are <em>real annual Q4 values</em> hand-curated from the public
+            brokerage and government reports archived in
+            <code>knowledge-base/raw/articles/</code> — primary sources are Colliers
+            (SF), Cushman &amp; Wakefield / NYC Comptroller (Manhattan), and the
+            D.C. Office of Revenue Analysis / JLL (D.C.). The three cities tell three
+            very different stories.
           </p>
           <div class="dashboard-sticky">
             <div class="city-toggle" role="group" aria-label="Select city">
@@ -147,64 +150,79 @@
                 San Francisco
               </button>
               <button type="button" data-city="New York" aria-pressed="false">
-                New York
+                Manhattan (NYC)
               </button>
               <button type="button" data-city="Washington DC" aria-pressed="false">
-                Washington DC
+                Washington, D.C.
               </button>
             </div>
             <div class="dashboard-charts">
               <div class="chart-panel" data-metric="vacancy">
-                <h3>Vacancy</h3>
+                <h3>Vacancy rate</h3>
                 <div class="chart-panel__svg" aria-hidden="true">
-                  <p class="chart-panel__placeholder">Interactive vacancy chart loads here.</p>
-                </div>
-              </div>
-              <div class="chart-panel" data-metric="value">
-                <h3>Property value</h3>
-                <div class="chart-panel__svg" aria-hidden="true">
-                  <p class="chart-panel__placeholder">Interactive value-index chart loads here.</p>
+                  <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
               </div>
               <div class="chart-panel" data-metric="rent">
-                <h3>Rent index</h3>
+                <h3>Class A asking rent</h3>
                 <div class="chart-panel__svg" aria-hidden="true">
-                  <p class="chart-panel__placeholder">Interactive rent-index chart loads here.</p>
+                  <p class="chart-panel__placeholder">Live chart loads here.</p>
+                </div>
+              </div>
+              <div class="chart-panel" data-metric="sublease">
+                <h3>Sublease available</h3>
+                <div class="chart-panel__svg" aria-hidden="true">
+                  <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
               </div>
             </div>
           </div>
+          <p class="dashboard-source">
+            Sources per city: Colliers SF Office Market Research (Q4 reports); Cushman
+            &amp; Wakefield Manhattan MarketBeat and the
+            <a href="https://comptroller.nyc.gov/" rel="noopener">NYC Comptroller</a>
+            "Doom Loop or Boom Loop?" report; D.C. Office of Revenue Analysis and JLL
+            D.C. market reports. Brokerage figures vary by ~1-3 pp across vendors due
+            to direct-vs-total and building-class differences — these series follow the
+            primary source cited for each city.
+          </p>
         </section>
 
-        <section class="case-study" aria-labelledby="sf-title">
-          <h2 id="sf-title">Case study: San Francisco</h2>
-          <p>
-            Tech-heavy remote adoption hit San Francisco early and hard. Market reports
-            document sustained stress; policy voices argue recovery requires deliberate
-            action — not just market time.
-          </p>
-          <p>
-            The chart below uses the project's harmonized synthetic panel (for shape and
-            teaching) — pair it with Colliers / SPUR PDFs in Sources for real-world
-            calibration.
-          </p>
-          <div class="case-study__chart" id="sf-chart-mount"></div>
-        </section>
+        <div class="case-studies">
+          <section class="case-study case-study--side" aria-labelledby="sf-title">
+            <h2 id="sf-title">Case study: San Francisco</h2>
+            <p>
+              Tech-heavy remote adoption hit San Francisco early and hard. By Q4 2024,
+              Colliers reports overall office vacancy at <strong>36.6%</strong> — up from
+              <strong>5.2%</strong> at the end of 2019, a roughly seven-fold increase.
+              Sublease availability ballooned from under 2 M sq ft to nearly 9 M sq ft at
+              the post-pandemic peak.
+            </p>
+            <p>
+              Class A asking rents have softened from a 2019 peak around $80/sf to about
+              $70/sf — a real but contained drop, because landlords prefer concessions
+              over headline rent cuts. Policy voices (SPUR, the Mayor's office) argue
+              recovery requires conversions and downtown activation, not just market time.
+            </p>
+          </section>
 
-        <section class="case-study" aria-labelledby="nyc-title">
-          <h2 id="nyc-title">Case study: New York City</h2>
-          <p>
-            NYC's scale and tax base change the arithmetic. The Comptroller's framing —
-            doom loop vs. boom loop — captures how simultaneous distress and selective
-            strength can coexist in one market.
-          </p>
-          <p>
-            Two small multiples: a value index proxy (relatively stronger assets) versus
-            vacancy stress. Same synthetic NYC series — illustrative, not a substitute for
-            building-class microdata.
-          </p>
-          <div class="case-study__chart" id="nyc-chart-mount"></div>
-        </section>
+          <section class="case-study case-study--side" aria-labelledby="nyc-title">
+            <h2 id="nyc-title">Case study: New York City</h2>
+            <p>
+              Manhattan's market splits in two. Overall vacancy peaked around
+              <strong>18-19%</strong> in 2022, then drifted back toward
+              <strong>17-18%</strong> in 2024 as trophy Class A leasing recovered.
+              The NYC Comptroller frames this as "doom loop vs. boom loop" — both can
+              coexist inside one market.
+            </p>
+            <p>
+              Importantly, Manhattan Class A asking rents kept <em>rising</em>
+              ($83/sf in 2019 → $86/sf in 2024) even as vacancy stayed elevated.
+              Trophy buildings absorbed the flight-to-quality bid while Class B/C and
+              older fringe stock did the heavy lifting on vacancy and sublease.
+            </p>
+          </section>
+        </div>
 
         <section class="fred-panel" aria-labelledby="fred-title">
           <header class="fred-panel__header">
@@ -245,50 +263,52 @@
         </section>
 
         <section class="findings" aria-labelledby="findings-title">
-          <h2 id="findings-title">Findings from the panel</h2>
+          <h2 id="findings-title">Findings from the real city panel</h2>
           <p class="findings__lead">
-            Quantitative results from the harmonized three-city panel
-            (San Francisco, New York, Washington, D.C.; quarterly, 2005-Q1 to 2024-Q4;
-            240 city-quarter observations). Deltas below compare 2019-Q4 to 2024-Q4 — the
-            five-year window that brackets the pandemic shock.
+            All four findings use the <em>real</em> data shown above —
+            <code>site/data/city_panel.json</code> for the cities and
+            <code>site/data/fred_real.json</code> for the national series. City deltas
+            compare Q4 2019 to Q4 2024.
           </p>
 
           <ol class="findings__grid">
-            <li class="findings__item">
-              <span class="findings__num">01</span>
-              <h3>The vacancy shock is structural, not cyclical.</h3>
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">01 · real data</span>
+              <h3>The "office shock" is really a San Francisco shock.</h3>
               <p>
-                Vacancy rose by <strong>+12.7 pp</strong> in San Francisco
-                (8.5% → 21.2%), <strong>+12.3 pp</strong> in New York
-                (7.7% → 20.0%), and <strong>+11.3 pp</strong> in Washington, D.C.
-                (9.5% → 20.9%) over five years. All three cities now sit roughly
-                <strong>2.5x</strong> their pre-pandemic baseline. That is a regime
-                change, not a normal real-estate cycle.
+                Q4 2019 → Q4 2024 vacancy jumps (Colliers / Cushman / DC ORA):
+                <strong>SF +31.4 pp</strong> (5.2% → 36.6%),
+                <strong>Manhattan +6.5 pp</strong> (11.0% → 17.5%),
+                <strong>DC +4.2 pp</strong> (17.4% → 21.6%).
+                SF's shock is roughly <strong>seven times</strong> DC's. National "office
+                in distress" headlines hide a very lopsided geography.
               </p>
             </li>
 
-            <li class="findings__item">
-              <span class="findings__num">02</span>
-              <h3>The same shock translates unevenly into asset prices.</h3>
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">02 · real data</span>
+              <h3>Trophy-class rents diverge from vacancy.</h3>
               <p>
-                Despite near-identical vacancy moves, the property value index over
-                the same window grew only <strong>+2.6%</strong> in New York and
-                <strong>+3.5%</strong> in Washington, D.C., versus <strong>+5.8%</strong>
-                in San Francisco. The biggest vacancy increase is not the biggest value
-                hit — composition (Class A vs. B/C, trophy vs. commodity) matters more
-                than headline occupancy.
+                Class A asking rents moved
+                <strong>SF $80 → $70</strong> (-12%),
+                <strong>Manhattan $83 → $86</strong> (+4%),
+                <strong>DC $58 → $58</strong> (flat). Manhattan landlords actually raised
+                trophy rents <em>through</em> the shock as flight-to-quality concentrated
+                demand at the top of the stack — a classic K-shaped pattern that the
+                vacancy aggregate misses.
               </p>
             </li>
 
-            <li class="findings__item">
-              <span class="findings__num">03</span>
-              <h3>Adjustment is running through occupancy and asset values, not headline rents.</h3>
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">03 · real data</span>
+              <h3>Sublease, not direct vacancy, is the leading indicator.</h3>
               <p>
-                Rent index growth converged tightly across cities at
-                <strong>+9.0% to +10.0%</strong>. Nominal rents are sticky; landlords
-                concede on incentives and absorb empty space rather than mark rent down.
-                This is consistent with the literature: the loss shows up first in
-                <em>values</em> and <em>tax bases</em>, not in posted rents.
+                Sublease space peaked
+                <strong>SF +5x</strong> (1.8 → 9.4 M sq ft),
+                <strong>Manhattan ~2x</strong> (11.3 → 21.5 M sq ft),
+                <strong>DC ~2x</strong> (2.6 → 4.6 M sq ft). Sublease ran up well before
+                direct vacancy and is now slowly bleeding back down in all three cities
+                — an early-but-real sign the worst is behind us.
               </p>
             </li>
 
@@ -301,22 +321,22 @@
                 <strong>$2.32 trillion (Dec 2019) to $3.01 trillion (Dec 2024)</strong>,
                 a <strong>+29.5%</strong> expansion. Delinquencies
                 (<a href="https://fred.stlouisfed.org/series/DRCRELEXFACBS" rel="noopener">DRCRELEXFACBS</a>)
-                rose from <strong>0.67% to 1.56%</strong> over the same window — more
-                than double, but still a small share of book. The repricing is real;
-                the official credit event is, so far, contained.
+                rose from <strong>0.67% to 1.56%</strong> — more than double, but still
+                a small share of book. The repricing is real; the official credit event
+                is, so far, contained.
               </p>
             </li>
           </ol>
 
           <p class="methodology">
-            <strong>Methodology.</strong> A small, harmonized quarterly panel is held in
-            <code>site/data/timeseries.json</code> and driven by a Python pipeline
-            (<code>code/data_pipeline.py</code>). Vacancy is in percent; property value and
-            rent are unitless indexes anchored to 2005. The series are illustrative — they
-            calibrate the <em>shape</em> of the post-2020 shock rather than perfectly
-            reproduce any one brokerage feed. Real-world calibration anchors (Moody's
-            forecasts, lease-level academic estimates, brokerage reports) are cited
-            beneath the Sources block on the next page.
+            <strong>Methodology.</strong> City series live in
+            <code>site/data/city_panel.json</code> — real annual Q4 values 2015-2024 for
+            San Francisco (Colliers), Manhattan (Cushman &amp; Wakefield / NYC Comptroller),
+            and Washington, D.C. (D.C. ORA / JLL). National series are pulled live from
+            FRED via <code>code/fetch_fred.py</code> and cached in
+            <code>site/data/fred_real.json</code>. Brokerage figures vary by ~1-3 pp
+            across vendors due to direct-vs-total and building-class differences; series
+            here follow the primary source cited per city.
           </p>
         </section>
       </section>
