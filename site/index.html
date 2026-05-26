@@ -30,7 +30,14 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <span class="site-header__label">Office CRE · Distribution</span>
+      <div class="site-header__brand">
+        <svg class="site-header__mark" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M2 14 L9 4 L16 14" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          <line x1="5" y1="10" x2="13" y2="10" stroke="#3db7a0" stroke-width="2"/>
+          <line x1="5" y1="13" x2="13" y2="13" stroke="#f26b5e" stroke-width="2"/>
+        </svg>
+        <span class="site-header__label">Office CRE · Distribution</span>
+      </div>
       <button
         type="button"
         id="theme-toggle"
@@ -43,7 +50,6 @@
     </header>
 
     <main id="main">
-      <!-- Page 1: Headline numbers + project description -->
       <section class="page" id="page-1" aria-labelledby="hero-title">
         <p class="page__eyebrow">01 — The numbers</p>
 
@@ -52,6 +58,9 @@
           <h1 id="hero-title" class="hero__title">
             Who wins and loses when office values crash?
           </h1>
+          <p class="hero__thesis" data-thesis-echo>
+            National "office crisis" headlines hide a San Francisco crisis — and a Manhattan split.
+          </p>
           <p class="byline">
             By <strong>Reade Decker</strong>
             <span class="byline__sep" aria-hidden="true">·</span>
@@ -68,7 +77,6 @@
 
         <section class="description" aria-labelledby="about-title">
           <h2 id="about-title" class="description__title">About this project</h2>
-
           <div class="description__grid">
             <div class="description__item">
               <h3>Context</h3>
@@ -79,7 +87,6 @@
                 traffic, and lender balance sheets.
               </p>
             </div>
-
             <div class="description__item">
               <h3>Literature</h3>
               <p>
@@ -89,7 +96,6 @@
                 on bank <dfn>CRE</dfn> exposure.
               </p>
             </div>
-
             <div class="description__item">
               <h3>Research question</h3>
               <p>
@@ -98,7 +104,6 @@
                 does the SF / NYC / D.C. gap reveal about how distributed the pain is?
               </p>
             </div>
-
             <div class="description__item">
               <h3>Why this is progress</h3>
               <p>
@@ -109,6 +114,41 @@
             </div>
           </div>
         </section>
+
+        <section class="project-adds" aria-labelledby="adds-title">
+          <h2 id="adds-title">What this project adds</h2>
+          <ul>
+            <li>A harmonized three-city panel (SF, Manhattan, D.C.) hand-curated from primary brokerage and government PDFs — 2015–2024 Q4.</li>
+            <li>Sublease tracked as a leading indicator: it spiked before direct vacancy in all three markets.</li>
+            <li>FRED national series paired with city pain: banks expanded CRE exposure (+29.5%) while vacancy exploded.</li>
+          </ul>
+        </section>
+
+        <section class="progress-lens" aria-labelledby="progress-title">
+          <h2 id="progress-title">Progress lens</h2>
+          <p>
+            <strong>Engine:</strong> When a land use saturates, repricing forces capital toward
+            adaptive reuse — office-to-residential conversions, lab buildouts, mixed-use downtowns.
+          </p>
+          <p>
+            <strong>Bottleneck:</strong> Zoning, conversion economics, and municipal dependence on
+            office property-tax assessments slow the transition.
+          </p>
+          <p>
+            <strong>Inequality:</strong> Patient capital and trophy landlords gain option value;
+            downtown workers in office-adjacent services and small businesses bear the employment
+            and fiscal cost first.
+          </p>
+          <p>
+            <strong>Future:</strong> Whether a city enters a doom loop or boom loop depends on
+            policy (conversions, tax reform) and whether distressed basis clears fast enough for
+            new uses to take hold.
+          </p>
+        </section>
+
+        <p class="stat-strip__stakes">
+          The stakes: hundreds of billions repriced — but not evenly. Who captures the upside?
+        </p>
 
         <section class="stat-strip" aria-label="National headline statistics">
           <div class="stat-strip__inner">
@@ -133,6 +173,21 @@
           </div>
         </section>
 
+        <div class="hero-chart">
+          <figure class="figure">
+            <img
+              src="assets/vacancy-compare.svg"
+              alt="Vacancy comparison chart: San Francisco rises to 36.6 percent by 2024 while Manhattan and D.C. rise modestly"
+              width="640"
+              height="220"
+              loading="eager"
+            />
+            <figcaption>
+              Author-built chart from the hand-curated city panel — the geographic shock is not national, it is San Francisco-first.
+            </figcaption>
+          </figure>
+        </div>
+
         <div class="photo-band">
           <figure class="figure">
             <img
@@ -143,8 +198,7 @@
               loading="lazy"
             />
             <figcaption>
-              Downtown San Francisco during curfew, June 2020 — early signal of the office
-              foot-traffic collapse.
+              Downtown San Francisco during curfew, June 2020 — early signal of the office foot-traffic collapse.
               <a href="https://commons.wikimedia.org/wiki/File:Downtown_San_Francisco_Under_Curfew.jpg" rel="noopener">Wikimedia Commons</a>
               · CC BY-SA 4.0 · David Mark
             </figcaption>
@@ -153,12 +207,10 @@
 
         <p class="callout callout--loser">
           Lease-level study estimates a
-          <strong data-stat="nycLongRunDecline">46%</strong> long-run decline in NYC office
-          values.
+          <strong data-stat="nycLongRunDecline">46%</strong> long-run decline in NYC office values.
         </p>
       </section>
 
-      <!-- Page 2: Cities (interactive dashboard + case studies) -->
       <section class="page" id="page-2" aria-labelledby="dash-title">
         <p class="page__eyebrow">02 — The cities (interactive)</p>
 
@@ -173,24 +225,15 @@
               <div class="why-cities__grid">
                 <div class="why-cities__item">
                   <h3>San Francisco</h3>
-                  <p>
-                    Tech/WFH shock and extreme vacancy — a demand-collapse story where
-                    conversion and repricing dominate.
-                  </p>
+                  <p>Tech/WFH shock and extreme vacancy — conversion and repricing dominate.</p>
                 </div>
                 <div class="why-cities__item">
                   <h3>Manhattan</h3>
-                  <p>
-                    Scale plus flight-to-quality — a K-shaped recovery where trophy
-                    <dfn>Class A</dfn> holds while older stock absorbs vacancy.
-                  </p>
+                  <p>Scale plus flight-to-quality — trophy <dfn>Class A</dfn> holds while older stock absorbs vacancy.</p>
                 </div>
                 <div class="why-cities__item">
                   <h3>Washington, D.C.</h3>
-                  <p>
-                    Government-adjacent demand with rising vacant stock — fiscal and
-                    property-tax exposure as assessed values weaken.
-                  </p>
+                  <p>Government-adjacent demand with rising vacant stock — fiscal and property-tax exposure.</p>
                 </div>
               </div>
             </div>
@@ -204,8 +247,7 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  Lower Manhattan skyline — where trophy Class A and distressed fringe
-                  stock coexist in one market.
+                  Lower Manhattan — trophy Class A and distressed fringe stock in one market.
                   <a href="https://commons.wikimedia.org/wiki/File:Lower_Manhattan_Skyline_April_2022_002.jpg" rel="noopener">Wikimedia Commons</a>
                   · CC BY-SA 4.0 · King of Hearts
                 </figcaption>
@@ -217,54 +259,114 @@
         <section class="dashboard-section">
           <h2 id="dash-title">Compare cities — real data</h2>
           <p class="lead">
-            Toggle a city or use <strong>Compare all</strong> to overlay SF, Manhattan,
-            and D.C. on the same axes. Vacancy, Class A asking rent, and sublease
-            availability are real annual Q4 values from brokerage and government reports
-            (2015–2024).
+            Real annual Q4 values from brokerage and government reports (2015–2024).
+            Hand-curated from primary sources — not a single vendor API.
           </p>
+
+          <div class="try-this" aria-label="How to use the interactive dashboard">
+            <strong>Try this</strong>
+            <ol>
+              <li>Start with <strong>Compare all</strong> on Vacancy — watch the SF line diverge from NYC and D.C.</li>
+              <li>Switch to Rent — Manhattan trophy rents rise while SF falls.</li>
+              <li>Pick one city to focus on sublease as an early distress signal.</li>
+            </ol>
+          </div>
+
           <div class="dashboard-sticky">
             <div class="city-toggle" role="group" aria-label="Select city or compare all">
-              <button type="button" data-city="San Francisco" aria-pressed="true">
-                San Francisco
-              </button>
-              <button type="button" data-city="New York" aria-pressed="false">
-                Manhattan (NYC)
-              </button>
-              <button type="button" data-city="Washington DC" aria-pressed="false">
-                Washington, D.C.
-              </button>
-              <button type="button" id="compare-all-btn" aria-pressed="false">
-                Compare all
-              </button>
+              <button type="button" data-city="San Francisco" aria-pressed="false">San Francisco</button>
+              <button type="button" data-city="New York" aria-pressed="false">Manhattan (NYC)</button>
+              <button type="button" data-city="Washington DC" aria-pressed="false">Washington, D.C.</button>
+              <button type="button" id="compare-all-btn" aria-pressed="true">Compare all</button>
             </div>
             <div class="dashboard-charts">
               <div class="chart-panel" data-metric="vacancy">
                 <h3>Vacancy rate</h3>
-                <div class="chart-panel__svg" aria-hidden="true">
+                <div
+                  class="chart-panel__svg"
+                  role="img"
+                  aria-label="Vacancy chart: San Francisco surges to 36.6 percent by 2024; Manhattan and D.C. rise modestly."
+                >
                   <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
+                <p class="chart-summary">Compare all: SF vacancy 5.2% → 36.6% (2019–2024); DC +4.2 pp over the same span.</p>
               </div>
               <div class="chart-panel" data-metric="rent">
                 <h3>Class A asking rent</h3>
-                <div class="chart-panel__svg" aria-hidden="true">
+                <div
+                  class="chart-panel__svg"
+                  role="img"
+                  aria-label="Rent chart: Manhattan Class A asking rent rises; San Francisco falls."
+                >
                   <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
+                <p class="chart-summary">Compare all: Manhattan $83 → $86/sf; SF $80 → $70/sf — a K-shaped split.</p>
               </div>
               <div class="chart-panel" data-metric="sublease">
                 <h3>Sublease available</h3>
-                <div class="chart-panel__svg" aria-hidden="true">
+                <div
+                  class="chart-panel__svg"
+                  role="img"
+                  aria-label="Sublease chart: space available rose in all three cities before direct vacancy peaked."
+                >
                   <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
+                <p class="chart-summary">Compare all: sublease spiked in all three cities — an early distress signal.</p>
               </div>
             </div>
           </div>
           <p class="dashboard-source">
-            Sources per city: Colliers SF Office Market Research (Q4 reports); Cushman
-            &amp; Wakefield Manhattan MarketBeat and the
-            <a href="https://comptroller.nyc.gov/" rel="noopener">NYC Comptroller</a>
-            "Doom Loop or Boom Loop?" report; D.C. Office of Revenue Analysis and JLL
-            D.C. market reports. Brokerage figures vary by ~1–3 pp across vendors due
-            to direct-vs-total and building-class differences.
+            Sources: Colliers SF; Cushman &amp; Wakefield / NYC Comptroller;
+            <a href="https://ora-cfo.dc.gov/blog/increasing-levels-vacant-office-space-achilles%E2%80%99-heel-dcs-office-market" rel="noopener">D.C. ORA</a> / JLL.
+            Brokerage figures vary ~1–3 pp across vendors.
+          </p>
+        </section>
+
+        <section class="findings" aria-labelledby="findings-title">
+          <h2 id="findings-title">Findings from the real city panel</h2>
+          <p class="findings__lead">
+            <span data-thesis-echo>National "office crisis" headlines hide a San Francisco crisis — and a Manhattan split.</span>
+            Four patterns from the dashboard above. City deltas compare Q4 2019 to Q4 2024.
+          </p>
+          <ol class="findings__grid">
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">01 · real data</span>
+              <h3>The "office shock" is really a San Francisco shock.</h3>
+              <p>
+                Vacancy jumps: <strong>SF +31.4 pp</strong>, <strong>Manhattan +6.5 pp</strong>,
+                <strong>DC +4.2 pp</strong>. SF's shock is roughly seven times DC's.
+              </p>
+            </li>
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">02 · real data</span>
+              <h3>Trophy-class rents diverge from vacancy.</h3>
+              <p>
+                Class A asking rents: <strong>SF $80 → $70</strong>, <strong>Manhattan $83 → $86</strong>,
+                <strong>DC flat</strong>. Flight-to-quality concentrated demand at the top.
+              </p>
+            </li>
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">03 · real data</span>
+              <h3>Sublease is the leading indicator.</h3>
+              <p>
+                Sublease peaked <strong>SF +5×</strong>, <strong>Manhattan ~2×</strong>,
+                <strong>DC ~2×</strong> — before direct vacancy, now slowly bleeding back.
+              </p>
+            </li>
+            <li class="findings__item findings__item--real">
+              <span class="findings__num">04 · real data</span>
+              <h3>Banks absorb the shock — so far.</h3>
+              <p>
+                CRE loans grew <strong>$2.32T → $3.01T</strong> (+29.5%). Delinquencies
+                <strong>0.67% → 1.56%</strong> — real repricing, contained credit event so far.
+              </p>
+            </li>
+          </ol>
+          <p class="methodology">
+            <strong>Methodology.</strong> City series are hand-curated annual Q4 values from primary
+            PDFs — a deliberate choice to harmonize three cities on one comparable panel rather than
+            rely on a single vendor feed. National series from FRED. Figures are directional; see
+            Limits &amp; counterpoints on Page 3.
           </p>
         </section>
 
@@ -272,30 +374,12 @@
           <details open>
             <summary id="glossary-title">Key terms (CRE glossary)</summary>
             <dl>
-              <div>
-                <dt>CRE</dt>
-                <dd>Commercial real estate — office, retail, and industrial property.</dd>
-              </div>
-              <div>
-                <dt>Class A / trophy</dt>
-                <dd>Newest, highest-quality buildings; trophy = top-tier Class A in prime locations.</dd>
-              </div>
-              <div>
-                <dt>Asking rent</dt>
-                <dd>Listed rent before concessions — not net effective rent.</dd>
-              </div>
-              <div>
-                <dt>Sublease</dt>
-                <dd>Tenant re-letting space they no longer need — an early distress signal.</dd>
-              </div>
-              <div>
-                <dt>Flight to quality</dt>
-                <dd>Tenants downsizing into better buildings, leaving older stock empty.</dd>
-              </div>
-              <div>
-                <dt>K-shaped</dt>
-                <dd>Top-tier assets recover while lower-tier assets stay distressed.</dd>
-              </div>
+              <div><dt>CRE</dt><dd>Commercial real estate — office, retail, and industrial property.</dd></div>
+              <div><dt>Class A / trophy</dt><dd>Newest, highest-quality buildings; trophy = top-tier Class A in prime locations.</dd></div>
+              <div><dt>Asking rent</dt><dd>Listed rent before concessions — not net effective rent.</dd></div>
+              <div><dt>Sublease</dt><dd>Tenant re-letting space they no longer need — an early distress signal.</dd></div>
+              <div><dt>Flight to quality</dt><dd>Tenants downsizing into better buildings, leaving older stock empty.</dd></div>
+              <div><dt>K-shaped</dt><dd>Top-tier assets recover while lower-tier assets stay distressed.</dd></div>
             </dl>
           </details>
         </section>
@@ -304,93 +388,97 @@
           <section class="case-study case-study--side" aria-labelledby="sf-title">
             <h2 id="sf-title">Case study: San Francisco</h2>
             <p>
-              Tech-heavy remote adoption hit San Francisco early. By Q4 2024, Colliers
-              reports vacancy at <strong>36.6%</strong> — up from <strong>5.2%</strong>
-              at end-2019. <dfn>Sublease</dfn> availability peaked near 9 M sq ft.
-            </p>
-            <p>
-              Class A asking rents softened from ~$80/sf to ~$70/sf — landlords prefer
-              concessions over headline cuts. SPUR argues recovery requires conversions
-              and downtown activation, not just market time.
+              Vacancy at <strong>36.6%</strong> (Q4 2024), up from <strong>5.2%</strong> end-2019.
+              <dfn>Sublease</dfn> peaked near 9 M sq ft. Class A rents ~$80 → ~$70/sf.
             </p>
             <div class="case-study__wl case-study__wl--losers">
               <h4>Losers here</h4>
               <ul>
-                <li>Downtown retailers and service businesses tied to office foot traffic</li>
-                <li>Municipal tax base as assessed values and transaction volume weaken</li>
-                <li>Class B/C landlords forced to cut rents and offer heavy concessions</li>
+                <li>Downtown workers and retailers tied to office foot traffic</li>
+                <li>Municipal tax base as assessed values weaken</li>
+                <li>Class B/C landlords forced to cut rents</li>
               </ul>
             </div>
             <div class="case-study__wl case-study__wl--winners">
               <h4>Winners (potential)</h4>
               <ul>
-                <li>Conversion developers buying distressed office at a discount</li>
-                <li>Value buyers and distressed-asset funds at repriced basis</li>
+                <li>Conversion developers at distressed basis</li>
+                <li>Distressed-asset funds with patience</li>
               </ul>
-              <p><a href="#page-3">See Page 3 → Winners &amp; Losers</a></p>
+              <p><a href="#page-3">Page 3 → Winners &amp; Losers</a></p>
             </div>
           </section>
 
           <section class="case-study case-study--side" aria-labelledby="nyc-title">
-            <h2 id="nyc-title">Case study: New York City</h2>
+            <h2 id="nyc-title">Case study: Manhattan</h2>
             <p>
-              Manhattan splits in two. Overall vacancy peaked ~<strong>18–19%</strong> in
-              2022, then drifted toward <strong>17–18%</strong> in 2024 as
-              <dfn>trophy Class A</dfn> leasing recovered — the NYC Comptroller's "doom
-              loop vs. boom loop" framing.
-            </p>
-            <p>
-              Class A asking rents <em>rose</em> ($83/sf → $86/sf) even as vacancy stayed
-              elevated. Tenants consolidated into fewer premium floors; landlords held
-              headline rents while hiding concessions off-lease — a classic
-              <dfn>K-shaped</dfn> pattern the vacancy aggregate misses.
+              Vacancy ~<strong>17–18%</strong> in 2024 as <dfn>trophy Class A</dfn> recovered.
+              Class A rents <em>rose</em> ($83 → $86/sf) — a <dfn>K-shaped</dfn> split.
             </p>
             <div class="case-study__wl case-study__wl--losers">
               <h4>Losers here</h4>
               <ul>
-                <li>Class B/C owners and older fringe stock carrying vacancy</li>
-                <li>Transit-adjacent small businesses when weekday foot traffic thins</li>
+                <li>Class B/C owners and older fringe stock</li>
+                <li>Transit-adjacent small businesses</li>
               </ul>
             </div>
             <div class="case-study__wl case-study__wl--winners">
               <h4>Winners here</h4>
               <ul>
-                <li>Trophy landlords who raised headline rents through the shock</li>
-                <li>Institutional buyers of discounted fringe assets with conversion optionality</li>
+                <li>Trophy landlords who raised headline rents</li>
+                <li>Buyers of discounted fringe assets</li>
               </ul>
-              <p><a href="#page-3">See Page 3 → Winners &amp; Losers</a></p>
+              <p><a href="#page-3">Page 3 → Winners &amp; Losers</a></p>
+            </div>
+          </section>
+
+          <section class="case-study case-study--side" aria-labelledby="dc-title">
+            <h2 id="dc-title">Case study: Washington, D.C.</h2>
+            <p>
+              Vacancy <strong>17.4% → 21.6%</strong> (2019–2024) — a slower burn than SF, but
+              the D.C. ORA flags vacant stock as an "Achilles' heel" for the property-tax base.
+            </p>
+            <div class="case-study__wl case-study__wl--losers">
+              <h4>Losers here</h4>
+              <ul>
+                <li>City fiscal capacity if assessments and transactions weaken</li>
+                <li>Owners of older federal-adjacent Class B stock</li>
+                <li>Downtown workers when federal return-to-office stays partial</li>
+              </ul>
+            </div>
+            <div class="case-study__wl case-study__wl--winners">
+              <h4>Winners here</h4>
+              <ul>
+                <li>Institutional buyers of discounted assets near transit</li>
+                <li>Conversion or mixed-use developers where zoning allows</li>
+              </ul>
+              <p><a href="#page-3">Page 3 → Winners &amp; Losers</a></p>
             </div>
           </section>
         </div>
 
         <section class="fred-panel" aria-labelledby="fred-title">
           <header class="fred-panel__header">
-            <p class="fred-panel__eyebrow">Real data — Federal Reserve Economic Data (FRED)</p>
+            <p class="fred-panel__eyebrow">Real data — FRED</p>
             <h2 id="fred-title">National CRE indicators</h2>
             <p class="fred-panel__lead">
-              Two live series from
-              <a href="https://fred.stlouisfed.org/" rel="noopener">FRED</a>. Even as
-              office vacancy exploded, U.S. banks kept expanding CRE exposure — while
-              only a small but rising share of loans is officially delinquent.
+              City pain is real (see dashboard above). Here: the banking system kept expanding
+              CRE exposure while delinquencies stayed low — repricing in markets, containment in credit so far.
             </p>
           </header>
-
           <div class="fred-panel__grid">
             <article class="fred-card" id="fred-card-loans">
-              <h3>Commercial real estate loans — all commercial banks</h3>
+              <h3>CRE loans — all commercial banks</h3>
               <p class="fred-card__meta">
-                Source: Federal Reserve H.8 release ·
-                <a href="https://fred.stlouisfed.org/series/CREACBM027NBOG" rel="noopener">FRED&nbsp;CREACBM027NBOG</a>
-                · monthly, billions of USD
+                <a href="https://fred.stlouisfed.org/series/CREACBM027NBOG" rel="noopener">FRED CREACBM027NBOG</a>
+                · monthly, billions USD
               </p>
               <div class="fred-card__chart" id="fred-loans-mount"></div>
             </article>
-
             <article class="fred-card" id="fred-card-delinq">
-              <h3>CRE loan delinquency rate — all commercial banks</h3>
+              <h3>CRE loan delinquency rate</h3>
               <p class="fred-card__meta">
-                Source: Federal Reserve Charge-Off &amp; Delinquency report ·
-                <a href="https://fred.stlouisfed.org/series/DRCRELEXFACBS" rel="noopener">FRED&nbsp;DRCRELEXFACBS</a>
+                <a href="https://fred.stlouisfed.org/series/DRCRELEXFACBS" rel="noopener">FRED DRCRELEXFACBS</a>
                 · quarterly, percent
               </p>
               <div class="fred-card__chart" id="fred-delinq-mount"></div>
@@ -398,92 +486,26 @@
           </div>
         </section>
 
-        <section class="findings" aria-labelledby="findings-title">
-          <h2 id="findings-title">Findings from the real city panel</h2>
-          <p class="findings__lead">
-            Four patterns from the city dashboard and FRED series above. City deltas
-            compare Q4 2019 to Q4 2024.
-          </p>
-
-          <ol class="findings__grid">
-            <li class="findings__item findings__item--real">
-              <span class="findings__num">01 · real data</span>
-              <h3>The "office shock" is really a San Francisco shock.</h3>
-              <p>
-                Vacancy jumps: <strong>SF +31.4 pp</strong>, <strong>Manhattan +6.5 pp</strong>,
-                <strong>DC +4.2 pp</strong>. SF's shock is roughly seven times DC's —
-                national headlines hide a lopsided geography.
-              </p>
-            </li>
-
-            <li class="findings__item findings__item--real">
-              <span class="findings__num">02 · real data</span>
-              <h3>Trophy-class rents diverge from vacancy.</h3>
-              <p>
-                Class A asking rents: <strong>SF $80 → $70</strong> (−12%),
-                <strong>Manhattan $83 → $86</strong> (+4%), <strong>DC flat</strong>.
-                Manhattan raised trophy rents through the shock as flight-to-quality
-                concentrated demand at the top — a K-shaped pattern vacancy alone misses.
-              </p>
-            </li>
-
-            <li class="findings__item findings__item--real">
-              <span class="findings__num">03 · real data</span>
-              <h3>Sublease is the leading indicator.</h3>
-              <p>
-                Sublease peaked <strong>SF +5×</strong>, <strong>Manhattan ~2×</strong>,
-                <strong>DC ~2×</strong>. It ran up before direct vacancy and is now slowly
-                bleeding back — an early sign the worst may be behind us.
-              </p>
-            </li>
-
-            <li class="findings__item findings__item--real">
-              <span class="findings__num">04 · real data</span>
-              <h3>Banks absorb the shock — so far.</h3>
-              <p>
-                CRE loans grew <strong>$2.32T → $3.01T</strong> (Dec 2019–2024, +29.5%).
-                Delinquencies rose <strong>0.67% → 1.56%</strong> — more than double, but
-                still a small share of book. Repricing is real; the official credit event
-                is, so far, contained.
-              </p>
-            </li>
-          </ol>
-
-          <p class="methodology">
-            <strong>Methodology.</strong> City series are real annual Q4 values 2015–2024
-            for San Francisco (Colliers), Manhattan (Cushman &amp; Wakefield / NYC
-            Comptroller), and Washington, D.C. (D.C. ORA / JLL). National series are
-            pulled from FRED and cached locally. Brokerage figures vary by ~1–3 pp across
-            vendors; series here follow the primary source cited per city.
-          </p>
-        </section>
-
         <p class="bridge">
-          These patterns do not affect everyone equally. The sections below translate the
-          data into who gains option value from repricing — and who bears the fiscal and
-          employment cost.
+          These patterns do not affect everyone equally. Page 3 translates the data into who gains
+          option value — and who bears the fiscal and employment cost.
           <a href="#page-3">Jump to Winners &amp; Losers →</a>
         </p>
       </section>
 
-      <!-- Page 3: Takeaways & sources -->
       <section class="page" id="page-3" aria-labelledby="wl-title">
         <p class="page__eyebrow">03 — Takeaways</p>
 
         <section class="tangible-example" aria-labelledby="tangible-title">
           <h2 id="tangible-title">Mini case study: SF office-to-residential conversion</h2>
           <p id="tangible-body">
-            When a tech tenant vacates a 1960s tower at a distressed basis, the owner
-            faces a choice: hold for years of negative cash flow or sell to a conversion
-            specialist. Public reporting on projects like 550 California Street shows how
-            a discounted office sale can become housing supply — the seller exits a
-            losing asset, the buyer captures rezoning upside, and the city stabilizes a
-            shrinking tax base.
+            When a tech tenant vacates a 1960s tower at a distressed basis, the owner faces a choice:
+            hold for negative cash flow or sell to a conversion specialist. Projects like 550 California
+            Street show how a discounted office sale can become housing — stabilizing the tax base
+            while adding supply. Progress for future residents; pain for the seller forced to exit.
           </p>
           <p>
-            That is the "who wins" story hiding inside SF's vacancy spike: not abstract
-            capital, but a concrete transfer from distressed sellers to patient buyers
-            with a different use case.
+            Source: <span id="case-study-source"><a href="https://www.spur.org/news/2023-12-12/without-decisive-action-san-franciscos-commercial-office-market-has-looong-road" rel="noopener">SPUR — SF office recovery report</a></span>
           </p>
         </section>
 
@@ -500,16 +522,16 @@
           <div class="winners-losers__col winners-losers__col--losers">
             <h3>Losers</h3>
             <ul id="losers-list">
+              <li>Urban workers in office-adjacent services (food, retail, cleaning, security) when attendance and hiring slow</li>
               <li>Small businesses in downtown corridors tied to office foot traffic</li>
-              <li>Urban workers in office-adjacent services when attendance and hiring slow</li>
               <li>Municipal budgets when assessed values and transaction volume weaken</li>
             </ul>
           </div>
         </section>
 
         <p class="callout callout--winner">
-          Capital that can buy at a discount and hold — or restructure — captures option
-          value when others are forced to sell or refinance.
+          Capital that can buy at a discount and hold — or restructure — captures option value when
+          others are forced to sell or refinance.
         </p>
 
         <section class="section-standalone" aria-labelledby="next-title">
@@ -520,41 +542,44 @@
             <li>Fiscal feedback loops: weaker downtowns → fewer services → harder recovery</li>
           </ul>
           <p>
-            The repricing is uneven by design: SF absorbed the demand shock, Manhattan
-            split by asset class, and D.C. faces fiscal drag. The winners are those with
-            capital and patience; the losers are workers, small businesses, and cities
-            tied to the old office equilibrium.
+            <span data-thesis-echo>National "office crisis" headlines hide a San Francisco crisis — and a Manhattan split.</span>
+            The winners are those with capital and patience; the losers are workers, small businesses,
+            and cities tied to the old office equilibrium.
           </p>
+        </section>
+
+        <section class="limits" aria-labelledby="limits-title">
+          <h2 id="limits-title">Limits &amp; counterpoints</h2>
+          <ul id="limits-list">
+            <li>Hand-curated brokerage series vary by vendor (~1–3 pp); comparisons are directional, not precise.</li>
+            <li>Class A asking rent ≠ net effective rent — concessions are often hidden off-lease.</li>
+            <li>Bank delinquency rates may understate distress if lenders extend or forbear on maturing loans.</li>
+            <li>SF conversion wins are potential, not realized at scale — rezoning and economics still bind many towers.</li>
+            <li>Counterpoint: lower office rents could eventually help some tenants — but fiscal drag and job losses in office-adjacent services hit workers and cities first.</li>
+          </ul>
         </section>
 
         <section class="sources" aria-labelledby="sources-title">
           <h2 id="sources-title">Sources</h2>
           <ul id="sources-list">
-            <li>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4124698">Gupta, Mittal &amp; Van Nieuwerburgh — Work From Home and the Office Real Estate Apocalypse</a>
-            </li>
-            <li>
-              <a href="../knowledge-base/wiki/summaries/kaplan-52-commercial-office-real-estate-statistics-2025.md">Kaplan Group — 52 Commercial &amp; Office Real Estate Statistics for 2025</a>
-            </li>
-            <li>
-              <a href="../knowledge-base/wiki/summaries/cfo-dive-moodys-vacancy-peak-2026.md">CFO Dive / Moody's — vacancy peak scenario</a>
-            </li>
-            <li>
-              <a href="../knowledge-base/raw/articles/NYC%E2%80%99s%20Office%20Market_%20Doom%20Loop%20or%20Boom%20Loop_%20-%20Office%20of%20the%20New%20York%20City%20Comptroller%20Mark%20Levine.pdf">NYC Comptroller — Doom Loop or Boom Loop?</a>
-            </li>
-            <li>
-              <a href="../knowledge-base/raw/articles/Without%20Decisive%20Action,%20San%20Francisco%E2%80%99s%20Commercial%20Office%20Market%20Has%20a%20Looong%20Road%20to%20Recovery%20_%20SPUR.pdf">SPUR — San Francisco commercial office recovery</a>
-            </li>
-            <li>
-              <a href="../knowledge-base/raw/articles/The%20Increasing%20Levels%20of%20Vacant%20Office%20Space_%20The%20Achilles%E2%80%99%20Heel%20of%20DC's%20Office%20Market%20_%20ora-cfo.pdf">D.C. ORA — Vacant office space</a>
-            </li>
-            <li>
-              <a href="../knowledge-base/raw/articles/San%20Francisco%20Office%20Market%20Research%20Report%20Q4%202024%20_%20Colliers.pdf">Colliers — San Francisco Office Q4 2024</a>
-            </li>
+            <li><a href="https://www.nber.org/papers/w30526" rel="noopener">Gupta, Mittal &amp; Van Nieuwerburgh — Work From Home and the Office Real Estate Apocalypse (NBER)</a></li>
+            <li><a href="https://www.thekaplangroup.com/blog/commercial-real-estate-statistics/" rel="noopener">Kaplan Group — 52 Commercial &amp; Office Real Estate Statistics for 2025</a></li>
+            <li><a href="https://www.cfodive.com/news/commercial-property-vacancy-rate-peak-2026-moodys-CRE-delinquency-real-estate/720234/" rel="noopener">CFO Dive / Moody's — office vacancy peak scenario</a></li>
+            <li><a href="https://comptroller.nyc.gov/reports/nycs-office-market-doom-loop-or-boom-loop/" rel="noopener">NYC Comptroller — Doom Loop or Boom Loop?</a></li>
+            <li><a href="https://www.spur.org/news/2023-12-12/without-decisive-action-san-franciscos-commercial-office-market-has-looong-road" rel="noopener">SPUR — San Francisco commercial office recovery</a></li>
+            <li><a href="https://ora-cfo.dc.gov/blog/increasing-levels-vacant-office-space-achilles%E2%80%99-heel-dcs-office-market" rel="noopener">D.C. ORA — Vacant office space and tax-base risk</a></li>
+            <li><a href="https://www.colliers.com/en-us/research/san-francisco" rel="noopener">Colliers — San Francisco office market research</a></li>
           </ul>
         </section>
       </section>
     </main>
+
+    <noscript>
+      <p style="padding:1rem;color:var(--text-muted)">
+        Charts require JavaScript. Key finding: San Francisco vacancy rose from 5.2% to 36.6% (2019–2024)
+        while Manhattan rose from 11.0% to 17.5% and D.C. from 17.4% to 21.6%.
+      </p>
+    </noscript>
 
     <script type="module" src="js/main.js"></script>
   </body>

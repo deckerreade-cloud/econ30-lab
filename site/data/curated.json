@@ -7,6 +7,7 @@
     "sfOfficeVacancyMajorCities": "22.65%",
     "headline": "After the pandemic, remote and hybrid work pulled demand out of the office sector. Vacancy rose to record levels while property values and tax bases came under pressure — unevenly, across cities and building classes."
   },
+  "thesis": "National \"office crisis\" headlines hide a San Francisco crisis — and a Manhattan split.",
   "sf": {
     "headline": "San Francisco became the poster child for empty towers and distressed pricing. Brokerage data show sustained high vacancy; policy reports (SPUR) argue recovery is long without conversion, tax reform, and downtown activation.",
     "statLabel": "SF metro office vacancy (major-city context)",
@@ -24,7 +25,9 @@
   },
   "caseStudy": {
     "title": "Mini case study: SF office-to-residential conversion",
-    "body": "When a tech tenant vacates a 1960s tower at a distressed basis, the owner faces a choice: hold for years of negative cash flow or sell to a conversion specialist. Public reporting on projects like 550 California Street shows how a discounted office sale can become housing supply — the seller exits a losing asset, the buyer captures rezoning upside, and the city stabilizes a shrinking tax base. That is the \"who wins\" story hiding inside SF's vacancy spike."
+    "body": "When a tech tenant vacates a 1960s tower at a distressed basis, the owner faces a choice: hold for years of negative cash flow or sell to a conversion specialist. Public reporting on projects like 550 California Street shows how a discounted office sale can become housing supply — the seller exits a losing asset, the buyer captures rezoning upside, and the city stabilizes a shrinking tax base.",
+    "sourceUrl": "https://www.spur.org/news/2023-12-12/without-decisive-action-san-franciscos-commercial-office-market-has-looong-road",
+    "sourceLabel": "SPUR — SF office recovery report"
   },
   "winners": [
     "Institutional investors and well-capitalized buyers acquiring distressed or discounted assets",
@@ -32,9 +35,16 @@
     "Asset managers with long horizons who can wait out lease rollover and repricing"
   ],
   "losers": [
+    "Urban workers in office-adjacent services (food, retail, cleaning, security) when attendance and hiring slow",
     "Small businesses in downtown corridors tied to office foot traffic",
-    "Urban workers in office-adjacent services when attendance and hiring slow",
     "Municipal budgets when assessed values and transaction volume weaken"
+  ],
+  "limits": [
+    "Hand-curated brokerage series vary by vendor (~1–3 pp); comparisons are directional, not precise.",
+    "Class A asking rent ≠ net effective rent — concessions are often hidden off-lease.",
+    "Bank delinquency rates may understate distress if lenders extend or forbear on maturing loans.",
+    "SF conversion wins are potential, not realized at scale — rezoning and economics still bind many towers.",
+    "Counterpoint: lower office rents could eventually help some tenants — but fiscal drag and job losses in office-adjacent services hit workers and cities first."
   ],
   "next": [
     "Office-to-residential conversion (where economically and legally feasible)",
@@ -43,32 +53,32 @@
   ],
   "sources": [
     {
-      "label": "Gupta, Mittal & Van Nieuwerburgh — Work From Home and the Office Real Estate Apocalypse (NBER; long-run NYC decline & nationwide value destruction figures)",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4124698"
+      "label": "Gupta, Mittal & Van Nieuwerburgh — Work From Home and the Office Real Estate Apocalypse (NBER)",
+      "url": "https://www.nber.org/papers/w30526"
     },
     {
-      "label": "Kaplan Group — 52 Commercial & Office Real Estate Statistics for 2025 (wiki summary)",
-      "url": "../knowledge-base/wiki/summaries/kaplan-52-commercial-office-real-estate-statistics-2025.md"
+      "label": "Kaplan Group — 52 Commercial & Office Real Estate Statistics for 2025",
+      "url": "https://www.thekaplangroup.com/blog/commercial-real-estate-statistics/"
     },
     {
-      "label": "CFO Dive / Moody's — vacancy peak scenario (wiki summary)",
-      "url": "../knowledge-base/wiki/summaries/cfo-dive-moodys-vacancy-peak-2026.md"
+      "label": "CFO Dive / Moody's — office vacancy peak scenario",
+      "url": "https://www.cfodive.com/news/commercial-property-vacancy-rate-peak-2026-moodys-CRE-delinquency-real-estate/720234/"
     },
     {
-      "label": "NYC Comptroller — Doom Loop or Boom Loop? (PDF in repo)",
-      "url": "../knowledge-base/raw/articles/NYC%E2%80%99s%20Office%20Market_%20Doom%20Loop%20or%20Boom%20Loop_%20-%20Office%20of%20the%20New%20York%20City%20Comptroller%20Mark%20Levine.pdf"
+      "label": "NYC Comptroller — Doom Loop or Boom Loop?",
+      "url": "https://comptroller.nyc.gov/reports/nycs-office-market-doom-loop-or-boom-loop/"
     },
     {
-      "label": "SPUR — San Francisco commercial office recovery (PDF in repo)",
-      "url": "../knowledge-base/raw/articles/Without%20Decisive%20Action,%20San%20Francisco%E2%80%99s%20Commercial%20Office%20Market%20Has%20a%20Looong%20Road%20to%20Recovery%20_%20SPUR.pdf"
+      "label": "SPUR — San Francisco commercial office recovery",
+      "url": "https://www.spur.org/news/2023-12-12/without-decisive-action-san-franciscos-commercial-office-market-has-looong-road"
     },
     {
-      "label": "D.C. ORA — Vacant office space (PDF in repo)",
-      "url": "../knowledge-base/raw/articles/The%20Increasing%20Levels%20of%20Vacant%20Office%20Space_%20The%20Achilles%E2%80%99%20Heel%20of%20DC's%20Office%20Market%20_%20ora-cfo.pdf"
+      "label": "D.C. ORA — Vacant office space and tax-base risk",
+      "url": "https://ora-cfo.dc.gov/blog/increasing-levels-vacant-office-space-achilles%E2%80%99-heel-dcs-office-market"
     },
     {
-      "label": "Colliers — San Francisco Office Q4 2024 (PDF in repo)",
-      "url": "../knowledge-base/raw/articles/San%20Francisco%20Office%20Market%20Research%20Report%20Q4%202024%20_%20Colliers.pdf"
+      "label": "Colliers — San Francisco office market research",
+      "url": "https://www.colliers.com/en-us/research/san-francisco"
     }
   ]
 }

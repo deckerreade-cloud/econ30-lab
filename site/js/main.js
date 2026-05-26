@@ -44,6 +44,11 @@ function fillStatPlaceholders(curated) {
     const key = el.getAttribute("data-stat");
     if (key && national[key] != null) el.textContent = String(national[key]);
   });
+  if (curated.thesis) {
+    document.querySelectorAll("[data-thesis-echo]").forEach((el) => {
+      el.textContent = curated.thesis;
+    });
+  }
 }
 
 function renderLists(curated) {
@@ -51,8 +56,10 @@ function renderLists(curated) {
   const w = document.getElementById("winners-list");
   const l = document.getElementById("losers-list");
   const n = document.getElementById("next-list");
+  const lim = document.getElementById("limits-list");
   const src = document.getElementById("sources-list");
   const tangibleBody = document.getElementById("tangible-body");
+  const caseStudySource = document.getElementById("case-study-source");
   if (w && Array.isArray(curated.winners) && curated.winners.length) {
     w.innerHTML = curated.winners.map((t) => `<li>${escapeHtml(t)}</li>`).join("");
   }
@@ -62,16 +69,22 @@ function renderLists(curated) {
   if (n && Array.isArray(curated.next) && curated.next.length) {
     n.innerHTML = curated.next.map((t) => `<li>${escapeHtml(t)}</li>`).join("");
   }
+  if (lim && Array.isArray(curated.limits) && curated.limits.length) {
+    lim.innerHTML = curated.limits.map((t) => `<li>${escapeHtml(t)}</li>`).join("");
+  }
   if (src && Array.isArray(curated.sources) && curated.sources.length) {
     src.innerHTML = curated.sources
       .map(
         (s) =>
-          `<li><a href="${escapeAttr(s.url)}">${escapeHtml(s.label)}</a></li>`
+          `<li><a href="${escapeAttr(s.url)}" rel="noopener">${escapeHtml(s.label)}</a></li>`
       )
       .join("");
   }
   if (tangibleBody && curated.caseStudy?.body) {
     tangibleBody.textContent = curated.caseStudy.body;
+  }
+  if (caseStudySource && curated.caseStudy?.sourceUrl) {
+    caseStudySource.innerHTML = `<a href="${escapeAttr(curated.caseStudy.sourceUrl)}" rel="noopener">${escapeHtml(curated.caseStudy.sourceLabel || "Source")}</a>`;
   }
 }
 
@@ -135,7 +148,7 @@ async function main() {
   ]);
 
   renderFredCharts(fred);
-  initDashboard(cityRows, { animate: !prefersReducedMotion });
+  initDashboard(cityRows, { animate: !prefersReducedMotion, defaultCompare: true });
 }
 
 main().catch((err) => {

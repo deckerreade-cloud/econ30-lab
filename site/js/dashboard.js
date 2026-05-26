@@ -12,6 +12,36 @@ const CITY_COLORS = {
   "Washington DC": "#3db7a0",
 };
 
+const CHART_SUMMARIES = {
+  vacancy: {
+    single: (city, rows) => {
+      const first = rows[0];
+      const last = rows[rows.length - 1];
+      return `${city}: vacancy ${first.vacancy_rate_pct}% (2015) → ${last.vacancy_rate_pct}% (2024).`;
+    },
+    compare:
+      "Compare all: San Francisco vacancy surges to 36.6% by 2024; Manhattan and D.C. rise modestly — SF +31 pp vs DC +4 pp.",
+  },
+  rent: {
+    single: (city, rows) => {
+      const first = rows[0];
+      const last = rows[rows.length - 1];
+      return `${city}: Class A asking rent $${first.asking_rent_psf} → $${last.asking_rent_psf}/sf (2015–2024).`;
+    },
+    compare:
+      "Compare all: Manhattan trophy rents rise through the shock; San Francisco falls — a K-shaped split.",
+  },
+  sublease: {
+    single: (city, rows) => {
+      const first = rows[0];
+      const last = rows[rows.length - 1];
+      return `${city}: sublease space ${first.sublease_msf}M → ${last.sublease_msf}M sq ft available.`;
+    },
+    compare:
+      "Compare all: sublease spiked in all three cities before direct vacancy — an early distress signal.",
+  },
+};
+
 const METRICS = {
   vacancy: {
     key: "vacancy_rate_pct",
@@ -38,18 +68,32 @@ function hairlineColor() {
   return "rgba(128, 128, 128, 0.25)";
 }
 
+function updateChartSummary(panel, metric, mode, city, cityRows) {
+  const el = panel.querySelector(".chart-summary");
+  if (!el) return;
+  const cfg = CHART_SUMMARIES[metric];
+  if (!cfg) return;
+  el.textContent =
+    mode === "compare" ? cfg.compare : cfg.single(city, cityRows);
+}
+
+function setContainerA11y(container, label) {
+  container.setAttribute("role", "img");
+  container.setAttribute("aria-label", label);
+}
+
 /**
  * @param {Array<{date:string,city:string,vacancy_rate_pct:number,asking_rent_psf:number,sublease_msf:number}>} timeseries
- * @param {{ animate?: boolean }} options
+ * @param {{ animate?: boolean, defaultCompare?: boolean }} options
  */
 export function initDashboard(timeseries, options = {}) {
-  const { animate = true } = options;
+  const { animate = true, defaultCompare = true } = options;
   const cityButtons = document.querySelectorAll(".city-toggle [data-city]");
   const compareBtn = document.getElementById("compare-all-btn");
   const panels = document.querySelectorAll(".chart-panel[data-metric]");
   if (!panels.length) return;
 
-  let mode = "single";
+  let mode = defaultCompare ? "compare" : "single";
   let current = "San Francisco";
 
   const byCity = (city) =>
@@ -63,7 +107,7 @@ export function initDashboard(timeseries, options = {}) {
     if (!container) return;
     d3.select(container).selectAll("svg").remove();
 
-    const margin = { top: 18, right: 8, bottom: 36, left: 44 };
+    const margin = { top: 18, right: 8, bottom: 40, left: 44 };
     const width = container.clientWidth || 280;
     const height = 175;
     const innerW = width - margin.left - margin.right;
@@ -135,6 +179,9 @@ export function initDashboard(timeseries, options = {}) {
         .ease(d3.easeCubicOut)
         .attr("stroke-dashoffset", 0);
     }
+
+    setContainerA11y(container, CHART_SUMMARIES[metric].single(current, cityRows));
+    updateChartSummary(panel, metric, "single", current, cityRows);
   }
 
   function drawOverlayPanel(panel, metric) {
@@ -145,7 +192,7 @@ export function initDashboard(timeseries, options = {}) {
     if (!container) return;
     d3.select(container).selectAll("svg").remove();
 
-    const margin = { top: 18, right: 8, bottom: 36, left: 44 };
+    const margin = { top: 22, right: 8, bottom: 40, left: 44 };
     const width = container.clientWidth || 280;
     const height = 175;
     const innerW = width - margin.left - margin.right;
@@ -207,9 +254,26 @@ export function initDashboard(timeseries, options = {}) {
         .attr("d", line);
     });
 
-    const legend = g.append("g").attr("class", "chart-legend").attr("transform", `translate(0, -4)`);
+    if (metric === "vacancy") {
+      const sfLast = byCity("San Francisco").slice(-1)[0];
+      if (sfLast) {
+        const px = x(new Date(sfLast.date));
+        const py = y(+sfLast.vacancy_rate_pct);
+        g.append("text")
+          .attr("x", Math.min(px - 4, innerW - 4))
+          .attr("y", Math.max(py - 8, 10))
+          .attr("text-anchor", "end")
+          .attr("fill", CITY_COLORS["San Francisco"])
+          .attr("font-size", 8)
+          .attr("font-weight", 600)
+          .text("SF +31 pp vs DC +4 pp");
+      }
+    }
+
+    const legend = g.append("g").attr("class", "chart-legend").attr("transform", `translate(0, -8)`);
+    const legendStep = width < 320 ? 58 : 72;
     CITIES.forEach((city, i) => {
-      const row = legend.append("g").attr("transform", `translate(${i * 72}, 0)`);
+      const row = legend.append("g").attr("transform", `translate(${i * legendStep}, 0)`);
       row
         .append("line")
         .attr("x1", 0)
@@ -226,6 +290,9 @@ export function initDashboard(timeseries, options = {}) {
         .attr("font-size", 8)
         .text(city === "New York" ? "NYC" : city === "Washington DC" ? "DC" : "SF");
     });
+
+    setContainerA11y(container, CHART_SUMMARIES[metric].compare);
+    updateChartSummary(panel, metric, "compare", current, byCity(current));
   }
 
   function updateCharts() {
@@ -247,6 +314,13 @@ export function initDashboard(timeseries, options = {}) {
     updateCharts();
   }
 
+  function setCompareMode() {
+    mode = "compare";
+    cityButtons.forEach((b) => b.setAttribute("aria-pressed", "false"));
+    if (compareBtn) compareBtn.setAttribute("aria-pressed", "true");
+    updateCharts();
+  }
+
   cityButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const city = btn.getAttribute("data-city");
@@ -255,14 +329,11 @@ export function initDashboard(timeseries, options = {}) {
   });
 
   if (compareBtn) {
-    compareBtn.addEventListener("click", () => {
-      mode = "compare";
-      cityButtons.forEach((b) => b.setAttribute("aria-pressed", "false"));
-      compareBtn.setAttribute("aria-pressed", "true");
-      updateCharts();
-    });
+    compareBtn.addEventListener("click", setCompareMode);
   }
 
   window.addEventListener("resize", updateCharts);
-  setSingleCity(current);
+
+  if (defaultCompare) setCompareMode();
+  else setSingleCity(current);
 }
