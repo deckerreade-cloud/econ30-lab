@@ -1,0 +1,195 @@
+/* Econ 30 Lab 7 — HTML slide deck */
+
+:root {
+  --bg-deep: #0b1220;
+  --bg-panel: #11192c;
+  --text-primary: #e6e8ee;
+  --text-muted: #8a93a6;
+  --accent-loser: #f26b5e;
+  --accent-winner: #3db7a0;
+  --accent-neutral: #ffd166;
+  --hairline: rgba(230, 232, 238, 0.08);
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+
+.deck {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 4rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.slide h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+
+.slide h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--accent-neutral);
+  line-height: 1.2;
+}
+
+.slide p {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0 0 0.85rem;
+  max-width: 42rem;
+}
+
+.slide ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 40rem;
+}
+
+.slide li {
+  margin-bottom: 0.5rem;
+}
+
+.slide li strong {
+  color: var(--text-primary);
+}
+
+.slide .stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.slide .stat {
+  padding: 0.75rem 0;
+  border-top: 2px solid var(--hairline);
+  min-width: 140px;
+}
+
+.slide .stat__value {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--accent-loser);
+  line-height: 1.1;
+}
+
+.slide .stat__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.slide .question {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  max-width: 16ch;
+  margin: 0;
+}
+
+.slide .chart-backup {
+  margin: 1rem 0;
+  max-width: 640px;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+
+.slide a {
+  color: var(--accent-winner);
+}
+
+.slide .url-block {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+
+.slide .url-block a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.slide .url-block a:hover {
+  text-decoration: underline;
+}
+
+.nav-hint {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.25rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  z-index: 10;
+}
+
+.progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent-winner);
+  transition: width 0.3s ease;
+  z-index: 10;
+}
+
+@media (max-width: 600px) {
+  .slide {
+    padding: 2rem 1.5rem;
+  }
+}

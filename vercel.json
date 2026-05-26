@@ -9,6 +9,8 @@
     { "source": "/data/:path*", "destination": "/site/data/:path*" },
     { "source": "/js/:path*", "destination": "/site/js/:path*" },
     { "source": "/styles/:path*", "destination": "/site/styles/:path*" },
-    { "source": "/assets/:path*", "destination": "/site/assets/:path*" }
+    { "source": "/assets/:path*", "destination": "/site/assets/:path*" },
+    { "source": "/presentation", "destination": "/presentation/index.html" },
+    { "source": "/presentation/:path*", "destination": "/presentation/:path*" }
   ]
 }

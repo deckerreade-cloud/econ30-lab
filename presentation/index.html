@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Who Wins and Loses — Econ 30 Presentation · Reade Decker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slides.css" />
+  </head>
+  <body>
+    <div class="deck" id="deck">
+      <!-- Slide 1: Hook -->
+      <section class="slide is-active" data-slide="1" aria-label="Slide 1 of 5">
+        <p class="slide__eyebrow">Reade Decker · Econ 30 Capstone</p>
+        <h1>Office values crashed. One national headline hides three local stories.</h1>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat__value">19.6%</div>
+            <div class="stat__label">U.S. office vacancy</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">$556.8B</div>
+            <div class="stat__label">Illustrative value destruction</div>
+          </div>
+        </div>
+        <p>
+          After COVID, remote work pulled demand out of offices. Vacancy roughly tripled.
+          But “the office crisis” is not one story — it is a distribution story.
+        </p>
+      </section>
+
+      <!-- Slide 2: Puzzle -->
+      <section class="slide" data-slide="2" aria-label="Slide 2 of 5">
+        <p class="slide__eyebrow">The puzzle</p>
+        <h2>Same shock. Three cities. Three paths.</h2>
+        <ul>
+          <li><strong>San Francisco</strong> — vacancy ~5% → ~37% (demand collapse)</li>
+          <li><strong>Manhattan</strong> — trophy rents rose while vacancy stayed high (K-shaped split)</li>
+          <li><strong>Washington, D.C.</strong> — slower burn, fiscal / tax-base exposure</li>
+        </ul>
+        <p style="margin-top: 1.25rem; color: var(--accent-neutral); font-weight: 600;">
+          National “office crisis” headlines hide a San Francisco crisis — and a Manhattan split.
+        </p>
+      </section>
+
+      <!-- Slide 3: Question -->
+      <section class="slide" data-slide="3" aria-label="Slide 3 of 5">
+        <p class="slide__eyebrow">Research question</p>
+        <p class="question">Who wins and loses when office values crash?</p>
+        <p style="margin-top: 1.5rem;">
+          When office values reprice after a demand shock, who gains option value —
+          and who bears the fiscal and employment cost?
+        </p>
+      </section>
+
+      <!-- Slide 4: Data map -->
+      <section class="slide" data-slide="4" aria-label="Slide 4 of 5">
+        <p class="slide__eyebrow">Data &amp; sources</p>
+        <h2>What I built on</h2>
+        <ul>
+          <li><strong>City panel</strong> — hand-curated Q4 data 2015–2024 (SF, Manhattan, D.C.): vacancy, Class A rent, sublease</li>
+          <li><strong>FRED</strong> — CRE loans + delinquency on U.S. bank balance sheets</li>
+          <li><strong>Literature</strong> — Gupta et al. (~46% NYC long-run decline); NYC Comptroller; SPUR; D.C. ORA</li>
+        </ul>
+        <img
+          class="chart-backup"
+          src="/assets/vacancy-compare.svg"
+          alt="Vacancy comparison: San Francisco surges while Manhattan and D.C. rise modestly"
+          width="640"
+          height="220"
+        />
+        <p style="font-size: 0.9rem;">Harmonized three cities on the same metrics — compare paths, not just headlines.</p>
+      </section>
+
+      <!-- Slide 5: Takeaway + live demo -->
+      <section class="slide" data-slide="5" aria-label="Slide 5 of 5">
+        <p class="slide__eyebrow">Takeaways</p>
+        <h2>Winners vs. losers</h2>
+        <ul>
+          <li><strong style="color: var(--accent-winner)">Winners</strong> — patient capital at distressed basis; trophy landlords (Manhattan)</li>
+          <li><strong style="color: var(--accent-loser)">Losers</strong> — downtown workers in office-adjacent services; city tax bases</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+          <strong>Live demo next:</strong> Compare all on vacancy — watch SF diverge.
+        </p>
+        <div class="url-block">
+          Capstone site:
+          <a href="https://econ30-lab.vercel.app/" rel="noopener">econ30-lab.vercel.app</a>
+        </div>
+        <p style="font-size: 0.85rem; margin-top: 1rem;">
+          Next 10 days: net effective rent, deeper D.C. fiscal case, demo polish.
+        </p>
+      </section>
+    </div>
+
+    <div class="progress" id="progress" style="width: 20%"></div>
+    <p class="nav-hint" id="nav-hint">← → or click · 1 / 5</p>
+
+    <script>
+      (function () {
+        const slides = Array.from(document.querySelectorAll(".slide"));
+        const progress = document.getElementById("progress");
+        const hint = document.getElementById("nav-hint");
+        let index = 0;
+
+        function show(i) {
+          index = Math.max(0, Math.min(slides.length - 1, i));
+          slides.forEach((s, j) => s.classList.toggle("is-active", j === index));
+          progress.style.width = ((index + 1) / slides.length) * 100 + "%";
+          hint.textContent = "← → or click · " + (index + 1) + " / " + slides.length;
+        }
+
+        function next() {
+          show(index + 1);
+        }
+        function prev() {
+          show(index - 1);
+        }
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") {
+            e.preventDefault();
+            next();
+          } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+            e.preventDefault();
+            prev();
+          } else if (e.key === "Home") {
+            show(0);
+          } else if (e.key === "End") {
+            show(slides.length - 1);
+          }
+        });
+
+        document.getElementById("deck").addEventListener("click", (e) => {
+          if (e.target.closest("a")) return;
+          const x = e.clientX / window.innerWidth;
+          if (x < 0.35) prev();
+          else next();
+        });
+
+        show(0);
+      })();
+    </script>
+  </body>
+</html>
