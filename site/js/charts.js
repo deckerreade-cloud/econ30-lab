@@ -6,22 +6,32 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
 const parseDate = (d) => new Date(d);
 
+function tickColor() {
+  return getComputedStyle(document.documentElement).getPropertyValue("--text-muted").trim() || "#8a93a6";
+}
+
+function hairlineColor() {
+  return "rgba(128, 128, 128, 0.25)";
+}
+
 /**
  * @param {HTMLElement} container
- * @param {{ yKey: string, yLabel: string, color?: string, animate?: boolean }} opts
+ * @param {{ yKey: string, yLabel: string, xLabel?: string, color?: string, animate?: boolean, height?: number, yTickFormat?: (v:number)=>string }} opts
  */
 export function createLineChart(container, opts) {
-  const { yKey, yLabel, color = "#3db7a0", animate = true, height: chartHeight = 260 } = opts;
+  const {
+    yKey,
+    yLabel,
+    xLabel = "Year",
+    color = "#3db7a0",
+    animate = true,
+    height: chartHeight = 260,
+    yTickFormat,
+  } = opts;
   let data = [];
-  let svg;
-  let g;
-  let xScale;
-  let yScale;
-  let line;
-  let path;
   let width = 0;
-  let height = chartHeight;
-  const margin = { top: 16, right: 12, bottom: 28, left: 44 };
+  const height = chartHeight;
+  const margin = { top: 20, right: 12, bottom: 40, left: 52 };
 
   function measure() {
     const rect = container.getBoundingClientRect();
@@ -31,7 +41,7 @@ export function createLineChart(container, opts) {
   function render() {
     measure();
     d3.select(container).selectAll("svg").remove();
-    svg = d3
+    const svg = d3
       .select(container)
       .append("svg")
       .attr("width", width)
@@ -39,25 +49,22 @@ export function createLineChart(container, opts) {
       .attr("role", "img")
       .attr("aria-label", yLabel);
 
-    g = svg
-      .append("g")
-      .attr("transform", `translate(${margin.left},${margin.top})`);
-
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
     const innerW = width - margin.left - margin.right;
     const innerH = height - margin.top - margin.bottom;
 
-    xScale = d3
+    const xScale = d3
       .scaleTime()
       .domain(d3.extent(data, (d) => parseDate(d.date)))
       .range([0, innerW]);
 
-    yScale = d3
+    const yScale = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => +d[yKey]) * 1.05 || 1])
       .nice()
       .range([innerH, 0]);
 
-    line = d3
+    const line = d3
       .line()
       .x((d) => xScale(parseDate(d.date)))
       .y((d) => yScale(+d[yKey]))
@@ -67,16 +74,33 @@ export function createLineChart(container, opts) {
       .attr("class", "axis axis--x")
       .attr("transform", `translate(0,${innerH})`)
       .call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%Y")))
-      .call((a) => a.selectAll("text").attr("fill", "#8a93a6").attr("font-size", 10))
-      .call((a) => a.selectAll("path,line").attr("stroke", "rgba(230,232,238,0.15)"));
+      .call((a) => a.selectAll("text").attr("fill", tickColor()).attr("font-size", 10))
+      .call((a) => a.selectAll("path,line").attr("stroke", hairlineColor()));
 
     g.append("g")
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(yScale).ticks(4))
-      .call((a) => a.selectAll("text").attr("fill", "#8a93a6").attr("font-size", 10))
-      .call((a) => a.selectAll("path,line").attr("stroke", "rgba(230,232,238,0.15)"));
+      .call(d3.axisLeft(yScale).ticks(4).tickFormat(yTickFormat || ((v) => v)))
+      .call((a) => a.selectAll("text").attr("fill", tickColor()).attr("font-size", 10))
+      .call((a) => a.selectAll("path,line").attr("stroke", hairlineColor()));
 
-    path = g
+    g.append("text")
+      .attr("x", innerW / 2)
+      .attr("y", innerH + 34)
+      .attr("text-anchor", "middle")
+      .attr("fill", tickColor())
+      .attr("font-size", 10)
+      .text(xLabel);
+
+    g.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("x", -innerH / 2)
+      .attr("y", -42)
+      .attr("text-anchor", "middle")
+      .attr("fill", tickColor())
+      .attr("font-size", 10)
+      .text(yLabel);
+
+    const path = g
       .append("path")
       .datum(data)
       .attr("fill", "none")
@@ -94,14 +118,6 @@ export function createLineChart(container, opts) {
         .ease(d3.easeCubicOut)
         .attr("stroke-dashoffset", 0);
     }
-
-    g.append("text")
-      .attr("x", 0)
-      .attr("y", -4)
-      .attr("fill", "#8a93a6")
-      .attr("font-size", 10)
-      .attr("letter-spacing", "0.06em")
-      .text(yLabel.toUpperCase());
   }
 
   return {
@@ -112,57 +128,6 @@ export function createLineChart(container, opts) {
     },
     destroy() {
       d3.select(container).selectAll("svg").remove();
-    },
-  };
-}
-
-/**
- * Two small line charts (K-shaped narrative): value index vs vacancy.
- * @param {HTMLElement} container
- * @param {{ animate?: boolean }} opts
- */
-export function createSmallMultiples(container, opts) {
-  const { animate = true } = opts;
-  let data = [];
-
-  function draw() {
-    container.innerHTML = "";
-    if (!data.length) return;
-
-    const wrap = document.createElement("div");
-    wrap.className = "small-multiples";
-    container.appendChild(wrap);
-
-    const series = [
-      { key: "property_value_index", label: "Value index (Class A proxy)", color: "#3db7a0" },
-      { key: "vacancy_rate_pct", label: "Vacancy % (B/C stress)", color: "#f26b5e" },
-    ];
-
-    series.forEach((s) => {
-      const cell = document.createElement("div");
-      cell.className = "sm-cell";
-      const h4 = document.createElement("h4");
-      h4.textContent = s.label;
-      cell.appendChild(h4);
-      wrap.appendChild(cell);
-      const chart = createLineChart(cell, {
-        yKey: s.key,
-        yLabel: s.key.replace(/_/g, " "),
-        color: s.color,
-        animate,
-        height: 140,
-      });
-      chart.setData(data);
-    });
-  }
-
-  return {
-    setData(rows) {
-      data = (rows || []).slice();
-      draw();
-    },
-    destroy() {
-      container.innerHTML = "";
     },
   };
 }

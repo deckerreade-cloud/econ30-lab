@@ -1,19 +1,23 @@
 /**
- * Static 3-section narrative: stat strip, dashboard, case-study charts.
- * D3 charts loaded from charts.js / dashboard.js.
+ * Static 3-section narrative: stat strip, dashboard, FRED charts.
  */
 
 import { createLineChart } from "./charts.js";
 import { initDashboard } from "./dashboard.js";
+import { initTheme } from "./theme.js";
 
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
 async function loadCurated() {
-  const res = await fetch(new URL("../data/curated.json", import.meta.url));
-  if (!res.ok) throw new Error("curated.json missing");
-  return res.json();
+  try {
+    const res = await fetch(new URL("../data/curated.json", import.meta.url));
+    if (!res.ok) return null;
+    return res.json();
+  } catch (_err) {
+    return null;
+  }
 }
 
 async function loadCityPanel() {
@@ -34,6 +38,7 @@ async function loadFred() {
 }
 
 function fillStatPlaceholders(curated) {
+  if (!curated) return;
   const national = curated.national || {};
   document.querySelectorAll("[data-stat]").forEach((el) => {
     const key = el.getAttribute("data-stat");
@@ -42,26 +47,31 @@ function fillStatPlaceholders(curated) {
 }
 
 function renderLists(curated) {
+  if (!curated) return;
   const w = document.getElementById("winners-list");
   const l = document.getElementById("losers-list");
   const n = document.getElementById("next-list");
   const src = document.getElementById("sources-list");
-  if (w && Array.isArray(curated.winners)) {
+  const tangibleBody = document.getElementById("tangible-body");
+  if (w && Array.isArray(curated.winners) && curated.winners.length) {
     w.innerHTML = curated.winners.map((t) => `<li>${escapeHtml(t)}</li>`).join("");
   }
-  if (l && Array.isArray(curated.losers)) {
+  if (l && Array.isArray(curated.losers) && curated.losers.length) {
     l.innerHTML = curated.losers.map((t) => `<li>${escapeHtml(t)}</li>`).join("");
   }
-  if (n && Array.isArray(curated.next)) {
+  if (n && Array.isArray(curated.next) && curated.next.length) {
     n.innerHTML = curated.next.map((t) => `<li>${escapeHtml(t)}</li>`).join("");
   }
-  if (src && Array.isArray(curated.sources)) {
+  if (src && Array.isArray(curated.sources) && curated.sources.length) {
     src.innerHTML = curated.sources
       .map(
         (s) =>
           `<li><a href="${escapeAttr(s.url)}">${escapeHtml(s.label)}</a></li>`
       )
       .join("");
+  }
+  if (tangibleBody && curated.caseStudy?.body) {
+    tangibleBody.textContent = curated.caseStudy.body;
   }
 }
 
@@ -87,9 +97,11 @@ function renderFredCharts(fred) {
     const chart = createLineChart(loansMount, {
       yKey: "value",
       yLabel: "Billions of USD",
+      xLabel: "Year",
       color: "#ffd166",
       animate: !prefersReducedMotion,
       height: 240,
+      yTickFormat: (v) => `$${Math.round(v)}B`,
     });
     chart.setData(loans.rows);
   }
@@ -100,23 +112,28 @@ function renderFredCharts(fred) {
     const chart = createLineChart(delinqMount, {
       yKey: "value",
       yLabel: "Delinquency rate (%)",
+      xLabel: "Year",
       color: "#f26b5e",
       animate: !prefersReducedMotion,
       height: 240,
+      yTickFormat: (v) => `${v}%`,
     });
     chart.setData(delinq.rows);
   }
 }
 
 async function main() {
-  const [curated, cityRows, fred] = await Promise.all([
-    loadCurated(),
+  initTheme();
+
+  const curated = await loadCurated();
+  fillStatPlaceholders(curated);
+  renderLists(curated);
+
+  const [cityRows, fred] = await Promise.all([
     loadCityPanel(),
     loadFred(),
   ]);
 
-  fillStatPlaceholders(curated);
-  renderLists(curated);
   renderFredCharts(fred);
   initDashboard(cityRows, { animate: !prefersReducedMotion });
 }

@@ -13,14 +13,18 @@
     "statValue": "22.65%"
   },
   "nyc": {
-    "headline": "New York’s market splits: trophy Class A assets and selective leasing can stabilize headlines while Class B/C stock and fiscal exposure still matter. The NYC Comptroller frames the tension as doom loop vs. boom loop.",
+    "headline": "New York's market splits: trophy Class A assets and selective leasing can stabilize headlines while Class B/C stock and fiscal exposure still matter. The NYC Comptroller frames the tension as doom loop vs. boom loop.",
     "statLabel": "NYC office narrative",
     "statValue": "K-shaped"
   },
   "dc": {
-    "headline": "Washington, D.C. depends heavily on federal-adjacent office demand. The D.C. Office of Revenue Analysis ties rising vacant stock to valuation and property-tax risk — a fiscal Achilles’ heel.",
+    "headline": "Washington, D.C. depends heavily on federal-adjacent office demand. The D.C. Office of Revenue Analysis ties rising vacant stock to valuation and property-tax risk — a fiscal Achilles' heel.",
     "statLabel": "Policy frame",
     "statValue": "Vacancy & tax base"
+  },
+  "caseStudy": {
+    "title": "Mini case study: SF office-to-residential conversion",
+    "body": "When a tech tenant vacates a 1960s tower at a distressed basis, the owner faces a choice: hold for years of negative cash flow or sell to a conversion specialist. Public reporting on projects like 550 California Street shows how a discounted office sale can become housing supply — the seller exits a losing asset, the buyer captures rezoning upside, and the city stabilizes a shrinking tax base. That is the \"who wins\" story hiding inside SF's vacancy spike."
   },
   "winners": [
     "Institutional investors and well-capitalized buyers acquiring distressed or discounted assets",
@@ -47,7 +51,7 @@
       "url": "../knowledge-base/wiki/summaries/kaplan-52-commercial-office-real-estate-statistics-2025.md"
     },
     {
-      "label": "CFO Dive / Moody’s — vacancy peak scenario (wiki summary)",
+      "label": "CFO Dive / Moody's — vacancy peak scenario (wiki summary)",
       "url": "../knowledge-base/wiki/summaries/cfo-dive-moodys-vacancy-peak-2026.md"
     },
     {
