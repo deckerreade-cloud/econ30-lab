@@ -86,11 +86,15 @@ Pause.
 
 3. **Literature anchor** — “Gupta and co-authors estimate a long-run **46%** decline in NYC office values. SPUR and the NYC Comptroller frame policy choices — doom loop vs. boom loop.”
 
-> “How I used it: I harmonized three cities on the same metrics so we compare adjustment *paths*, not just read one national headline. Brokerage figures vary by a few points across vendors — these comparisons are directional, not precise.”
+> “How I used it: I harmonized three cities on the same metrics so we compare adjustment *paths*, not just read one national headline. Methodology is separate from interpretation on Page 2 — how the panel was built vs. what it means for winners and losers. Brokerage figures vary by a few points across vendors — these comparisons are directional, not precise.”
 
 ---
 
 ## Beat 4 — Interactive (~2 min 30 sec) — **show, don’t tell**
+
+**Navigate to Page 2.** Briefly scroll to **Why these three cities?** (20 sec)
+
+> “I compare San Francisco, Manhattan, and D.C. because they share the same post-COVID shock and the same three metrics — but they show three different adjustment paths. SF alone would overgeneralize an office apocalypse; Manhattan alone would miss how lopsided the geography is. The comparison is the argument.”
 
 **Navigate to Page 2 dashboard.** Compare all should load by default.
 
@@ -110,11 +114,13 @@ Click **San Francisco**. Scroll to sublease panel.
 
 > “Sublease spiked before direct vacancy in all three cities — tenants putting space back on the market before landlords feel it in headline vacancy. An early distress signal.”
 
-### Step 4 — Finding #01 (optional, 15 sec)
+### Step 4 — Findings + interpretation (30 sec)
 
-Scroll to findings grid.
+Scroll to findings grid, then **From patterns to payoff**.
 
-> “Finding one states it directly: the ‘office shock’ is really a San Francisco shock. The interactive isn’t decoration — it’s how I prove the headline is wrong.”
+> “Each finding has a ‘so what’ line linking to who wins and loses. Finding one: SF shock — pain concentrates in workers and the tax base, not evenly nationally. Finding two: trophy rent rises in Manhattan while SF falls — landlords at the top win, B/C owners lose.”
+
+> “The interpretation section ties it together: national distress plus contained bank delinquency plus uneven city pain means option value accrues to patient capital, not downtown workers. That’s the bridge to Page 3.”
 
 ---
 

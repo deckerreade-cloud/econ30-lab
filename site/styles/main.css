@@ -549,6 +549,68 @@ code {
   margin-right: 0.4rem;
 }
 
+.findings__sowhat {
+  margin: 0.75rem 0 0;
+  padding-top: 0.65rem;
+  border-top: 1px dashed var(--hairline);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.findings__sowhat strong {
+  color: var(--accent-winner);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.interpretation {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 209, 102, 0.08) 0%, var(--bg-panel) 55%);
+  border: 1px solid rgba(255, 209, 102, 0.25);
+  border-radius: 6px;
+}
+
+.interpretation h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.85rem;
+}
+
+.interpretation p {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.interpretation p:last-child {
+  margin-bottom: 0;
+}
+
+.interpretation a {
+  color: var(--accent-winner);
+  font-weight: 600;
+}
+
+.case-study__headline {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.case-study__link {
+  margin: 0.75rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.case-study__link a {
+  color: var(--accent-winner);
+}
+
 .stat-strip {
   border-top: 1px solid var(--hairline);
   border-bottom: none;
@@ -777,6 +839,62 @@ code {
   font-size: 0.98rem;
 }
 
+.why-cities__subhead {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-neutral);
+  margin: 1.25rem 0 0.5rem;
+}
+
+.why-cities__text {
+  margin: 0 0 0.75rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.why-cities__list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.why-cities__list li + li {
+  margin-top: 0.35rem;
+}
+
+.why-cities__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+}
+
+.why-cities__table th,
+.why-cities__table td {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--hairline);
+  text-align: left;
+  vertical-align: top;
+}
+
+.why-cities__table thead th {
+  background: var(--bg-deep);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.why-cities__table tbody th {
+  font-weight: 600;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.02);
+}
+
 .why-cities__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -808,6 +926,12 @@ code {
   max-width: 1100px;
   margin: 1.5rem auto 0;
   padding: 0 0.25rem;
+}
+
+.glossary__note {
+  margin: 0 0 0.75rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
 }
 
 .glossary details {
