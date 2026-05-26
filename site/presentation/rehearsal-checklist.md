@@ -75,3 +75,9 @@ If they can’t answer both, **cut motivation** and **lengthen demo + takeaways*
 | | | |
 
 Fill in after each practice run.
+
+---
+
+## Estimated script length
+
+The full walkthrough script is ~1,220 words. At ~140–160 words/min, spoken portions land around **7–8 minutes** without demo pauses. Budget **2–2.5 min** for the live dashboard — use the cut list if you exceed 8:00.
