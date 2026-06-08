@@ -1,20 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="Vacancy rates 2015-2024: San Francisco rises to 36.6 percent while Manhattan and DC stay lower">
-  <rect width="640" height="220" fill="#11192c"/>
-  <text x="48" y="14" fill="#8a93a6" font-family="Inter, sans-serif" font-size="11" letter-spacing="0.08em">VACANCY COMPARISON · Q4 SNAPSHOTS</text>
-  <line x1="48" y1="160" x2="624" y2="160" stroke="rgba(230,232,238,0.15)"/>
-  <line x1="48" y1="0" x2="48" y2="160" stroke="rgba(230,232,238,0.15)"/>
-  <g transform="translate(48,20)">
-    <polyline fill="none" stroke="#f26b5e" stroke-width="2.5" points="0.0,132.9 64.0,131.7 128.0,133.3 192.0,135.7 256.0,139.0 320.0,92.4 384.0,69.3 448.0,50.7 512.0,22.8 576.0,11.9"/>
-<polyline fill="none" stroke="#ffd166" stroke-width="2.5" points="0.0,121.1 64.0,117.1 128.0,112.6 192.0,114.3 256.0,115.5 320.0,99.7 384.0,89.2 448.0,83.9 512.0,87.1 576.0,89.2"/>
-<polyline fill="none" stroke="#3db7a0" stroke-width="2.5" points="0.0,93.2 64.0,90.8 128.0,90.0 192.0,90.4 256.0,89.6 320.0,84.7 384.0,80.3 448.0,77.4 512.0,75.0 576.0,72.6"/>
-    <text x="576.0" y="3.851851851851876" fill="#f26b5e" font-family="Inter, sans-serif" font-size="9" text-anchor="end">SF +31 pp</text>
-    <text x="48" y="188" fill="#8a93a6" font-family="Inter, sans-serif" font-size="10">2015</text>
-    <text x="624" y="188" fill="#8a93a6" font-family="Inter, sans-serif" font-size="10" text-anchor="end">2024</text>
-    <text x="-36" y="80.0" fill="#8a93a6" font-family="Inter, sans-serif" font-size="10" transform="rotate(-90 -36 80.0)" text-anchor="middle">Vacancy %</text>
-    <g transform="translate(0,174)">
-      <line x1="0" y1="0" x2="14" y2="0" stroke="#f26b5e" stroke-width="2"/><text x="18" y="4" fill="#8a93a6" font-size="9">SF</text>
-      <line x1="44" y1="0" x2="58" y2="0" stroke="#ffd166" stroke-width="2"/><text x="62" y="4" fill="#8a93a6" font-size="9">NYC</text>
-      <line x1="98" y1="0" x2="112" y2="0" stroke="#3db7a0" stroke-width="2"/><text x="116" y="4" fill="#8a93a6" font-size="9">DC</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-label="Vacancy rates 2015-2024: San Francisco rises to 36.6 percent while Manhattan and DC stay lower">
+  <rect width="960" height="340" fill="#11192c"/>
+  <text x="72" y="22" fill="#8a93a6" font-family="Inter, sans-serif" font-size="13" letter-spacing="0.08em">VACANCY COMPARISON · Q4 SNAPSHOTS · SAN FRANCISCO DIVERGES</text>
+  <line x1="72" y1="248" x2="936" y2="248" stroke="rgba(230,232,238,0.15)"/>
+  <line x1="72" y1="32" x2="72" y2="248" stroke="rgba(230,232,238,0.15)"/>
+  <g transform="translate(72,32)">
+    <polyline fill="none" stroke="#f26b5e" stroke-width="3.75" points="0,207.2 96,205.4 192,209.8 288,215.4 384,222.8 480,148.6 576,111.4 672,81.4 768,36.6 864,19.2"/>
+    <polyline fill="none" stroke="#ffd166" stroke-width="2.25" opacity="0.85" points="0,188.6 96,182.4 192,175.2 288,178.2 384,180.6 480,155.2 576,138.6 672,130.6 768,135.4 864,138.6"/>
+    <polyline fill="none" stroke="#3db7a0" stroke-width="2.25" opacity="0.85" points="0,145.2 96,141.4 192,140.2 288,140.8 384,139.6 480,131.8 576,125.2 672,120.8 768,117.0 864,113.4"/>
+    <text x="864" y="8" fill="#f26b5e" font-family="Inter, sans-serif" font-size="12" font-weight="600" text-anchor="end">SF 5.2% → 36.6% (+31 pp)</text>
+    <text x="72" y="292" fill="#8a93a6" font-family="Inter, sans-serif" font-size="12">2015</text>
+    <text x="936" y="292" fill="#8a93a6" font-family="Inter, sans-serif" font-size="12" text-anchor="end">2024</text>
+    <text x="-48" y="124" fill="#8a93a6" font-family="Inter, sans-serif" font-size="12" transform="rotate(-90 -48 124)" text-anchor="middle">Vacancy %</text>
+    <g transform="translate(0,268)">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#f26b5e" stroke-width="3.5"/>
+      <text x="26" y="5" fill="#f26b5e" font-size="11" font-weight="600">San Francisco</text>
+      <line x1="140" y1="0" x2="160" y2="0" stroke="#ffd166" stroke-width="2.25"/>
+      <text x="166" y="5" fill="#8a93a6" font-size="11">Manhattan</text>
+      <line x1="260" y1="0" x2="280" y2="0" stroke="#3db7a0" stroke-width="2.25"/>
+      <text x="286" y="5" fill="#8a93a6" font-size="11">Washington, D.C.</text>
     </g>
   </g>
 </svg>

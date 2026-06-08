@@ -173,19 +173,27 @@
           </div>
         </section>
 
-        <div class="hero-chart">
+        <div class="hero-chart hero-chart--featured">
           <figure class="figure">
             <img
               src="assets/vacancy-compare.svg"
               alt="Vacancy comparison chart: San Francisco rises to 36.6 percent by 2024 while Manhattan and D.C. rise modestly"
-              width="640"
-              height="220"
+              width="960"
+              height="340"
               loading="eager"
             />
             <figcaption>
               Author-built chart from the hand-curated city panel — the geographic shock is not national, it is San Francisco-first.
             </figcaption>
           </figure>
+          <div class="chart-learn">
+            <strong>What this plot tells us:</strong>
+            <dfn>Vacancy rate</dfn> is the share of office space sitting empty (direct plus sublease).
+            The coral <strong>San Francisco</strong> line is the story: it climbs from about <strong>5.2%</strong> pre-COVID
+            to <strong>36.6%</strong> by Q4 2024 — a <strong>+31.4 percentage-point</strong> jump. Manhattan (gold) and
+            D.C. (teal) rise only modestly (+6.5 and +4.2 pp). Same national shock, but SF absorbs a local demand
+            collapse that national headlines flatten away.
+          </div>
         </div>
 
         <div class="photo-band">
@@ -246,6 +254,74 @@
                 </div>
               </div>
 
+              <h3 class="why-cities__subhead">General trends each city faces</h3>
+              <div class="why-cities__trends">
+                <article class="why-cities__trend">
+                  <h4>San Francisco</h4>
+                  <ul>
+                    <li><strong>Vacancy spiral:</strong> 5.2% → 36.6% (2019–2024) as tech and WFH emptied downtown faster than anywhere else.</li>
+                    <li><strong>Rent compression:</strong> Class A asking rent fell $80 → $70/sf — landlords cutting to compete for fewer tenants.</li>
+                    <li><strong>Sublease flood:</strong> tenants listed ~9 M sq ft (~5× pre-COVID) before official vacancy peaked — early distress signal.</li>
+                    <li><strong>Conversion pressure:</strong> distressed basis and policy talk push office towers toward housing — if economics work.</li>
+                  </ul>
+                </article>
+                <article class="why-cities__trend">
+                  <h4>Manhattan</h4>
+                  <ul>
+                    <li><strong>Moderate vacancy rise:</strong> 11.0% → 17.5% (+6.5 pp) — painful, but nothing like SF's +31 pp.</li>
+                    <li><strong>Flight to quality:</strong> tenants downsized into trophy Class A; older B/C stock absorbs the empty space.</li>
+                    <li><strong>K-shaped rents:</strong> headline Class A asking rent <em>rose</em> $83 → $86/sf even as fringe buildings struggle.</li>
+                    <li><strong>Within-market split:</strong> trophy landlords look resilient; B/C owners and transit-adjacent retail bear the cost.</li>
+                  </ul>
+                </article>
+                <article class="why-cities__trend">
+                  <h4>Washington, D.C.</h4>
+                  <ul>
+                    <li><strong>Slow burn:</strong> vacancy 17.4% → 21.6% (+4.2 pp) — gradual creep, not a sudden collapse.</li>
+                    <li><strong>Flat headline rents:</strong> Class A asking ~$58/sf end-2024 — no trophy recovery, no SF-style crash.</li>
+                    <li><strong>Federal drag:</strong> partial return-to-office and agency footprint cuts weigh on federal-adjacent stock.</li>
+                    <li><strong>Fiscal risk:</strong> D.C. ORA flags vacant offices as an "Achilles' heel" for the property-tax base.</li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="city-photos" aria-label="City skyline photos">
+                <figure class="figure city-photos__item">
+                  <img
+                    src="assets/sf-aerial.jpg"
+                    alt="Aerial view of San Francisco downtown and bay"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                  <figcaption>San Francisco — tech-heavy CBD where vacancy surged after WFH.</figcaption>
+                </figure>
+                <figure class="figure city-photos__item">
+                  <img
+                    src="assets/manhattan-skyline.jpg"
+                    alt="Lower Manhattan office skyline"
+                    width="1280"
+                    height="853"
+                    loading="lazy"
+                  />
+                  <figcaption>Manhattan — trophy Class A and distressed fringe stock in one market.</figcaption>
+                </figure>
+                <figure class="figure city-photos__item">
+                  <img
+                    src="assets/dc-skyline.jpg"
+                    alt="Washington D.C. skyline at dusk"
+                    width="1280"
+                    height="448"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Washington, D.C. — federal-adjacent office corridors and slower-burn vacancy.
+                    <a href="https://commons.wikimedia.org/wiki/File:Washington_dc_skyline.jpg" rel="noopener">Wikimedia Commons</a>
+                    · Ad Meskens · CC BY-SA 3.0
+                  </figcaption>
+                </figure>
+              </div>
+
               <h3 class="why-cities__subhead">Why not one city?</h3>
               <ul class="why-cities__list">
                 <li><strong>SF alone</strong> → overgeneralize an “office apocalypse” nationwide.</li>
@@ -283,6 +359,14 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="chart-learn chart-learn--table">
+                <strong>What this table tells us:</strong>
+                Each row is a different lens on the same shock. <strong>Primary shock channel</strong> names
+                <em>how</em> demand broke (tech collapse vs. flight-to-quality vs. fiscal drag).
+                <strong>Vacancy Δ</strong> quantifies the pain — SF's +31.4 pp is roughly seven times D.C.'s +4.2 pp.
+                <strong>Who wins / loses</strong> translates the numbers into people and capital: conversion buyers
+                vs. workers in SF, trophy landlords vs. B/C owners in Manhattan, discount buyers vs. the city budget in D.C.
+              </div>
             </div>
             <div class="why-cities__figure">
               <figure class="figure">
@@ -327,7 +411,7 @@
               <button type="button" id="compare-all-btn" aria-pressed="true">Compare all</button>
             </div>
             <div class="dashboard-charts">
-              <div class="chart-panel" data-metric="vacancy">
+              <div class="chart-panel chart-panel--featured" data-metric="vacancy">
                 <h3>Vacancy rate</h3>
                 <div
                   class="chart-panel__svg"
@@ -337,6 +421,13 @@
                   <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
                 <p class="chart-summary">Compare all: SF vacancy 5.2% → 36.6% (2019–2024); DC +4.2 pp over the same span.</p>
+                <p class="chart-learn" data-chart-learn="vacancy">
+                  <strong>What this plot tells us:</strong>
+                  <dfn>Vacancy rate</dfn> measures empty office space as a share of total inventory.
+                  In <strong>Compare all</strong>, watch the coral SF line separate from gold (Manhattan) and teal (D.C.) after 2020.
+                  SF gained <strong>+31.4 pp</strong>; Manhattan <strong>+6.5 pp</strong>; D.C. <strong>+4.2 pp</strong>.
+                  Pick a single city to see that market's full 2015–2024 path. The takeaway: the "office crisis" is geographically concentrated — not evenly national.
+                </p>
               </div>
               <div class="chart-panel" data-metric="rent">
                 <h3>Class A asking rent</h3>
@@ -348,6 +439,13 @@
                   <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
                 <p class="chart-summary">Compare all: Manhattan $83 → $86/sf; SF $80 → $70/sf — a K-shaped split.</p>
+                <p class="chart-learn" data-chart-learn="rent">
+                  <strong>What this plot tells us:</strong>
+                  <dfn>Class A asking rent</dfn> is the listed sticker price on the newest, highest-quality buildings — not net rent after free months or concessions.
+                  <dfn>Trophy rent</dfn> is top-tier Class A in prime towers. Manhattan's line rising ($83 → $86/sf) while SF falls ($80 → $70) shows
+                  <dfn>flight to quality</dfn>: tenants didn't disappear in NYC — many moved into better buildings, leaving older stock empty.
+                  That's a <dfn>K-shaped</dfn> split — winners and losers inside one city.
+                </p>
               </div>
               <div class="chart-panel" data-metric="sublease">
                 <h3>Sublease available</h3>
@@ -359,6 +457,13 @@
                   <p class="chart-panel__placeholder">Live chart loads here.</p>
                 </div>
                 <p class="chart-summary">Compare all: sublease spiked in all three cities — an early distress signal.</p>
+                <p class="chart-learn" data-chart-learn="sublease">
+                  <strong>What this plot tells us:</strong>
+                  <dfn>Sublease</dfn> is space a tenant tries to re-let because they no longer need it — a leading indicator of distress.
+                  Tenants list sublease <em>before</em> landlords feel it in direct vacancy. SF peaked near <strong>9 M sq ft</strong> (~5× pre-COVID);
+                  Manhattan and D.C. roughly doubled. Pick one city to isolate its spike-and-fade pattern.
+                  Early sublease waves signal forced sales ahead — a window for patient capital, pain for owners who must sell now.
+                </p>
               </div>
             </div>
           </div>
@@ -468,6 +573,15 @@
 
         <div class="case-studies">
           <section class="case-study case-study--side" aria-labelledby="sf-title">
+            <figure class="case-study__figure figure">
+              <img
+                src="assets/sf-aerial.jpg"
+                alt="Aerial view of San Francisco financial district"
+                width="1280"
+                height="720"
+                loading="lazy"
+              />
+            </figure>
             <h2 id="sf-title">Case study: San Francisco</h2>
             <p class="case-study__headline">
               <strong>Losers:</strong> downtown workers, retailers, and the municipal tax base as vacancy
@@ -497,6 +611,15 @@
           </section>
 
           <section class="case-study case-study--side" aria-labelledby="nyc-title">
+            <figure class="case-study__figure figure">
+              <img
+                src="assets/manhattan-skyline.jpg"
+                alt="Lower Manhattan office towers and skyline"
+                width="1280"
+                height="853"
+                loading="lazy"
+              />
+            </figure>
             <h2 id="nyc-title">Case study: Manhattan</h2>
             <p class="case-study__headline">
               <strong>Losers:</strong> Class B/C owners and fringe stock as vacancy rises modestly (+6.5 pp).
@@ -524,6 +647,20 @@
           </section>
 
           <section class="case-study case-study--side" aria-labelledby="dc-title">
+            <figure class="case-study__figure figure">
+              <img
+                src="assets/dc-skyline.jpg"
+                alt="Washington D.C. skyline — federal-adjacent office corridors"
+                width="1280"
+                height="448"
+                loading="lazy"
+              />
+              <figcaption>
+                Washington, D.C. skyline — slower vacancy burn, fiscal exposure on property taxes.
+                <a href="https://commons.wikimedia.org/wiki/File:Washington_dc_skyline.jpg" rel="noopener">Wikimedia Commons</a>
+                · Ad Meskens · CC BY-SA 3.0
+              </figcaption>
+            </figure>
             <h2 id="dc-title">Case study: Washington, D.C.</h2>
             <p class="case-study__headline">
               <strong>Losers:</strong> city fiscal capacity and Class B owners as vacancy creeps up (+4.2 pp).
@@ -572,6 +709,12 @@
                 · monthly, billions USD
               </p>
               <div class="fred-card__chart" id="fred-loans-mount"></div>
+              <p class="chart-learn">
+                <strong>What this plot tells us:</strong>
+                Total <dfn>CRE</dfn> loans on bank balance sheets kept climbing ($2.32T → $3.01T, +29.5%) even as
+                city vacancy exploded. Banks expanded exposure — they did not pull back from commercial real estate at the national level.
+                Repricing is happening in asset markets first; credit volumes lag the downtown pain workers feel.
+              </p>
             </article>
             <article class="fred-card" id="fred-card-delinq">
               <h3>CRE loan delinquency rate</h3>
@@ -580,6 +723,12 @@
                 · quarterly, percent
               </p>
               <div class="fred-card__chart" id="fred-delinq-mount"></div>
+              <p class="chart-learn">
+                <strong>What this plot tells us:</strong>
+                Delinquency — loans past due — rose only modestly (0.67% → 1.56%). Contained so far, but that can understate
+                distress if lenders extend or forbear on maturing loans. The lag between falling building values and rising
+                delinquency gives patient holders time; workers and forced sellers bear cost before credit pain fully shows.
+              </p>
             </article>
           </div>
         </section>

@@ -68,6 +68,10 @@ function hairlineColor() {
   return "rgba(128, 128, 128, 0.25)";
 }
 
+function panelHeight(metric) {
+  return metric === "vacancy" ? 280 : 200;
+}
+
 function updateChartSummary(panel, metric, mode, city, cityRows) {
   const el = panel.querySelector(".chart-summary");
   if (!el) return;
@@ -109,7 +113,7 @@ export function initDashboard(timeseries, options = {}) {
 
     const margin = { top: 18, right: 8, bottom: 40, left: 44 };
     const width = container.clientWidth || 280;
-    const height = 175;
+    const height = panelHeight(metric);
     const innerW = width - margin.left - margin.right;
     const innerH = height - margin.top - margin.bottom;
 
@@ -194,7 +198,7 @@ export function initDashboard(timeseries, options = {}) {
 
     const margin = { top: 22, right: 8, bottom: 40, left: 44 };
     const width = container.clientWidth || 280;
-    const height = 175;
+    const height = panelHeight(metric);
     const innerW = width - margin.left - margin.right;
     const innerH = height - margin.top - margin.bottom;
 
