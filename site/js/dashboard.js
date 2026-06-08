@@ -88,7 +88,9 @@ function updateChartSummary(panel, metric, mode, city, cityRows) {
 }
 
 function appendCovidMarker(g, x, innerH) {
-  const covidDate = new Date("2020-12-31");
+  // March 2020 — between Q4 2019 and Q4 2020 snapshots (not Dec 31, which
+  // hugs the next year tick on a calendar-year axis).
+  const covidDate = new Date(2020, 2, 11);
   const [x0, x1] = x.domain();
   if (covidDate < x0 || covidDate > x1) return;
   const cx = x(covidDate);
