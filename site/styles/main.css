@@ -304,6 +304,71 @@ code {
   margin: 0 0 1rem;
 }
 
+.hero__cta {
+  margin: 0 0 0.5rem;
+}
+
+.hero__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 1.15rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--bg-deep);
+  background: var(--accent-neutral);
+  border-radius: 4px;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.hero__cta-link:hover {
+  filter: brightness(1.08);
+}
+
+.hero__cta-link:focus-visible {
+  outline: 2px solid var(--accent-neutral);
+  outline-offset: 3px;
+}
+
+.insight-ribbon {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(61, 183, 160, 0.1) 0%, var(--bg-panel) 60%);
+  border: 1px solid rgba(61, 183, 160, 0.28);
+  border-radius: 6px;
+}
+
+.insight-ribbon__title {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-winner);
+  margin: 0 0 0.85rem;
+}
+
+.insight-ribbon__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.insight-ribbon__list li {
+  margin-bottom: 0.65rem;
+}
+
+.insight-ribbon__list li:last-child {
+  margin-bottom: 0;
+}
+
+.insight-ribbon__list strong {
+  color: var(--text-primary);
+}
+
 .byline {
   font-size: 0.95rem;
   color: var(--text-muted);
@@ -470,6 +535,11 @@ code {
 
 .dashboard-source a {
   color: var(--accent-winner);
+}
+
+.dashboard-source a + a::before {
+  content: " · ";
+  color: var(--text-muted);
 }
 
 .fred-panel {
@@ -663,6 +733,100 @@ code {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.findings__chart-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-winner);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.findings__chart-link:hover {
+  text-decoration: underline;
+}
+
+.findings__chart-link:focus-visible {
+  outline: 2px solid var(--accent-winner);
+  outline-offset: 2px;
+}
+
+.argument-thread {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+
+.argument-thread h2 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+
+.argument-thread__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .argument-thread__steps {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.65rem;
+  }
+}
+
+.argument-thread__step {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  background: var(--bg-deep);
+}
+
+.argument-thread__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 50%;
+  background: rgba(255, 209, 102, 0.15);
+  color: var(--accent-neutral);
+}
+
+.argument-thread__label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.argument-thread__step p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.argument-thread__step a {
+  color: var(--accent-winner);
 }
 
 .interpretation {
@@ -868,6 +1032,20 @@ code {
 .city-toggle button:hover {
   color: var(--text-primary);
   border-color: var(--text-muted);
+}
+
+.city-toggle button:focus-visible {
+  outline: 2px solid var(--accent-neutral);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .city-toggle button {
+    flex: 1 1 calc(50% - 0.25rem);
+    min-width: 0;
+    font-size: 0.68rem;
+    padding: 0.5rem 0.55rem;
+  }
 }
 
 .city-toggle button[aria-pressed="true"] {
@@ -1511,6 +1689,12 @@ dfn {
   border-radius: 4px;
   padding: 0.5rem;
   min-height: 180px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.chart-panel--highlight {
+  border-color: var(--accent-neutral);
+  box-shadow: 0 0 0 1px rgba(255, 209, 102, 0.35);
 }
 
 .chart-panel--featured {
@@ -1658,4 +1842,105 @@ dfn {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.takeaway-line {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--accent-neutral);
+  background: rgba(255, 209, 102, 0.08);
+  border-radius: 0 6px 6px 0;
+}
+
+.takeaway-line__label {
+  margin: 0 0 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-neutral);
+}
+
+.takeaway-line__text {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.progress-takeaway {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+}
+
+.progress-takeaway h2 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+
+.progress-takeaway__grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  .progress-takeaway__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.progress-takeaway__grid dt {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-winner);
+  margin-bottom: 0.25rem;
+}
+
+.progress-takeaway__grid dd {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+}
+
+.site-footer__byline {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.site-footer__byline strong {
+  color: var(--text-primary);
+}
+
+.site-footer__links {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.site-footer__links a {
+  color: var(--accent-winner);
+}
+
+.site-footer__links span[aria-hidden="true"] {
+  margin: 0 0.35rem;
+  opacity: 0.5;
 }

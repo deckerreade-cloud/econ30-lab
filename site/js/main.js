@@ -170,6 +170,18 @@ function initSectionNav() {
   setActive("page-1");
 }
 
+function initFindingLinks(dashboard) {
+  if (!dashboard?.focusMetric) return;
+  document.querySelectorAll(".findings__chart-link[data-metric]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      dashboard.focusMetric(btn.getAttribute("data-metric"), {
+        mode: btn.getAttribute("data-mode") || "compare",
+        city: btn.getAttribute("data-city") || undefined,
+      });
+    });
+  });
+}
+
 async function main() {
   initTheme();
   initSectionNav();
@@ -184,7 +196,11 @@ async function main() {
   ]);
 
   renderFredCharts(fred);
-  initDashboard(cityRows, { animate: !prefersReducedMotion, defaultCompare: true });
+  const dashboard = initDashboard(cityRows, {
+    animate: !prefersReducedMotion,
+    defaultCompare: true,
+  });
+  initFindingLinks(dashboard);
 }
 
 main().catch((err) => {

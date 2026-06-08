@@ -72,13 +72,40 @@ function panelHeight(metric) {
   return metric === "vacancy" ? 280 : 200;
 }
 
+function announceChartSummary(text) {
+  const live = document.getElementById("chart-live-region");
+  if (live) live.textContent = text;
+}
+
 function updateChartSummary(panel, metric, mode, city, cityRows) {
   const el = panel.querySelector(".chart-summary");
   if (!el) return;
   const cfg = CHART_SUMMARIES[metric];
   if (!cfg) return;
-  el.textContent =
-    mode === "compare" ? cfg.compare : cfg.single(city, cityRows);
+  const text = mode === "compare" ? cfg.compare : cfg.single(city, cityRows);
+  el.textContent = text;
+  announceChartSummary(text);
+}
+
+function appendCovidMarker(g, x, innerH) {
+  const covidDate = new Date("2020-12-31");
+  const [x0, x1] = x.domain();
+  if (covidDate < x0 || covidDate > x1) return;
+  const cx = x(covidDate);
+  g.append("line")
+    .attr("x1", cx)
+    .attr("x2", cx)
+    .attr("y1", 0)
+    .attr("y2", innerH)
+    .attr("stroke", tickColor())
+    .attr("stroke-dasharray", "3,3")
+    .attr("opacity", 0.5);
+  g.append("text")
+    .attr("x", cx + 3)
+    .attr("y", 10)
+    .attr("fill", tickColor())
+    .attr("font-size", 8)
+    .text("COVID");
 }
 
 function setContainerA11y(container, label) {
@@ -147,6 +174,8 @@ export function initDashboard(timeseries, options = {}) {
       .call(d3.axisLeft(y).ticks(3).tickFormat(cfg.tickFormat))
       .call((a) => a.selectAll("text").attr("fill", tickColor()).attr("font-size", 10))
       .call((a) => a.selectAll("path,line").attr("stroke", hairlineColor()));
+
+    appendCovidMarker(g, x, innerH);
 
     g.append("text")
       .attr("x", innerW / 2)
@@ -230,6 +259,8 @@ export function initDashboard(timeseries, options = {}) {
       .call(d3.axisLeft(y).ticks(3).tickFormat(cfg.tickFormat))
       .call((a) => a.selectAll("text").attr("fill", tickColor()).attr("font-size", 10))
       .call((a) => a.selectAll("path,line").attr("stroke", hairlineColor()));
+
+    appendCovidMarker(g, x, innerH);
 
     g.append("text")
       .attr("x", innerW / 2)
@@ -338,6 +369,27 @@ export function initDashboard(timeseries, options = {}) {
 
   window.addEventListener("resize", updateCharts);
 
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  function focusMetric(metric, opts = {}) {
+    const { mode = "compare", city = "San Francisco" } = opts;
+    if (mode === "compare") setCompareMode();
+    else if (city && CITIES.includes(city)) setSingleCity(city);
+
+    const panel = document.querySelector(`.chart-panel[data-metric="${metric}"]`);
+    if (!panel) return;
+    panel.classList.add("chart-panel--highlight");
+    window.setTimeout(() => panel.classList.remove("chart-panel--highlight"), 2200);
+    panel.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "center",
+    });
+  }
+
   if (defaultCompare) setCompareMode();
   else setSingleCity(current);
+
+  return { setCompareMode, setSingleCity, focusMetric };
 }

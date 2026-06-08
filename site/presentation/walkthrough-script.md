@@ -23,8 +23,8 @@
 | 3 | 0:45 | PAGE 1 · About this project | Scroll |
 | 4 | 1:15 | PAGE 1 · What this project adds | Scroll |
 | 5 | 1:40 | PAGE 1 · Progress lens | Scroll |
-| 6 | 2:05 | PAGE 1 · Stat strip | Pause on numbers |
-| 7 | 2:25 | PAGE 1 · Photo + 46% callout | Scroll |
+| 6 | 2:00 | PAGE 1 · Stat strip + insight ribbon | Pause on numbers |
+| 7 | 2:20 | PAGE 1 · Photo + 46% callout | Scroll |
 | 8 | 2:40 | PAGE 2 · Why these three cities? | Scroll |
 | 9 | 3:05 | PAGE 2 · General trends + city photos | Slow scroll |
 | 10 | 3:20 | PAGE 2 · Dashboard (intro) | Scroll to dashboard |
@@ -102,17 +102,17 @@ Load **https://econ30-lab.vercel.app/** and start at the very top.
 
 ---
 
-### ⏱️ 2:05 — PAGE 1 · Stat strip
+### ⏱️ 2:00 — PAGE 1 · Stat strip + "What you won't get from a headline"
 
-**ON SCREEN:** Line **"The stakes: hundreds of billions repriced — but not evenly. Who captures the upside?"** Then four stat boxes: **19.6%** · **24%** · **$556.8B** · **22.65%** with labels underneath.
+**ON SCREEN:** Right after the hero CTA **"Explore the interactive data →"**: stakes line, four stat boxes (**19.6%** · **24%** · **$556.8B** · **22.65%**), then green-tinted box **"What you won't get from a headline"** with three bullets (original data, 7× geographic gap, sublease leading signal).
 
-**ACTION:** Pause on the four numbers so they read clearly on video.
+**ACTION:** Pause on the four numbers, then scroll through the insight ribbon.
 
-**SAY:** These four numbers are the national oh-wow stats. U.S. office vacancy is about nineteen point six percent. Moody's worst case is twenty-four percent. Some studies put total nationwide value loss around five hundred fifty-six billion dollars. SF shows up around twenty-two point six five percent in one stat pack — but wait till you see SF on my chart; it goes way higher. The shock is real, but these stats still don't tell you who gets hurt. Who loses: restaurant and retail workers downtown, small shops that need office foot traffic, city budgets on property taxes and building sales. Who wins: big investors who can buy a tower cheap, sit through the pain, and wait or flip it into something else. That's the puzzle this whole site is trying to answer.
+**SAY:** Right under the title you'll see Explore the interactive data — that's where the proof lives. These four numbers are the national oh-wow stats. U.S. office vacancy about nineteen point six percent. Moody's worst case twenty-four percent. Nationwide value loss around five hundred fifty-six billion. But wait till you see SF on my chart — it goes way higher. The green box is what you won't get from a headline: I built my own three-city panel by hand; SF vacancy jumped thirty-one points while D.C. only four — a seven-to-one gap; and sublease spiked before official vacancy in all three cities. That's the original contribution. Who loses: downtown workers and city budgets. Who wins: patient capital at a discount. That's the puzzle.
 
 ---
 
-### ⏱️ 2:25 — PAGE 1 · Photo + 46% callout (end of Page 1)
+### ⏱️ 2:20 — PAGE 1 · Photo + 46% callout (end of Page 1)
 
 **ON SCREEN:** Photo caption **"Downtown San Francisco during curfew, June 2020"**. Below: red callout box **"46% long-run decline in NYC office values."** Next section below is Page 2.
 
@@ -306,11 +306,10 @@ Load **https://econ30-lab.vercel.app/** and start at the very top.
 
 ```
 PAGE 1 — 01 · The numbers
-├── Hero (title + thesis)
+├── Hero (title + thesis + CTA)
+├── Stat strip + insight ribbon
 ├── About this project
-├── What this project adds
 ├── Progress lens
-├── Stat strip
 ├── Photo
 └── 46% callout
 

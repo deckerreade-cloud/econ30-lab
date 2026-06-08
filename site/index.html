@@ -117,7 +117,55 @@
             <em>progress</em> hides inside that repricing: who gains option value when
             offices are forced to evolve.
           </p>
+          <p class="hero__cta">
+            <a class="hero__cta-link" href="#dash-title">Explore the interactive data →</a>
+          </p>
         </div>
+
+        <p class="stat-strip__stakes">
+          The stakes: hundreds of billions repriced — but not evenly. Who captures the upside?
+        </p>
+
+        <section class="stat-strip" aria-label="National headline statistics">
+          <div class="stat-strip__inner">
+            <div class="stat-strip__grid">
+              <div class="stat">
+                <div class="stat__value" data-stat="officeVacancyQ1Pct">19.6%</div>
+                <div class="stat__label">U.S. office vacancy (Q1 2025)</div>
+              </div>
+              <div class="stat stat--neutral">
+                <div class="stat__value" data-stat="moodysVacancyPeakPct">24%</div>
+                <div class="stat__label">Moody's peak vacancy scenario</div>
+              </div>
+              <div class="stat">
+                <div class="stat__value" data-stat="nationwideValueDestruction">$556.8B</div>
+                <div class="stat__label">Illustrative nationwide office value destruction (literature)</div>
+              </div>
+              <div class="stat stat--neutral">
+                <div class="stat__value" data-stat="sfOfficeVacancyMajorCities">22.65%</div>
+                <div class="stat__label">SF vacancy context (major-city stat pack)</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="insight-ribbon" aria-labelledby="insight-title">
+          <h2 id="insight-title" class="insight-ribbon__title">What you won't get from a headline</h2>
+          <ul class="insight-ribbon__list">
+            <li>
+              <strong>Original data:</strong> hand-curated Q4 panel for SF, Manhattan, and D.C. (2015–2024) —
+              vacancy, Class A rent, and sublease — harmonized from primary PDFs, not one vendor API.
+            </li>
+            <li>
+              <strong>Geographic shock:</strong> SF vacancy +31.4 pp vs. D.C. +4.2 pp — roughly a
+              <strong>7×</strong> gap inside one country after the same pandemic shock.
+            </li>
+            <li>
+              <strong>Leading signal:</strong> sublease spiked in all three cities <em>before</em> direct vacancy
+              peaked — an early distress window national stats miss.
+            </li>
+          </ul>
+        </section>
 
         <section class="description" aria-labelledby="about-title">
           <h2 id="about-title" class="description__title">About this project</h2>
@@ -159,15 +207,6 @@
           </div>
         </section>
 
-        <section class="project-adds" aria-labelledby="adds-title">
-          <h2 id="adds-title">What this project adds</h2>
-          <ul>
-            <li>A harmonized three-city panel (SF, Manhattan, D.C.) hand-curated from primary brokerage and government PDFs — 2015–2024 Q4.</li>
-            <li>Sublease tracked as a leading indicator: it spiked before direct vacancy in all three markets.</li>
-            <li>FRED national series paired with city pain: banks expanded CRE exposure (+29.5%) while vacancy exploded.</li>
-          </ul>
-        </section>
-
         <section class="progress-lens" aria-labelledby="progress-title">
           <h2 id="progress-title">Progress lens</h2>
           <p>
@@ -188,33 +227,6 @@
             policy (conversions, tax reform) and whether distressed basis clears fast enough for
             new uses to take hold.
           </p>
-        </section>
-
-        <p class="stat-strip__stakes">
-          The stakes: hundreds of billions repriced — but not evenly. Who captures the upside?
-        </p>
-
-        <section class="stat-strip" aria-label="National headline statistics">
-          <div class="stat-strip__inner">
-            <div class="stat-strip__grid">
-              <div class="stat">
-                <div class="stat__value" data-stat="officeVacancyQ1Pct">19.6%</div>
-                <div class="stat__label">U.S. office vacancy (Q1 2025)</div>
-              </div>
-              <div class="stat stat--neutral">
-                <div class="stat__value" data-stat="moodysVacancyPeakPct">24%</div>
-                <div class="stat__label">Moody's peak vacancy scenario</div>
-              </div>
-              <div class="stat">
-                <div class="stat__value" data-stat="nationwideValueDestruction">$556.8B</div>
-                <div class="stat__label">Illustrative nationwide office value destruction (literature)</div>
-              </div>
-              <div class="stat stat--neutral">
-                <div class="stat__value" data-stat="sfOfficeVacancyMajorCities">22.65%</div>
-                <div class="stat__label">SF vacancy context (major-city stat pack)</div>
-              </div>
-            </div>
-          </div>
         </section>
 
         <div class="photo-band">
@@ -498,7 +510,40 @@
             Sources: Colliers SF; Cushman &amp; Wakefield / NYC Comptroller;
             <a href="https://ora-cfo.dc.gov/blog/increasing-levels-vacant-office-space-achilles%E2%80%99-heel-dcs-office-market" rel="noopener">D.C. ORA</a> / JLL.
             Brokerage figures vary ~1–3 pp across vendors.
+            <a href="data/city_panel.json" download>Download city panel (JSON)</a>
           </p>
+          <div id="chart-live-region" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+        </section>
+
+        <section class="argument-thread" aria-labelledby="argument-title">
+          <h2 id="argument-title">How this site answers the research question</h2>
+          <ol class="argument-thread__steps">
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">Q</span>
+              <span class="argument-thread__label">Research question</span>
+              <p>Who wins and loses when office values crash?</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">1</span>
+              <span class="argument-thread__label">Geography</span>
+              <p>SF shock (+31.4 pp) vs. modest rises in Manhattan and D.C. — pain is not national.</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">2</span>
+              <span class="argument-thread__label">Within-market split</span>
+              <p>Manhattan trophy rent rises while fringe stock absorbs vacancy — winners and losers in one CBD.</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">3</span>
+              <span class="argument-thread__label">Timing</span>
+              <p>Sublease leads vacancy; bank delinquency lags repricing — option value accrues to patient capital first.</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">→</span>
+              <span class="argument-thread__label">Payoff</span>
+              <p><a href="#page-3">Winners &amp; losers</a> named — workers and cities lose first; capital with patience wins.</p>
+            </li>
+          </ol>
         </section>
 
         <section class="glossary" aria-labelledby="glossary-title">
@@ -533,6 +578,7 @@
                 <strong>DC +4.2 pp</strong>. SF's shock is roughly seven times DC's.
               </p>
               <p class="findings__sowhat"><strong>So what:</strong> Pain concentrates in SF workers and the municipal tax base — not evenly across a “national office crisis.”</p>
+              <button type="button" class="findings__chart-link" data-metric="vacancy" data-mode="compare">See in vacancy chart →</button>
             </li>
             <li class="findings__item findings__item--real">
               <span class="findings__num">02 · real data</span>
@@ -542,6 +588,7 @@
                 <strong>DC flat</strong>. Flight-to-quality concentrated demand at the top.
               </p>
               <p class="findings__sowhat"><strong>So what:</strong> Manhattan trophy landlords win; SF and D.C. headline rents understate distress in older stock.</p>
+              <button type="button" class="findings__chart-link" data-metric="rent" data-mode="compare">See in rent chart →</button>
             </li>
             <li class="findings__item findings__item--real">
               <span class="findings__num">03 · real data</span>
@@ -551,6 +598,7 @@
                 <strong>DC ~2×</strong> — before direct vacancy, now slowly bleeding back.
               </p>
               <p class="findings__sowhat"><strong>So what:</strong> Early signal that distressed sellers may face forced sales — a window for patient capital.</p>
+              <button type="button" class="findings__chart-link" data-metric="sublease" data-mode="single" data-city="San Francisco">See in sublease chart →</button>
             </li>
             <li class="findings__item findings__item--real">
               <span class="findings__num">04 · real data</span>
@@ -560,6 +608,7 @@
                 <strong>0.67% → 1.56%</strong> — real repricing, contained credit event so far.
               </p>
               <p class="findings__sowhat"><strong>So what:</strong> Repricing hits asset markets before bank balance sheets — lag benefits holders who exit or restructure early.</p>
+              <a class="findings__chart-link findings__chart-link--anchor" href="#fred-title">See FRED charts →</a>
             </li>
           </ol>
           <p class="methodology">
@@ -818,6 +867,35 @@
           others are forced to sell or refinance.
         </p>
 
+        <blockquote class="takeaway-line" cite="#hero-title">
+          <p class="takeaway-line__label">Remember this</p>
+          <p class="takeaway-line__text" data-thesis-echo>
+            National "office crisis" headlines hide a San Francisco crisis — and a Manhattan split.
+          </p>
+        </blockquote>
+
+        <section class="progress-takeaway" aria-labelledby="progress-takeaway-title">
+          <h2 id="progress-takeaway-title">Progress studies takeaway</h2>
+          <dl class="progress-takeaway__grid">
+            <div>
+              <dt>Who gains</dt>
+              <dd>Patient capital, trophy landlords, and conversion buyers at a distressed basis — option value when others must sell.</dd>
+            </div>
+            <div>
+              <dt>Engine</dt>
+              <dd>Forced repricing pushes saturated office space toward housing, labs, and mixed-use downtowns.</dd>
+            </div>
+            <div>
+              <dt>Bottleneck</dt>
+              <dd>Zoning, conversion economics, and cities' dependence on office property-tax assessments.</dd>
+            </div>
+            <div>
+              <dt>Future lesson</dt>
+              <dd>Progress and inequality move together — workers and municipal budgets feel the shock before credit markets fully adjust.</dd>
+            </div>
+          </dl>
+        </section>
+
         <section class="section-standalone" aria-labelledby="next-title">
           <h2 id="next-title">What comes next</h2>
           <ul id="next-list">
@@ -857,6 +935,19 @@
         </section>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p class="site-footer__byline">
+        <strong>Reade Decker</strong> · Econ 30 Capstone · Progress &amp; Inequality · Spring 2026
+      </p>
+      <p class="site-footer__links">
+        <a href="https://econ30-lab.vercel.app/">econ30-lab.vercel.app</a>
+        <span aria-hidden="true">·</span>
+        <a href="data/city_panel.json" download>City panel data (JSON)</a>
+        <span aria-hidden="true">·</span>
+        <span>Panel through Q4 2024</span>
+      </p>
+    </footer>
 
     <noscript>
       <p style="padding:1rem;color:var(--text-muted)">
