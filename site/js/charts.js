@@ -31,7 +31,7 @@ export function createLineChart(container, opts) {
   let data = [];
   let width = 0;
   const height = chartHeight;
-  const margin = { top: 20, right: 12, bottom: 40, left: 52 };
+  const margin = { top: 20, right: 12, bottom: 40, left: 60 };
 
   function measure() {
     const rect = container.getBoundingClientRect();
@@ -94,7 +94,7 @@ export function createLineChart(container, opts) {
     g.append("text")
       .attr("transform", "rotate(-90)")
       .attr("x", -innerH / 2)
-      .attr("y", -42)
+      .attr("y", -30)
       .attr("text-anchor", "middle")
       .attr("fill", tickColor())
       .attr("font-size", 10)
