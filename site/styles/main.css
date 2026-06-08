@@ -411,7 +411,7 @@ code {
   .case-studies {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.75rem;
-    align-items: start;
+    align-items: stretch;
   }
 }
 
@@ -1186,7 +1186,14 @@ code {
 
 /* Compact case-study trio — balanced to fit one screen without feeling tiny */
 @media (min-width: 900px) {
+  .case-studies {
+    align-items: stretch;
+  }
+
   .case-studies .case-study--side {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 1rem 1.1rem 1.1rem;
     font-size: 0.88rem;
     line-height: 1.45;
@@ -1215,8 +1222,10 @@ code {
   }
 
   .case-studies .case-study__figure img {
-    aspect-ratio: 16 / 8;
-    max-height: 112px;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    height: 132px;
+    width: 100%;
   }
 
   .case-studies .case-study__figure figcaption {
@@ -1230,6 +1239,10 @@ code {
     padding-top: 0.6rem;
     font-size: 0.84rem;
     line-height: 1.4;
+  }
+
+  .case-studies .case-study__wl--losers {
+    margin-top: auto;
   }
 
   .case-studies .case-study__wl h4 {
