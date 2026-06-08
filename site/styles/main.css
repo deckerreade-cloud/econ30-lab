@@ -1184,66 +1184,66 @@ code {
   font-size: 0.82rem;
 }
 
-/* Compact case-study trio — fit three columns on one screen */
+/* Compact case-study trio — balanced to fit one screen without feeling tiny */
 @media (min-width: 900px) {
   .case-studies .case-study--side {
-    padding: 0.75rem 0.85rem 0.9rem;
-    font-size: 0.8rem;
-    line-height: 1.4;
+    padding: 1rem 1.1rem 1.1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .case-studies .case-study--side h2 {
-    font-size: 0.95rem;
-    margin: 0 0 0.45rem;
-    line-height: 1.25;
+    font-size: 1.1rem;
+    margin: 0 0 0.55rem;
+    line-height: 1.3;
   }
 
   .case-studies .case-study--side p {
-    margin: 0 0 0.5rem;
-    font-size: 0.8rem;
-    line-height: 1.4;
+    margin: 0 0 0.6rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .case-studies .case-study__headline {
-    font-size: 0.8rem;
-    line-height: 1.4;
-    margin-bottom: 0.45rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    margin-bottom: 0.55rem;
   }
 
   .case-studies .case-study__figure {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.6rem;
   }
 
   .case-studies .case-study__figure img {
-    aspect-ratio: 16 / 7;
-    max-height: 88px;
+    aspect-ratio: 16 / 8;
+    max-height: 112px;
   }
 
   .case-studies .case-study__figure figcaption {
-    margin-top: 0.25rem;
-    font-size: 0.62rem;
-    line-height: 1.35;
+    margin-top: 0.3rem;
+    font-size: 0.68rem;
+    line-height: 1.4;
   }
 
   .case-studies .case-study__wl {
-    margin: 0.5rem 0 0;
-    padding-top: 0.5rem;
-    font-size: 0.76rem;
-    line-height: 1.35;
+    margin: 0.65rem 0 0;
+    padding-top: 0.6rem;
+    font-size: 0.84rem;
+    line-height: 1.4;
   }
 
   .case-studies .case-study__wl h4 {
-    font-size: 0.62rem;
-    margin: 0 0 0.25rem;
+    font-size: 0.66rem;
+    margin: 0 0 0.3rem;
   }
 
   .case-studies .case-study__wl ul {
-    margin: 0 0 0.45rem;
-    padding-left: 1rem;
+    margin: 0 0 0.5rem;
+    padding-left: 1.05rem;
   }
 
   .case-studies .case-study__wl li {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.28rem;
   }
 
   .case-studies .case-study__wl li:last-child {
@@ -1251,9 +1251,9 @@ code {
   }
 
   .case-studies .case-study__link {
-    margin: 0.4rem 0 0;
-    font-size: 0.72rem;
-    line-height: 1.35;
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 }
 
