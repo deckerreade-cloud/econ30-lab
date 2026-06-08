@@ -14,19 +14,19 @@
 | **SAY** | Words to speak on camera (read word for word) |
 | ⏱️ | Rough timestamp in a 7-minute take |
 
-### Quick cheat sheet (17 stops)
+### Quick cheat sheet (25 stops)
 
 | # | ⏱️ | Header — where on site | ACTION |
 |---|-----|------------------------|--------|
-| 1 | 0:00 | TOP OF SITE · Header | Stay at top |
+| 1 | 0:00 | TOP OF SITE · Header + section nav | Stay at top |
 | 2 | 0:15 | PAGE 1 · Hero | — |
 | 3 | 0:45 | PAGE 1 · About this project | Scroll |
 | 4 | 1:15 | PAGE 1 · What this project adds | Scroll |
 | 5 | 1:40 | PAGE 1 · Progress lens | Scroll |
 | 6 | 2:05 | PAGE 1 · Stat strip | Pause on numbers |
-| 7 | 2:25 | PAGE 1 · Hero chart | — |
-| 8 | 2:40 | PAGE 1 · Photo + 46% callout | Scroll |
-| 9 | 2:50 | PAGE 2 · Why these three cities? | Scroll |
+| 7 | 2:25 | PAGE 1 · Photo + 46% callout | Scroll |
+| 8 | 2:40 | PAGE 2 · Why these three cities? | Scroll |
+| 9 | 3:05 | PAGE 2 · General trends + city photos | Slow scroll |
 | 10 | 3:20 | PAGE 2 · Dashboard (intro) | Scroll to dashboard |
 | 11 | 3:30 | PAGE 2 · Dashboard · Vacancy | 🖱️ Compare all → top chart |
 | 12 | 3:55 | PAGE 2 · Dashboard · Rent | 🖱️ middle chart |
@@ -52,13 +52,13 @@ Load **https://econ30-lab.vercel.app/** and start at the very top.
 
 ---
 
-### ⏱️ 0:00 — TOP OF SITE · Header
+### ⏱️ 0:00 — TOP OF SITE · Header + section nav
 
-**ON SCREEN:** Top bar only — small logo, text **"Office CRE · Distribution"**, **Light mode** button on the right. You are above Page 1; nothing else visible yet.
+**ON SCREEN:** Top bar — small logo, text **"Office CRE · Distribution"**, center nav **01 · The numbers** | **02 · The cities** | **03 · Takeaways**, **Light mode** on the right. You are above Page 1; nothing else visible yet.
 
-**ACTION:** Stay at the top. Do not scroll.
+**ACTION:** Stay at the top. Optionally point at the section nav — you can jump sections with those links.
 
-**SAY:** Hey — I'm Reade Decker. For my Econ 30 capstone I built this website about what happened to office buildings after COVID. I'm gonna walk you through the whole thing — just scroll with me top to bottom. I'll only stop a couple times to click the charts.
+**SAY:** Hey — I'm Reade Decker. For my Econ 30 capstone I built this website about what happened to office buildings after COVID. I'm gonna walk you through the whole thing — just scroll with me top to bottom. The header has three jumps if you want to skip ahead: the numbers, the cities, and takeaways. I'll only stop a couple times to click the charts.
 
 ---
 
@@ -112,43 +112,43 @@ Load **https://econ30-lab.vercel.app/** and start at the very top.
 
 ---
 
-### ⏱️ 2:25 — PAGE 1 · Hero chart (static)
-
-**ON SCREEN:** Line chart image — three colored lines. Caption: *Author-built chart from the hand-curated city panel — the geographic shock is not national, it is San Francisco-first.*
-
-**ACTION:** Center the chart in frame.
-
-**SAY:** This chart is the whole argument in one picture — before we even get to the live charts. SF vacancy goes from about five percent to thirty-seven percent by twenty twenty-four. Manhattan and D.C. go up too, but way less — like six to seven points for NYC and four for D.C., not thirty-one. And here's what national headlines miss: Manhattan's nicest building rents actually went up through all this, while SF's fell. SF's vacancy jump was about seven times D.C.'s. Same country, same pandemic — totally different stories on the ground.
-
----
-
-### ⏱️ 2:40 — PAGE 1 · Photo + 46% callout (end of Page 1)
+### ⏱️ 2:25 — PAGE 1 · Photo + 46% callout (end of Page 1)
 
 **ON SCREEN:** Photo caption **"Downtown San Francisco during curfew, June 2020"**. Below: red callout box **"46% long-run decline in NYC office values."** Next section below is Page 2.
 
 **ACTION:** Scroll past the photo; pause on the red callout.
 
-**SAY:** There's a photo of empty downtown SF during curfew in twenty twenty — showing how dead foot traffic got early on. The red box underneath is Gupta's forty-six percent long-run NYC drop from lease data. That's the academic anchor. Alright — now we hit Page two and the interactive stuff.
+**SAY:** There's a photo of empty downtown SF during curfew in twenty twenty — showing how dead foot traffic got early on. The red box underneath is Gupta's forty-six percent long-run NYC drop from lease data. That's the academic anchor. The live charts on Page two will show the geographic split — SF vacancy to thirty-seven percent while Manhattan and D.C. rise only a few points. Alright — now we hit Page two and the interactive stuff.
 
 ---
 
-### ⏱️ 2:50 — PAGE 2 · Why these three cities?
+### ⏱️ 2:40 — PAGE 2 · Why these three cities?
 
-**ON SCREEN:** Gray label **"02 — The cities (interactive)"**. Heading **"Why these three cities?"** Intro paragraph, **"What they share"**, **"What varies — and why compare"** with three cards (**San Francisco**, **Manhattan**, **Washington, D.C.**), list **"Why not one city?"**, comparison **table** (Vacancy Δ row: +31.4 pp, +6.5 pp, +4.2 pp). Manhattan skyline photo on the right on wide screens.
+**ON SCREEN:** Gray label **"02 — The cities (interactive)"**. Heading **"Why these three cities?"** Intro paragraph, **"What they share"**, **"What varies — and why compare"** with three cards (**San Francisco**, **Manhattan**, **Washington, D.C.**), list **"Why not one city?"**, comparison **table** (Vacancy Δ row: +31.4 pp, +6.5 pp, +4.2 pp). Manhattan panorama photo on the right on wide screens.
 
-**ACTION:** Scroll until **"02 — The cities (interactive)"** hits the top. Slow scroll through the three city cards.
+**ACTION:** Scroll until **"02 — The cities (interactive)"** hits the top. Slow scroll through the three city cards and the comparison table.
 
 **SAY:** Page two is where I test the argument with real numbers. Why these three cities? They're all major office downtowns, same post-COVID shock, same three measures from twenty fifteen to twenty twenty-four. But each city tells a different story. San Francisco — demand just collapsed. Tech and WFH emptied out faster than anywhere. Vacancy up thirty-one percentage points. Conversion and repricing dominate. Manhattan — split inside one city. Tenants moved into nicer buildings and left older ones empty — flight to quality. Trophy rent goes up while B and C buildings soak up vacancy. A K-shape — top fine, bottom not. Washington, D.C. — slower burn. Vacancy only up four point two points, not thirty-one. But D.C.'s budget office says empty offices are an Achilles' heel for property taxes. If I only did SF, you'd think the whole country's doomed. Manhattan only, you'd miss how uneven the geography is. D.C. only, you'd miss the trophy-versus-distressed split you see when you put NYC next to SF. That's why I'm comparing three cities — it's the whole project.
 
 ---
 
+### ⏱️ 3:05 — PAGE 2 · General trends + city photos
+
+**ON SCREEN:** Heading **"General trends each city faces"** — three equal trend boxes (SF, Manhattan, D.C.) with bullet lists, then a row of three city photos below.
+
+**ACTION:** Slow scroll through the trend boxes and photo row.
+
+**SAY:** Below that, General trends each city faces — same shock, three paths. SF: vacancy spiral five point two to thirty-six point six, rent compression, sublease flood, conversion pressure. Manhattan: moderate vacancy rise, flight to quality, K-shaped rents going up on trophy Class A. D.C.: slow burn, flat headline rents, federal drag, fiscal risk on the tax base. The photos underneath anchor each city visually before we hit the live data.
+
+---
+
 ### ⏱️ 3:20 — PAGE 2 · Dashboard (intro)
 
-**ON SCREEN:** Heading **"Compare cities — real data"**. Subtext *Real annual Q4 values from brokerage and government reports (2015–2024).* Blue **"Try this"** box with three numbered steps. Four buttons: **San Francisco** · **Manhattan (NYC)** · **Washington, D.C.** · **Compare all**. Three chart areas: **Vacancy rate**, **Class A asking rent**, **Sublease available**.
+**ON SCREEN:** Heading **"Compare cities — real data"**. Gold line **"Hand-curated city panel · annual Q4 data through 2024 · Colliers SF · Cushman / NYC Comptroller · D.C. ORA / JLL"**. Subtext *Real annual Q4 values from brokerage and government reports (2015–2024).* Blue **"Try this"** box with three numbered steps. Four buttons: **San Francisco** · **Manhattan (NYC)** · **Washington, D.C.** · **Compare all**. Three chart areas: **Vacancy rate**, **Class A asking rent**, **Sublease available**.
 
 **ACTION:** Scroll until the dashboard fills most of the frame. Confirm **Compare all** is highlighted.
 
-**SAY:** This is the main interactive part — Compare cities, real data. Real Q4 numbers from Colliers in SF, Cushman and the NYC Comptroller in Manhattan, D.C.'s budget office plus JLL. Not some auto API — I built the panel by hand so the three cities line up. The Try this box tells you what I'm about to do: Compare all on vacancy, switch to rent, then click SF for sublease.
+**SAY:** This is the main interactive part — Compare cities, real data. See the gold line — hand-curated panel through Q4 twenty twenty-four, not a vendor API. Real Q4 numbers from Colliers in SF, Cushman and the NYC Comptroller in Manhattan, D.C.'s budget office plus JLL. I built the panel by hand so the three cities line up. The Try this box tells you what I'm about to do: Compare all on vacancy, switch to rent, then click SF for sublease.
 
 ---
 
@@ -158,7 +158,7 @@ Load **https://econ30-lab.vercel.app/** and start at the very top.
 
 **ACTION:** 🖱️ Click **Compare all** if not already on. Talk to the **top** chart only.
 
-**SAY:** Compare all should be on. Top chart is Vacancy rate. Coral is SF, gold is Manhattan, teal is D.C. Watch the coral line — it just takes off. About five point two percent at end of twenty nineteen to thirty-six point six percent by late twenty twenty-four. Manhattan goes from roughly eleven percent to seventeen and a half. D.C. from seventeen point four to twenty-one point six. SF gained thirty-one point four percentage points. D.C. gained about four point two. That's like seven to one. Same national shock — but SF got a local catastrophe on top of it. That's Finding one in the charts: the office shock is really a San Francisco shock.
+**SAY:** Compare all should be on. Top chart is Vacancy rate — this is the whole argument in one picture. Coral is SF, gold is Manhattan, teal is D.C. Watch the coral line — it just takes off. About five point two percent at end of twenty nineteen to thirty-six point six percent by late twenty twenty-four. Manhattan goes from roughly eleven percent to seventeen and a half. D.C. from seventeen point four to twenty-one point six. SF gained thirty-one point four percentage points. D.C. gained about four point two. That's like seven to one. Same country, same pandemic — totally different stories. National headlines miss this. That's Finding one in the charts: the office shock is really a San Francisco shock.
 
 ---
 
@@ -311,12 +311,12 @@ PAGE 1 — 01 · The numbers
 ├── What this project adds
 ├── Progress lens
 ├── Stat strip
-├── Hero chart
 ├── Photo
 └── 46% callout
 
 PAGE 2 — 02 · The cities
 ├── Why these three cities?
+├── General trends + city photos
 ├── Dashboard 🖱️ (vacancy → rent → sublease)
 ├── Glossary
 ├── Findings (+ methodology)
@@ -343,7 +343,7 @@ If you're running long, trim **SAY** lines in this order:
 
 1. Shorten **About this project** — skip author names, keep research question  
 2. Rush **Progress lens** — just Inequality + Future  
-3. **Photo** and **46% callout** — one sentence  
+3. **General trends** — one sentence; **Photo** and **46% callout** — one sentence  
 4. Skim **Glossary** — skip entirely  
 5. Skim **D.C. case study** and **FRED** — one sentence each  
 6. Shorten **Limits** to two bullets  

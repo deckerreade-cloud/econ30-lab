@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Office CRE">
+  <rect width="32" height="32" rx="5" fill="#0b1220"/>
+  <path d="M4 24 L16 8 L28 24" fill="none" stroke="#8a93a6" stroke-width="1.5" opacity="0.55"/>
+  <line x1="8" y1="18" x2="24" y2="18" stroke="#3db7a0" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="8" y1="22" x2="24" y2="22" stroke="#f26b5e" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

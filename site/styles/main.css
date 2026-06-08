@@ -820,6 +820,16 @@ code {
   margin: 0 0 0.5rem;
 }
 
+.dashboard-vintage {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-neutral);
+  max-width: 40rem;
+}
+
 .dashboard-section .lead {
   color: var(--text-muted);
   margin: 0 0 1.5rem;
