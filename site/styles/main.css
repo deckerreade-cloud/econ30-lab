@@ -1011,9 +1011,11 @@ code {
 
 .why-cities__grid {
   margin-bottom: 1.5rem;
+  align-items: stretch;
 }
 
 .why-cities__item {
+  height: 100%;
   min-width: 0;
   padding: 0.85rem 1rem;
   background: var(--bg-deep);
@@ -1044,19 +1046,24 @@ code {
   margin-top: 1.75rem;
 }
 
-.why-cities__city-stacks {
-  margin-bottom: 1.5rem;
-}
-
-.why-cities__city-stack {
+.why-cities__trends-photos {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.why-cities__trends-row,
+.why-cities__photos-row {
+  align-items: stretch;
+}
+
+.why-cities__trends-row .why-cities__trend {
+  height: 100%;
   min-width: 0;
 }
 
 .why-cities__trend {
-  flex: 1;
   padding: 0.85rem 1rem;
   background: var(--bg-deep);
   border: 1px solid var(--hairline);
