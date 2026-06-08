@@ -21,7 +21,13 @@
     />
     <meta
       property="og:image"
-      content="https://econ30-lab.vercel.app/assets/downtown-sf.jpg"
+      content="https://econ30-lab.vercel.app/assets/og-card.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Vacancy comparison chart: San Francisco surges while Manhattan and D.C. rise modestly"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -34,7 +40,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://econ30-lab.vercel.app/assets/downtown-sf.jpg"
+      content="https://econ30-lab.vercel.app/assets/og-card.png"
     />
     <script>
       (function () {
@@ -57,6 +63,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
     <header class="site-header">
       <div class="site-header__inner">
         <a class="site-header__brand" href="#page-1">
@@ -122,6 +129,20 @@
           </p>
         </div>
 
+        <figure class="hero__chart figure">
+          <img
+            src="assets/vacancy-compare.svg"
+            alt="Vacancy rates 2015–2024: San Francisco rises to 36.6 percent while Manhattan and D.C. stay lower"
+            width="960"
+            height="340"
+            loading="eager"
+          />
+          <figcaption>
+            Author-built panel preview — the geographic shock is San Francisco-first.
+            <a href="#dash-title">Open the live dashboard →</a>
+          </figcaption>
+        </figure>
+
         <p class="stat-strip__stakes">
           The stakes: hundreds of billions repriced — but not evenly. Who captures the upside?
         </p>
@@ -174,17 +195,10 @@
               <h3>Context</h3>
               <p>
                 U.S. office vacancy is at multi-decade highs; Moody's projects a peak
-                around 24% in 2026. Tech-heavy downtowns and large monocentric markets
-                absorb very different hits — with knock-on effects on tax bases, foot
-                traffic, and lender balance sheets.
-              </p>
-            </div>
-            <div class="description__item">
-              <h3>Literature</h3>
-              <p>
-                Lease-level work by Gupta, Mittal, and Van Nieuwerburgh (NYC ~46% long-run
-                decline), Moody's vacancy forecasts, Cushman &amp; Wakefield and Colliers
-                market reports, the NYC Comptroller's doom-loop framing, and J.P. Morgan
+                around 24% in 2026. Tech-heavy downtowns absorb very different hits — with
+                knock-on effects on tax bases, foot traffic, and lender balance sheets.
+                Grounded in Gupta et al. (NYC ~46% long-run decline), Moody's forecasts,
+                Colliers / Cushman reports, the NYC Comptroller doom-loop frame, and J.P. Morgan
                 on bank <dfn>CRE</dfn> exposure.
               </p>
             </div>
@@ -252,8 +266,17 @@
         </p>
       </section>
 
-      <section class="page" id="page-2" aria-labelledby="dash-title">
+      <section class="page page--cities" id="page-2" aria-labelledby="dash-title">
         <p class="page__eyebrow">02 — The cities (interactive)</p>
+        <p class="story-spine">
+          <span>Same shock</span>
+          <span aria-hidden="true">→</span>
+          <span>Three cities</span>
+          <span aria-hidden="true">→</span>
+          <span>Interactive proof</span>
+          <span aria-hidden="true">→</span>
+          <span>Who wins &amp; loses</span>
+        </p>
 
         <section class="why-cities" aria-labelledby="why-cities-title">
           <div class="why-cities__layout">
@@ -515,39 +538,8 @@
           <div id="chart-live-region" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
         </section>
 
-        <section class="argument-thread" aria-labelledby="argument-title">
-          <h2 id="argument-title">How this site answers the research question</h2>
-          <ol class="argument-thread__steps">
-            <li class="argument-thread__step">
-              <span class="argument-thread__num">Q</span>
-              <span class="argument-thread__label">Research question</span>
-              <p>Who wins and loses when office values crash?</p>
-            </li>
-            <li class="argument-thread__step">
-              <span class="argument-thread__num">1</span>
-              <span class="argument-thread__label">Geography</span>
-              <p>SF shock (+31.4 pp) vs. modest rises in Manhattan and D.C. — pain is not national.</p>
-            </li>
-            <li class="argument-thread__step">
-              <span class="argument-thread__num">2</span>
-              <span class="argument-thread__label">Within-market split</span>
-              <p>Manhattan trophy rent rises while fringe stock absorbs vacancy — winners and losers in one CBD.</p>
-            </li>
-            <li class="argument-thread__step">
-              <span class="argument-thread__num">3</span>
-              <span class="argument-thread__label">Timing</span>
-              <p>Sublease leads vacancy; bank delinquency lags repricing — option value accrues to patient capital first.</p>
-            </li>
-            <li class="argument-thread__step">
-              <span class="argument-thread__num">→</span>
-              <span class="argument-thread__label">Payoff</span>
-              <p><a href="#page-3">Winners &amp; losers</a> named — workers and cities lose first; capital with patience wins.</p>
-            </li>
-          </ol>
-        </section>
-
         <section class="glossary" aria-labelledby="glossary-title">
-          <details open>
+          <details class="depth-fold">
             <summary id="glossary-title">Key terms (CRE glossary)</summary>
             <p class="glossary__note">Terms used in findings and case studies below — including trophy rent.</p>
             <dl>
@@ -647,7 +639,40 @@
           </p>
         </section>
 
-        <div class="case-studies">
+        <section class="argument-thread" aria-labelledby="argument-title">
+          <h2 id="argument-title">How this site answers the research question</h2>
+          <ol class="argument-thread__steps">
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">Q</span>
+              <span class="argument-thread__label">Research question</span>
+              <p>Who wins and loses when office values crash?</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">1</span>
+              <span class="argument-thread__label">Geography</span>
+              <p>SF shock (+31.4 pp) vs. modest rises in Manhattan and D.C. — pain is not national.</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">2</span>
+              <span class="argument-thread__label">Within-market split</span>
+              <p>Manhattan trophy rent rises while fringe stock absorbs vacancy — winners and losers in one CBD.</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">3</span>
+              <span class="argument-thread__label">Timing</span>
+              <p>Sublease leads vacancy; bank delinquency lags repricing — option value accrues to patient capital first.</p>
+            </li>
+            <li class="argument-thread__step">
+              <span class="argument-thread__num">→</span>
+              <span class="argument-thread__label">Payoff</span>
+              <p><a href="#page-3">Winners &amp; losers</a> named — workers and cities lose first; capital with patience wins.</p>
+            </li>
+          </ol>
+        </section>
+
+        <details class="depth-fold depth-fold--case-studies">
+          <summary>Deep dive: three city case studies (optional)</summary>
+          <div class="case-studies">
           <section class="case-study case-study--side" aria-labelledby="sf-title">
             <figure class="case-study__figure figure">
               <img
@@ -773,8 +798,11 @@
               <p class="case-study__link">This pattern supports <a href="#findings-title">Finding #03</a> and <a href="#page-3">Page 3 takeaways</a>.</p>
             </div>
           </section>
-        </div>
+          </div>
+        </details>
 
+        <details class="depth-fold depth-fold--fred" id="fred-fold">
+          <summary>National CRE indicators — FRED data (Finding #04)</summary>
         <section class="fred-panel" aria-labelledby="fred-title">
           <header class="fred-panel__header">
             <p class="fred-panel__eyebrow">Real data — FRED</p>
@@ -818,6 +846,7 @@
             </article>
           </div>
         </section>
+        </details>
 
         <p class="bridge">
           These patterns do not affect everyone equally. Page 3 translates the data into who gains
@@ -826,7 +855,7 @@
         </p>
       </section>
 
-      <section class="page" id="page-3" aria-labelledby="wl-title">
+      <section class="page page--takeaways" id="page-3" aria-labelledby="wl-title">
         <p class="page__eyebrow">03 — Takeaways</p>
 
         <section class="tangible-example" aria-labelledby="tangible-title">

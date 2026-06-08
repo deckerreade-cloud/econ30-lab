@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Who wins and loses when office values crash  Reade Decker capstone">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#11192c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="12" fill="none" stroke="rgba(255,209,102,0.35)" stroke-width="2"/>
+  <text x="72" y="108" fill="#8a93a6" font-family="Inter, system-ui, sans-serif" font-size="22" letter-spacing="0.14em">ECON 30 CAPSTONE · OFFICE CRE · DISTRIBUTION</text>
+  <text x="72" y="178" fill="#e6e8ee" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="700">Who wins and loses when</text>
+  <text x="72" y="242" fill="#e6e8ee" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="700">office values crash?</text>
+  <text x="72" y="302" fill="#ffd166" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="600">National headlines hide a San Francisco crisis  and a Manhattan split.</text>
+  <g transform="translate(72, 340)">
+    <polyline fill="none" stroke="#f26b5e" stroke-width="5" points="0,160 120,158 240,164 360,170 480,178 600,110 720,78 840,52 960,22 1080,10"/>
+    <polyline fill="none" stroke="#ffd166" stroke-width="3" opacity="0.85" points="0,140 120,134 240,126 360,130 480,132 600,108 720,92 840,84 960,88 1080,92"/>
+    <polyline fill="none" stroke="#3db7a0" stroke-width="3" opacity="0.85" points="0,108 120,104 240,102 360,102 480,100 600,92 720,86 840,82 960,78 1080,74"/>
+    <text x="1080" y="0" fill="#f26b5e" font-family="Inter, sans-serif" font-size="18" font-weight="700" text-anchor="end">SF 36.6%</text>
+    <text x="0" y="210" fill="#8a93a6" font-family="Inter, sans-serif" font-size="16">2015</text>
+    <text x="1080" y="210" fill="#8a93a6" font-family="Inter, sans-serif" font-size="16" text-anchor="end">2024</text>
+    <line x1="480" y1="0" x2="480" y2="190" stroke="rgba(138,147,166,0.45)" stroke-dasharray="6,6"/>
+    <text x="486" y="18" fill="#8a93a6" font-family="Inter, sans-serif" font-size="14">COVID</text>
+  </g>
+  <text x="72" y="582" fill="#3db7a0" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600">Reade Decker · econ30-lab.vercel.app</text>
+  <text x="1128" y="582" fill="#8a93a6" font-family="Inter, system-ui, sans-serif" font-size="18" text-anchor="end">Hand-curated panel · Q4 2024</text>
+</svg>

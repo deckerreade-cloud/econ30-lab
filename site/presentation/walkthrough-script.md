@@ -19,30 +19,26 @@
 | # | ⏱️ | Header — where on site | ACTION |
 |---|-----|------------------------|--------|
 | 1 | 0:00 | TOP OF SITE · Header + section nav | Stay at top |
-| 2 | 0:15 | PAGE 1 · Hero | — |
-| 3 | 0:45 | PAGE 1 · About this project | Scroll |
-| 4 | 1:15 | PAGE 1 · What this project adds | Scroll |
-| 5 | 1:40 | PAGE 1 · Progress lens | Scroll |
-| 6 | 2:00 | PAGE 1 · Stat strip + insight ribbon | Pause on numbers |
-| 7 | 2:20 | PAGE 1 · Photo + 46% callout | Scroll |
-| 8 | 2:40 | PAGE 2 · Why these three cities? | Scroll |
-| 9 | 3:05 | PAGE 2 · General trends + city photos | Slow scroll |
-| 10 | 3:20 | PAGE 2 · Dashboard (intro) | Scroll to dashboard |
-| 11 | 3:30 | PAGE 2 · Dashboard · Vacancy | 🖱️ Compare all → top chart |
-| 12 | 3:55 | PAGE 2 · Dashboard · Rent | 🖱️ middle chart |
-| 13 | 4:15 | PAGE 2 · Dashboard · Sublease | 🖱️ San Francisco → bottom chart |
-| 14 | 4:35 | PAGE 2 · Glossary | Scroll (optional) |
-| 15 | 4:45 | PAGE 2 · Findings | Scroll |
-| 16 | 5:10 | PAGE 2 · Interpretation | Scroll |
-| 17 | 5:30 | PAGE 2 · Case study · San Francisco | Scroll |
-| 18 | 5:42 | PAGE 2 · Case study · Manhattan | Scroll |
-| 19 | 5:52 | PAGE 2 · Case study · D.C. + FRED | Scroll |
-| 20 | 6:08 | PAGE 2 · Bridge to Page 3 | Scroll |
-| 21 | 6:12 | PAGE 3 · 550 California | Scroll |
-| 22 | 6:28 | PAGE 3 · Winners / Losers | — |
-| 23 | 6:45 | PAGE 3 · What comes next | Scroll |
-| 24 | 6:55 | PAGE 3 · Limits & counterpoints | Scroll |
-| 25 | 7:05 | CLOSE · Sources or dashboard | Optional scroll up |
+| 2 | 0:15 | PAGE 1 · Hero + CTA | — |
+| 3 | 0:35 | PAGE 1 · Chart preview + stat strip | Pause on chart |
+| 4 | 1:00 | PAGE 1 · Insight ribbon | Scroll |
+| 5 | 1:20 | PAGE 1 · About + Progress lens | Scroll |
+| 6 | 1:45 | PAGE 1 · Photo + 46% callout | Scroll |
+| 7 | 2:00 | PAGE 2 · Story spine + Why three cities? | Scroll |
+| 8 | 2:25 | PAGE 2 · General trends + city photos | Slow scroll |
+| 9 | 2:40 | PAGE 2 · Dashboard (intro) | Scroll to dashboard |
+| 10 | 2:50 | PAGE 2 · Dashboard · Vacancy | 🖱️ Compare all → top chart |
+| 11 | 3:15 | PAGE 2 · Dashboard · Rent | 🖱️ middle chart |
+| 12 | 3:35 | PAGE 2 · Dashboard · Sublease | 🖱️ San Francisco → bottom chart |
+| 13 | 3:55 | PAGE 2 · Findings | Scroll; click chart links |
+| 14 | 4:20 | PAGE 2 · Interpretation + argument thread | Scroll |
+| 15 | 4:40 | PAGE 2 · Case studies / FRED (optional expand) | Skip or expand |
+| 16 | 4:50 | PAGE 2 · Bridge to Page 3 | Scroll |
+| 17 | 4:55 | PAGE 3 · 550 California | Scroll |
+| 18 | 5:10 | PAGE 3 · Winners / Losers | — |
+| 19 | 5:25 | PAGE 3 · Remember this + Progress takeaway | Pause |
+| 20 | 5:40 | PAGE 3 · Limits & counterpoints | Scroll |
+| 21 | 5:55 | CLOSE · Sources or dashboard | Optional scroll up |
 
 ---
 

@@ -170,6 +170,55 @@ function initSectionNav() {
   setActive("page-1");
 }
 
+function initReadingProgress() {
+  const bar = document.getElementById("reading-progress");
+  if (!bar) return;
+
+  function update() {
+    const scrollTop = document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    bar.style.width = height > 0 ? `${(scrollTop / height) * 100}%` : "0%";
+  }
+
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+}
+
+function initDepthFolds() {
+  const fredFold = document.getElementById("fred-fold");
+  if (!fredFold) return;
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  function openFred() {
+    fredFold.open = true;
+    const target = document.getElementById("fred-title");
+    if (target) {
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
+    }
+  }
+
+  document.querySelectorAll('a[href="#fred-title"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      openFred();
+      history.pushState(null, "", "#fred-title");
+    });
+  });
+
+  if (location.hash === "#fred-title") openFred();
+  window.addEventListener("hashchange", () => {
+    if (location.hash === "#fred-title") openFred();
+  });
+}
+
 function initFindingLinks(dashboard) {
   if (!dashboard?.focusMetric) return;
   document.querySelectorAll(".findings__chart-link[data-metric]").forEach((btn) => {
@@ -184,6 +233,8 @@ function initFindingLinks(dashboard) {
 
 async function main() {
   initTheme();
+  initReadingProgress();
+  initDepthFolds();
   initSectionNav();
 
   const curated = await loadCurated();
