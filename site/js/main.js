@@ -135,8 +135,44 @@ function renderFredCharts(fred) {
   }
 }
 
+function initSectionNav() {
+  const links = document.querySelectorAll(".site-nav__link");
+  const sections = ["page-1", "page-2", "page-3"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  if (!links.length || !sections.length) return;
+
+  function setActive(id) {
+    links.forEach((link) => {
+      const active = link.getAttribute("href") === `#${id}`;
+      link.classList.toggle("is-active", active);
+      if (active) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    setActive("page-1");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible[0]) setActive(visible[0].target.id);
+    },
+    { rootMargin: "-15% 0px -55% 0px", threshold: [0, 0.15, 0.4] }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+  setActive("page-1");
+}
+
 async function main() {
   initTheme();
+  initSectionNav();
 
   const curated = await loadCurated();
   fillStatPlaceholders(curated);

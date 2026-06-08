@@ -30,23 +30,39 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="site-header__brand">
-        <svg class="site-header__mark" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-          <path d="M2 14 L9 4 L16 14" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-          <line x1="5" y1="10" x2="13" y2="10" stroke="#3db7a0" stroke-width="2"/>
-          <line x1="5" y1="13" x2="13" y2="13" stroke="#f26b5e" stroke-width="2"/>
-        </svg>
-        <span class="site-header__label">Office CRE · Distribution</span>
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="#page-1">
+          <svg class="site-header__mark" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+            <path d="M2 14 L9 4 L16 14" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+            <line x1="5" y1="10" x2="13" y2="10" stroke="#3db7a0" stroke-width="2"/>
+            <line x1="5" y1="13" x2="13" y2="13" stroke="#f26b5e" stroke-width="2"/>
+          </svg>
+          <span class="site-header__label">Office CRE · Distribution</span>
+        </a>
+        <nav class="site-nav" aria-label="Jump to section">
+          <a class="site-nav__link" href="#page-1" data-section="page-1">
+            <span class="site-nav__num">01</span>
+            <span class="site-nav__text">The numbers</span>
+          </a>
+          <a class="site-nav__link" href="#page-2" data-section="page-2">
+            <span class="site-nav__num">02</span>
+            <span class="site-nav__text">The cities</span>
+          </a>
+          <a class="site-nav__link" href="#page-3" data-section="page-3">
+            <span class="site-nav__num">03</span>
+            <span class="site-nav__text">Takeaways</span>
+          </a>
+        </nav>
+        <button
+          type="button"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-pressed="false"
+          aria-label="Switch to light mode"
+        >
+          Light mode
+        </button>
       </div>
-      <button
-        type="button"
-        id="theme-toggle"
-        class="theme-toggle"
-        aria-pressed="false"
-        aria-label="Switch to light mode"
-      >
-        Light mode
-      </button>
     </header>
 
     <main id="main">
@@ -172,29 +188,6 @@
             </div>
           </div>
         </section>
-
-        <div class="hero-chart hero-chart--featured">
-          <figure class="figure">
-            <img
-              src="assets/vacancy-compare.svg"
-              alt="Vacancy comparison chart: San Francisco rises to 36.6 percent by 2024 while Manhattan and D.C. rise modestly"
-              width="960"
-              height="340"
-              loading="eager"
-            />
-            <figcaption>
-              Author-built chart from the hand-curated city panel — the geographic shock is not national, it is San Francisco-first.
-            </figcaption>
-          </figure>
-          <div class="chart-learn">
-            <strong>What this plot tells us:</strong>
-            <dfn>Vacancy rate</dfn> is the share of office space sitting empty (direct plus sublease).
-            The coral <strong>San Francisco</strong> line is the story: it climbs from about <strong>5.2%</strong> pre-COVID
-            to <strong>36.6%</strong> by Q4 2024 — a <strong>+31.4 percentage-point</strong> jump. Manhattan (gold) and
-            D.C. (teal) rise only modestly (+6.5 and +4.2 pp). Same national shock, but SF absorbs a local demand
-            collapse that national headlines flatten away.
-          </div>
-        </div>
 
         <div class="photo-band">
           <figure class="figure">
