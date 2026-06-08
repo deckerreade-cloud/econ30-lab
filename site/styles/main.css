@@ -937,20 +937,38 @@ code {
   line-height: 1.45;
 }
 
-.why-cities__trends {
+.why-cities__full {
+  width: 100%;
+}
+
+.why-cities__subhead.why-cities__full {
+  margin-top: 1.75rem;
+}
+
+.why-cities__city-stacks {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
+  gap: 1.25rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 700px) {
-  .why-cities__trends {
-    grid-template-columns: repeat(3, 1fr);
+  .why-cities__city-stacks {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
   }
 }
 
+.why-cities__city-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
 .why-cities__trend {
+  flex: 1;
   padding: 0.85rem 1rem;
   background: var(--bg-deep);
   border: 1px solid var(--hairline);
@@ -981,24 +999,12 @@ code {
   color: var(--text-primary);
 }
 
-.city-photos {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 700px) {
-  .city-photos {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .city-photos__item {
   margin: 0;
 }
 
 .city-photos__item img {
+  width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
