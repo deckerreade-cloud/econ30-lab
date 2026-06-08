@@ -395,20 +395,23 @@ code {
 .case-studies {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1rem;
   max-width: 1100px;
-  margin: 2.5rem auto 0;
+  margin: 2rem auto 0;
 }
 
 @media (min-width: 800px) {
   .case-studies {
     grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
   }
 }
 
 @media (min-width: 1100px) {
   .case-studies {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: start;
   }
 }
 
@@ -1179,6 +1182,79 @@ code {
 
 .case-study__wl a {
   font-size: 0.82rem;
+}
+
+/* Compact case-study trio — fit three columns on one screen */
+@media (min-width: 900px) {
+  .case-studies .case-study--side {
+    padding: 0.75rem 0.85rem 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .case-studies .case-study--side h2 {
+    font-size: 0.95rem;
+    margin: 0 0 0.45rem;
+    line-height: 1.25;
+  }
+
+  .case-studies .case-study--side p {
+    margin: 0 0 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .case-studies .case-study__headline {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.45rem;
+  }
+
+  .case-studies .case-study__figure {
+    margin: 0 0 0.5rem;
+  }
+
+  .case-studies .case-study__figure img {
+    aspect-ratio: 16 / 7;
+    max-height: 88px;
+  }
+
+  .case-studies .case-study__figure figcaption {
+    margin-top: 0.25rem;
+    font-size: 0.62rem;
+    line-height: 1.35;
+  }
+
+  .case-studies .case-study__wl {
+    margin: 0.5rem 0 0;
+    padding-top: 0.5rem;
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+
+  .case-studies .case-study__wl h4 {
+    font-size: 0.62rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .case-studies .case-study__wl ul {
+    margin: 0 0 0.45rem;
+    padding-left: 1rem;
+  }
+
+  .case-studies .case-study__wl li {
+    margin-bottom: 0.2rem;
+  }
+
+  .case-studies .case-study__wl li:last-child {
+    margin-bottom: 0;
+  }
+
+  .case-studies .case-study__link {
+    margin: 0.4rem 0 0;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
 }
 
 .bridge {
